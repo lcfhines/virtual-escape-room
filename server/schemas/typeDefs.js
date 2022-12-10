@@ -41,6 +41,7 @@ const typeDefs = gql`
 
   type Interaction{
     _id: ID
+    interaction_id: String
     display_if_visited_interaction_id: ID
     description: String
     object_id: ID
