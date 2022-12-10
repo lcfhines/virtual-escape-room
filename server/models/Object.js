@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-// used to encrypt password
 
 const objectSchema = new Schema(
   {
