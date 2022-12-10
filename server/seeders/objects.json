@@ -1,51 +1,57 @@
 [
     {
+        "object_id":"Anna",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "description": "",
+        "name": "Annabelle Stone"
     },
     {
-        "object_id": "",
+        "object_id": "SirE",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "description": "",
+        "name": "Sir Edmond Graham"
     },
     {
-        "object_id": "",
+        "object_id": "Jere",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "description": "",
+        "name": "Jeremiah Steele"
     },
     {
-        "object_id": "",
+        "object_id": "Eliz",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "description": "",
+        "name": "Elizabeth Halloway"
     },
     {
-        "object_id": "",
+        "object_id": "Matt",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "description": "",
+        "name": "Matthew Wilde"
     },
     {
-        "object_id": "",
+        "object_id": "Marg",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "name": "Marguerite Featherbottom"
     },
     {
-        "object_id": "",
+        "object_id": "Olga",
         "room_id": "",
-        "type": "",
-        "isWeapon": "",
-        "description": ""
+        "type": "character",
+        "isWeapon": false,
+        "name": "Olga the Maid"
     },
     {
         "object_id": "",
