@@ -4,6 +4,7 @@ const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const db = require('./config/connection');
 const { typeDefs, resolvers } = require('./schemas');
+const { authMiddleware } = require('./utils/auth');
 
 // port used by the express server
 const PORT = process.env.PORT || 3001;
@@ -13,6 +14,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware,
 })
 
 // middleware to allow JSON to be sent and decoded from the request body
