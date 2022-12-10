@@ -48,13 +48,20 @@ const typeDefs = gql`
     interaction_id: ID
   }
 
-  type Reaction{
+  type GameUserInteraction{
+    _id: ID
+    title: String
+    story_line: String
+    time_limit: Int
+  }
+
+  type Motive{
     _id: ID
     description: String
     object_id: ID
   }
 
-  type Reaction{
+  type Solution{
     _id: ID
     character_id: ID
     object_id: ID
