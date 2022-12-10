@@ -75,7 +75,7 @@ footer{
 
 /* intro.html */
 
-#challenge1{
+#intro{
      text-align: center;
      padding: 50px;
      width:200px;
@@ -97,6 +97,11 @@ footer{
 
 }
 
+#leader{
+     text-align: center;
+     width: 30vw;
+     margin: 0 auto;  
+}
 /* challenges.html */
 
 
