@@ -23,6 +23,7 @@ const typeDefs = gql`
   type Room {
     _id: ID
     is_default: Boolean
+    room_id: Number
     title: String
     description: String
     game_id: ID
