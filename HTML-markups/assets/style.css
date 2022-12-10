@@ -73,7 +73,7 @@ footer{
 }
 
 
-/* intro.html */
+/* game.html */
 
 #intro{
      text-align: center;
@@ -83,7 +83,7 @@ footer{
      background-color:lightgray;
 }
 
-#start{
+#start, #solve{
      padding: 10px;
      background-color:green;
      width: 150px;
@@ -156,5 +156,30 @@ table td{
 
 #screenshot img{
      max-width: 350px;
-     max-width: 350px;
+     max-height: 350px;
+}
+
+
+/* room.html */
+
+#object{
+     width:90vw;
+     margin: 0 auto;
+}
+
+.row{
+     display: flex;
+     align-items:center;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+
+#object img{
+     width: 200px;
+     margin:20px;
+}
+
+#room{
+     display: flex;
+     justify-content: space-evenly;
 }
