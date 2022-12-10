@@ -12,11 +12,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
     email: {
       type: String,
       required: true,
@@ -58,12 +53,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-
-// virtual to get fullname
-userSchema.virtual('fullName')
-  .get(function () {
-    return this.first + ' ' + this.last;
-});
 
 const User = model('User', userSchema);
 
