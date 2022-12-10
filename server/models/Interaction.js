@@ -3,6 +3,10 @@ const {reactionSchema} = require ('./Reaction')
 
 const interactionSchema = new Schema(
   {
+    interaction_id: {
+      type: String,
+      required: true,
+    },
     display_if_visited_interaction_id: {  
       type: Schema.Types.ObjectId,
     },
