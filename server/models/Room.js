@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const roomSchema = new Schema(
   {
-    isDefault: {
+    is_default: {
       type: Boolean,
       default: false,
     },

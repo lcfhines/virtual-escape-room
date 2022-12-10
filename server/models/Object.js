@@ -6,7 +6,7 @@ const objectSchema = new Schema(
       type: String,
       required: true,
     },
-    isWeapon: {   
+    is_weapon: {   
       type: Boolean,
       default: false,
     },
