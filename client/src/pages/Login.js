@@ -44,8 +44,8 @@ const Login = (props) => {
               <div className="card-body">
                 {data ? (
                   <p>
-                    Success! You may now head{' '}
-                    <Link to="/">back to the homepage.</Link>
+                    Have fun escaping, {data.username}! Click{' '}
+                    <Link to="/">here</Link>{' '}to return to the homepage.
                   </p>
                 ) : (
                   <form onSubmit={handleFormSubmit}>
