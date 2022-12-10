@@ -19,7 +19,7 @@ const roomSchema = new Schema(
       required: true,
     },
     game_id: {
-      type: Schema.Types.ObjectId,
+      type: Number,
       required: true,
     },
     objects: [
