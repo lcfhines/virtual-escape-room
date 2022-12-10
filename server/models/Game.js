@@ -14,6 +14,12 @@ const gameSchema = new Schema(
       type: Number,
       required: true,
     },
+    rooms: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Room'
+      }
+    ]
   }
 );
 

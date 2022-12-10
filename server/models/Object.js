@@ -2,11 +2,11 @@ const { Schema, model } = require('mongoose');
 
 const objectSchema = new Schema(
   {
-    type: {   // 'char' or 'thing'
+    type: {   // 'Character' or 'Thing'
       type: String,
       required: true,
     },
-    isWeapon: {   
+    is_weapon: {   
       type: Boolean,
       default: false,
     },
@@ -18,6 +18,12 @@ const objectSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
+    interactions: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Interaction'
+      }
+    ]
   }
 );
 
