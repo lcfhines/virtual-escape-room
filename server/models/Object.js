@@ -1,28 +1,27 @@
 const { Schema, model } = require('mongoose');
 // used to encrypt password
 
-const roomSchema = new Schema(
+const objectSchema = new Schema(
   {
-    isDefault: {
-      type: Boolean,
-      default: false,
-    },
-    title: {
+    type: {   // 'char' or 'thing'
       type: String,
       required: true,
+    },
+    isWeapon: {   
+      type: Boolean,
+      default: false,
     },
     description: {
       type: String,
       required: true,
     },
-    game_id: {
+    room_id: {
       type: Schema.Types.ObjectId,
       required: true,
     },
-
   }
 );
 
-const Room = model('Room', roomSchema);
+const Object = model('Object', objectSchema);
 
-module.exports = Room;
+module.exports = Object;
