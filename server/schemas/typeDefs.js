@@ -33,7 +33,6 @@ const typeDefs = gql`
     _id: ID
     type: String  
     is_weapon: Boolean
-    description: String
     room_id: ID
     interactions: [Interaction]
     motives: [Motive]

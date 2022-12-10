@@ -10,10 +10,6 @@ const objectSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    description: {
-      type: String,
-      required: true,
-    },
     room_id: {
       type: Schema.Types.ObjectId,
       required: true,
