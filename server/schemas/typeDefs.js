@@ -85,16 +85,20 @@ const typeDefs = gql`
     game(gameId: ID!): Game
     room: (roomId: ID!): Room
     object: (objectId: ID!): Object    
-    interaction: (interactionId: ID!): Interaction     
+    interaction: (interactionId: ID!): Interaction
+    checkUserInteraction: (interactionId: ID!): Boolean
   }
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    startGame()
+    startGame(user_id: ID!): Game
+    addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction
+    checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Boolean
   }
 `;
-//start game in mutation will wipe out game user interaction table for that userId and start coutndown timer, switch room, click on object
-//
+//startGame - start game in mutation will wipe out game user interaction table for that userId and start coutndown timer, switch room, click on object
+// addUserInteraction - add user interaction, Interactions written to game user interaction table
+// checkSolution - check 3 dropdowns (character id, object id and motive id) against background solution table to see if they match and if so we return true or false
 
 module.exports = typeDefs;
