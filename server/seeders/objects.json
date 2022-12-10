@@ -1,8 +1,9 @@
 [
     {
+        "object_id": "",
+        "room_id": "",
         "type": "",
-        "is_weapon": "",
-        "description": "",
-        "room_id": ""
+        "isWeapon": "",
+        "description": ""
     }
 ]
