@@ -87,7 +87,7 @@ const typeDefs = gql`
     room: (roomId: ID!): Room
     object: (objectId: ID!): Object    
     interaction: (interactionId: ID!): Interaction
-    checkUserInteraction: (interactionId: ID!): Boolean
+    checkUserInteraction: (interactionId: ID!): GameUserInteraction
   }
 
   type Mutation {

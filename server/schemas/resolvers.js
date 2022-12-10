@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Game, Room, Object, Interaction} = require('../models');
+const { User, Game, Room, Object, Interaction, GameUserInteraction} = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -36,11 +36,10 @@ const resolvers = {
       interaction: async (parent, { gameId }) => {
         return Interaction.findOne({ _id: gameId });
       },
-
-
+      checkUserInteraction: async (parent, { interactionId }) => {
+      return GameUserInteraction.findOne({ interactionId: interactionId });
     },
-
-
+  }
 
   Mutation: {
     addUser: async (parent, { first_name, last_name, email, password }) => {
