@@ -175,6 +175,7 @@ table td{
      flex-wrap: wrap;
 }
 
+
 #object img{
      width: 200px;
      margin:20px;
@@ -193,8 +194,4 @@ table td{
 #room{
      display: flex;
      justify-content: space-evenly;
-}
-
-#room-desc{
-
 }
