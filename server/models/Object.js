@@ -14,6 +14,10 @@ const objectSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
+    name: {
+      type: String,
+      required: true,
+    },
     interactions: [
       {
         type:Schema.Types.ObjectId,
