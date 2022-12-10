@@ -6,9 +6,8 @@ import Auth from '../utils/auth';
 
 const Signup = () => {
     const [formState, setFormState] = useState({
-        firstName: '',
-        lastName: '',
-        username: '',
+        first_name: '',
+        last_name: '',
         email: '',
         password: '',
     });
@@ -46,7 +45,7 @@ const Signup = () => {
               <div className="card-body">
                 {data ? (
                   <p>
-                    Welcome to Virtual Escape Room, {data.username}! Click{' '}
+                    Welcome to Virtual Escape Room, {data.first_name}! Click{' '}
                     <Link to="/">here</Link>{' '}to return to the homepage.
                   </p>
                 ) : (
@@ -54,25 +53,17 @@ const Signup = () => {
                     <input
                       className="form-input"
                       placeholder="First name"
-                      name="firstName"
+                      name="first_name"
                       type="text"
-                      value={formState.firstName}
+                      value={formState.first_name}
                       onChange={handleChange}
                     />
                     <input
                       className="form-input"
                       placeholder="Last name"
-                      name="lastName"
+                      name="last_name"
                       type="text"
-                      value={formState.lastName}
-                      onChange={handleChange}
-                    />
-                    <input
-                      className="form-input"
-                      placeholder="Username"
-                      name="username"
-                      type="text"
-                      value={formState.username}
+                      value={formState.last_name}
                       onChange={handleChange}
                     />
                     <input
