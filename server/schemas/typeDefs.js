@@ -17,7 +17,7 @@ const typeDefs = gql`
     title: String
     story_line: String
     time_limit: Int
-    rooms:[Room]
+    rooms: [Room]
   }
 
   type Room {
@@ -43,6 +43,7 @@ const typeDefs = gql`
 
   type Interaction{
     _id: ID
+    interaction_id: String
     display_if_visited_interaction_id: ID
     interaction_id: String
     description: String
@@ -87,10 +88,10 @@ const typeDefs = gql`
     me: User
     games: [Game]!
     game(gameId: ID!): Game
-    room: (roomId: ID!): Room
-    object: (objectId: ID!): Object    
-    interaction: (interactionId: ID!): Interaction
-    checkUserInteraction: (interactionId: ID!): GameUserInteraction
+    room(roomId: ID!): Room
+    object(objectId: ID!): Object    
+    interaction(interactionId: ID!): Interaction
+    checkUserInteraction(interactionId: ID!): GameUserInteraction
   }
 
   type Mutation {
