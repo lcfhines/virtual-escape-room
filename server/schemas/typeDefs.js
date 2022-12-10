@@ -31,9 +31,11 @@ const typeDefs = gql`
 
   type Object{
     _id: ID
-    type: String  
+    type: String
+    object_id: String  
     is_weapon: Boolean
     room_id: ID
+    name: String
     interactions: [Interaction]
     motives: [Motive]
   }

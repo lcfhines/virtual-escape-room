@@ -6,12 +6,20 @@ const objectSchema = new Schema(
       type: String,
       required: true,
     },
+    object_id: {
+      type: String,
+      required: true
+    },
     is_weapon: {   
       type: Boolean,
       default: false,
     },
     room_id: {
       type: Schema.Types.ObjectId,
+      required: true,
+    },
+    name: {
+      type: String,
       required: true,
     },
     interactions: [
