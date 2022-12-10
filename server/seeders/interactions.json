@@ -1,0 +1,59 @@
+[
+    {
+        "description": "Examine",
+        "interaction_id": "A1",
+        "object_id":"Anna"
+    },
+    {
+        "description": "Who do you think did it?",
+        "interaction_id": "A2",
+        "object_id":"Anna"
+    },
+    {
+        "description": "What do you think about Sir Edmond?",
+        "interaction_id":"A3",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Jeremiah?",
+        "interaction_id": "A4",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Elizabeth?",
+        "interaction_id": "A5",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Matthew?",
+        "interaction_id": "A6",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Marguerite?",
+        "interaction_id": "A7",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "Where were you at the time of the murder?",
+        "interaction_id": "A8",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "S4",
+        "description": "Actually, I heard you were with Elizabeth in the kitchen.",
+        "interaction_id": "A9",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "E3",
+        "description": "Is there something going on between you and Elizabeth?",
+        "interaction_id": "A10",
+        "object_id":"Anna"
+    }
+]
