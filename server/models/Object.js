@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const objectSchema = new Schema(
   {
-    type: {   // 'char' or 'thing'
+    type: {   // 'Character' or 'Thing'
       type: String,
       required: true,
     },

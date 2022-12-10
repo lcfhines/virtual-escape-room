@@ -26,14 +26,17 @@ const typeDefs = gql`
     title: String
     description: String
     game_id: ID
+    objects: [Object]
   }
 
   type Object{
     _id: ID
-    type: String
+    type: String  
     is_weapon: Boolean
     description: String
     room_id: ID
+    interactions: [Interaction]
+    motives: [Motive]
   }
 
   type Interaction{
@@ -41,6 +44,7 @@ const typeDefs = gql`
     display_if_visited_interaction_id: ID
     description: String
     object_id: ID
+    reactions: [Reaction]
   }
 
   type Reaction{
@@ -80,7 +84,8 @@ const typeDefs = gql`
     games: [Game]!
     game(gameId: ID!): Game
     room: (roomId: ID!): Room
-
+    object: (objectId: ID!): Object    
+    interaction: (interactionId: ID!): Interaction     
   }
 
   type Mutation {
@@ -89,6 +94,7 @@ const typeDefs = gql`
     startGame()
   }
 `;
-//start game in mutation will wipe out game user interaction story
+//start game in mutation will wipe out game user interaction table for that userId and start coutndown timer, switch room, click on object
+//
 
 module.exports = typeDefs;
