@@ -67,7 +67,7 @@ const typeDefs = gql`
   type Motive{
     _id: ID
     description: String
-    object_id: ID
+    reaction_id: ID
   }
 
   type Solution{
