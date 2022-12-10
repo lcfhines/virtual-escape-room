@@ -6,6 +6,10 @@ const roomSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    room_id: {
+      type: Number,
+      required: true,
+    },
     title: {
       type: String,
       required: true,
