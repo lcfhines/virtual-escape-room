@@ -138,10 +138,11 @@ table td{
 
 /* rules */
 
-#instruction ,#rule {
+#instruction ,#rule,#room-desc {
      background-color: lightgray;
      width: 75vw;
      margin: 0 auto;
+     padding: 10px;
 }
 
 #instruction li,#rule li{
@@ -192,4 +193,8 @@ table td{
 #room{
      display: flex;
      justify-content: space-evenly;
+}
+
+#room-desc{
+
 }
