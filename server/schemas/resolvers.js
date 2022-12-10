@@ -38,8 +38,8 @@ const resolvers = {
       },
       checkUserInteraction: async (parent, { interactionId }) => {
       return GameUserInteraction.findOne({ interactionId: interactionId });
-    },
-  }
+      },
+  },
 
   Mutation: {
     addUser: async (parent, { first_name, last_name, email, password }) => {
