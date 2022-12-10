@@ -1,8 +1,15 @@
 [
+
     {
-        "is_default": "",
-        "title": "",
-        "description": "",
+        "is_default": "true",
+        "title": "Entrance-Hall",
+        "description": "Upon entering the entrance hall you see the constable, looking at you suspiciously. He stands in front of a large door with tobacco leaves carved into it. Opposite the door is a large staircase that leads to the second level. The railing on the left side of it has been destroyed with the remnants lying on the ground below it. Moving further into the house you can see doors that lead to every room on the ground level.  ",
+        "game_id": "1"
+    },
+    {
+        "is_default": "false",
+        "title": "Study",
+        "description": "Description: Upon entering the study, you are hit with the rich fragrance of Mahogany, and old books. The wall to your right is lined with bookshelves,containing a large variety of leather-bound books, with various artifacts dispersed amongst the shelves. On the opposite wall there is a large stone fireplace with a table in front situated between two large leather chairs. Atop the table are a pair of lowball glasses. The first glass has a smudge of red lipstick on the rim and appears to be only half- finished where the second is empty but some residue remains from a recently finished drink.  Lying between the glasses is a quill, bloodied at the top, but clean at the point. In front of the chairs, sprawled across the priceless oriental rug is the body of Jameson lying face up in a pool of blood. Opposite the door hangs a large portrait of the previous lady of the house. In front of the painting stands Sir Edmund, staring up at the painting swirling the remnants of his own drink in a glass. Situated below the painting is a large desk, scattered with documents. Upon closer examination it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss. Turning away from the desk one sees a length of wire lying on the ground curiously snaking throughout the room.",
         "game_id": ""
     }
 ]
