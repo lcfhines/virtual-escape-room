@@ -17,6 +17,7 @@ const typeDefs = gql`
     title: String
     story_line: String
     time_limit: Int
+    rooms:[Room]
   }
 
   type Room {
@@ -76,11 +77,18 @@ const typeDefs = gql`
   type Query {
     users: [User]!
     user(userId: ID!): User
+    games: [Game]!
+    game(gameId: ID!): Game
+    room: (roomId: ID!): Room
+
   }
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    startGame()
   }
 `;
+//start game in mutation will wipe out game user interaction story
 
 module.exports = typeDefs;
