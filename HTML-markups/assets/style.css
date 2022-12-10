@@ -73,9 +73,9 @@ footer{
 }
 
 
-/* intro.html */
+/* game.html */
 
-#challenge1{
+#intro{
      text-align: center;
      padding: 50px;
      width:200px;
@@ -83,7 +83,7 @@ footer{
      background-color:lightgray;
 }
 
-#start{
+#start, #solve{
      padding: 10px;
      background-color:green;
      width: 150px;
@@ -97,6 +97,11 @@ footer{
 
 }
 
+#leader{
+     text-align: center;
+     width: 30vw;
+     margin: 0 auto;  
+}
 /* challenges.html */
 
 
@@ -133,10 +138,11 @@ table td{
 
 /* rules */
 
-#instruction ,#rule {
+#instruction ,#rule,#room-desc {
      background-color: lightgray;
      width: 75vw;
      margin: 0 auto;
+     padding: 10px;
 }
 
 #instruction li,#rule li{
@@ -151,5 +157,41 @@ table td{
 
 #screenshot img{
      max-width: 350px;
-     max-width: 350px;
+     max-height: 350px;
+}
+
+
+/* room.html */
+
+#object{
+     width:90vw;
+     margin: 0 auto;
+}
+
+.row{
+     display: flex;
+     align-items:center;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+
+
+#object img{
+     width: 200px;
+     margin:20px;
+}
+
+#character{
+     margin-top: 25px;
+     width: 80vw;
+     margin: 20px auto;
+}
+
+#character img{
+     border-radius: 50%;
+}
+
+#room{
+     display: flex;
+     justify-content: space-evenly;
 }

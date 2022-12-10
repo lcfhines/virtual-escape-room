@@ -15,6 +15,7 @@ const typeDefs = gql`
   type Game {
     _id: ID
     title: String
+    game_id: Int
     story_line: String
     time_limit: Int
     rooms: [Room]
@@ -23,10 +24,10 @@ const typeDefs = gql`
   type Room {
     _id: ID
     is_default: Boolean
-    room_id: Number
+    room_id: Int
     title: String
     description: String
-    game_id: ID
+    game_id: Int
     objects: [Object]
   }
 
@@ -35,7 +36,7 @@ const typeDefs = gql`
     type: String
     object_id: String  
     is_weapon: Boolean
-    room_id: ID
+    room_id: Int
     name: String
     interactions: [Interaction]
     motives: [Motive]
@@ -44,17 +45,10 @@ const typeDefs = gql`
   type Interaction{
     _id: ID
     interaction_id: String
-    display_if_visited_interaction_id: ID
-    interaction_id: String
+    display_if_visited_interaction_id: String
     description: String
-    object_id: ID
-    reactions: [Reaction]
-  }
-
-  type Reaction{
-    _id: ID
-    description: String
-    interaction_id: ID
+    object_id: String
+    reaction: String
   }
 
   type GameUserInteraction{
@@ -87,11 +81,11 @@ const typeDefs = gql`
     user(userId: ID!): User
     me: User
     games: [Game]!
-    game(gameId: ID!): Game
-    room(roomId: ID!): Room
-    object(objectId: ID!): Object    
-    interaction(interactionId: ID!): Interaction
-    checkUserInteraction(interactionId: ID!): GameUserInteraction
+    game(game_id: Int!): Game
+    room(roomId: Int!): Room
+    object(objectId: String!): Object    
+    interaction(interactionId: String!): Interaction
+    checkUserInteraction(interactionId: String!): GameUserInteraction
   }
 
   type Mutation {

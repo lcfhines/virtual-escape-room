@@ -10,10 +10,6 @@ const interactionSchema = new Schema(
     display_if_visited_interaction_id: {  
       type: Schema.Types.ObjectId,
     },
-    interaction_id:{
-      type: String,
-      required: true
-    },
     description: {
       type: String,
       required: true,
@@ -23,7 +19,8 @@ const interactionSchema = new Schema(
       required: true,
     },
     reaction: {
-      type: reactionSchema
+      type: String,
+      required: true
     }
   }
 );

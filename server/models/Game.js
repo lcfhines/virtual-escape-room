@@ -6,6 +6,10 @@ const gameSchema = new Schema(
       type: String,
       required: true,
     },
+    game_id: {
+      type: Number,
+      required: true
+    },
     story_line: {
       type: String,
       required: true,
