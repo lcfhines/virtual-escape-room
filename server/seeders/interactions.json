@@ -1,0 +1,114 @@
+[
+    {
+        "description": "Examine",
+        "interaction_id": "A1",
+        "object_id":"Anna",
+        "reaction:": {
+            "description": "Upon closer examination Annabelle is a beautiful woman. She is dressed for a party, wearing a bright yellow gown, white elbow length gloves and a pair of white slippers. Her hands have never known a day of labor. She carries on her face a practiced neutral expression. If it weren't for her hidden glances towards Elizabeth it would seem she is completely unaware of tonights events."
+        }
+    },
+    {
+        "description": "Who do you think did it?",
+        "interaction_id": "A2",
+        "object_id":"Anna"
+    },
+    {
+        "description": "What do you think about Sir Edmond?",
+        "interaction_id":"A3",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Jeremiah?",
+        "interaction_id": "A4",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Elizabeth?",
+        "interaction_id": "A5",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Matthew?",
+        "interaction_id": "A6",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "What do you think about Marguerite?",
+        "interaction_id": "A7",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "",
+        "description": "Where were you at the time of the murder?",
+        "interaction_id": "A8",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "S4",
+        "description": "Actually, I heard you were with Elizabeth in the kitchen.",
+        "interaction_id": "A9",
+        "object_id":"Anna"
+    },
+    {
+        "display_if_visited_interaction_id": "E3",
+        "description": "Is there something going on between you and Elizabeth?",
+        "interaction_id": "A10",
+        "object_id":"Anna"
+    },
+    {
+        "description": "Examine",
+        "interaction_id": "S1",
+        "object_id":"SirE"
+        
+    },
+    {
+
+        "description": "What brings you here from Britain?",
+        "interaction_id": "S2",
+        "object_id":"SirE"
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "S3",
+        "object_id":"SirE"
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "S4",
+        "object_id":"SirE"
+    },
+    {
+        "description": "What do you think of Jeremiah?",
+        "interaction_id": "S5",
+        "object_id":"SirE"
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "S6",
+        "object_id":"SirE"
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "S7",
+        "object_id":"SirE"
+    },
+    {
+        "display_if_visited_interaction_id": "M2",
+        "description": "Tell me about your hunting trips with Matthew.",
+        "interaction_id": "S8",
+        "object_id":"SirE"
+    },
+    {
+        "display_if_visited_interaction_id": "B8",
+        "description": "I have a question about arrows.",
+        "interaction_id": "S9",
+        "object_id":"SirE"
+    },
+    {
+        
+    }
+]

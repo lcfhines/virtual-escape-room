@@ -19,7 +19,8 @@ const interactionSchema = new Schema(
       required: true,
     },
     reaction: {
-      type: reactionSchema
+      type: String,
+      required: true
     }
   }
 );
