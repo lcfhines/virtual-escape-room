@@ -1,21 +1,19 @@
 const { Schema, model } = require('mongoose');
 
-const interactionSchema = new Schema(
+const reactionSchema = new Schema(
   {
-    display_if_visited_interaction_id: {  
-      type: Schema.Types.ObjectId,
-    },
+   
     description: {
       type: String,
       required: true,
     },
-    object_id: {
+    interaction_id: {
       type: Schema.Types.ObjectId,
       required: true,
     },
   }
 );
 
-const Interaction = model('Interaction', interactionSchema);
+const Reaction = model('Reaction', reactionSchema);
 
-module.exports = Interaction;
+module.exports = Reaction;
