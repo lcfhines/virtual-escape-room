@@ -179,6 +179,16 @@ table td{
      margin:20px;
 }
 
+#character{
+     margin-top: 25px;
+     width: 80vw;
+     margin: 20px auto;
+}
+
+#character img{
+     border-radius: 50%;
+}
+
 #room{
      display: flex;
      justify-content: space-evenly;
