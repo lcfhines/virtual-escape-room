@@ -6,6 +6,10 @@ const objectSchema = new Schema(
       type: String,
       required: true,
     },
+    object_id: {
+      type: String,
+      required: true
+    },
     is_weapon: {   
       type: Boolean,
       default: false,
