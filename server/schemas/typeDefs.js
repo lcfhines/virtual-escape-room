@@ -81,6 +81,7 @@ const typeDefs = gql`
   type Query {
     users: [User]!
     user(userId: ID!): User
+    me: User
     games: [Game]!
     game(gameId: ID!): Game
     room: (roomId: ID!): Room

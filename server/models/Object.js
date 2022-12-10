@@ -18,6 +18,12 @@ const objectSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
+    interactions: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Interaction'
+      }
+    ]
   }
 );
 

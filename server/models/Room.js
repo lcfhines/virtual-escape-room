@@ -18,6 +18,12 @@ const roomSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
+    objects: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Object'
+      }
+    ]
 
   }
 );
