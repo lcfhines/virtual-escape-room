@@ -10,7 +10,7 @@ const motiveSchema = new Schema(
       type: String,
       required: true,
     },
-    object_id: {
+    interaction_id: {
       type: String,
       required: true,
     },

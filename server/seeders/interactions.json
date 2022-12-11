@@ -2,113 +2,292 @@
     {
         "description": "Examine",
         "interaction_id": "A1",
-        "object_id":"Anna",
-        "reaction:": {
+        "object_id": "Anna",
+        "reaction": {
             "description": "Upon closer examination Annabelle is a beautiful woman. She is dressed for a party, wearing a bright yellow gown, white elbow length gloves and a pair of white slippers. Her hands have never known a day of labor. She carries on her face a practiced neutral expression. If it weren't for her hidden glances towards Elizabeth it would seem she is completely unaware of tonights events."
         }
     },
     {
         "description": "Who do you think did it?",
         "interaction_id": "A2",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "Jeremiah, who else? The man has been living here alone for decades, he's obviously crazy. He wasn't happy about the sale of the house."
+        }
     },
     {
-        "description": "What do you think about Sir Edmond?",
-        "interaction_id":"A3",
-        "object_id":"Anna"
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "A3",
+        "object_id": "Anna",
+        "reaction": {
+            "description": "He's a long time friend of Jameson, but I hardly know him. He's been galavanting around the world for as long as I've known Jameson"
+        }
     },
     {
         "display_if_visited_interaction_id": "",
-        "description": "What do you think about Jeremiah?",
+        "description": "What do you think of Jeremiah?",
         "interaction_id": "A4",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "He murdered my fiance. I just know it"
+        }
     },
     {
         "display_if_visited_interaction_id": "",
-        "description": "What do you think about Elizabeth?",
+        "description": "What do you think of Elizabeth?",
         "interaction_id": "A5",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "She's been a ray of sunshine in my life. Sure she has something of sibling rivalry with Jameson, but what brother and sister don't? She's smart and witty and I was so looking forward to being a part of her family."
+        }
     },
     {
         "display_if_visited_interaction_id": "",
-        "description": "What do you think about Matthew?",
+        "description": "What do you think of Matthew?",
         "interaction_id": "A6",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "Oh that weasel? A scummy layabout who's done nothing for my fiance's business, but still demands 50% ownership. I don't know what Jameson saw in him"
+        }
     },
     {
         "display_if_visited_interaction_id": "",
-        "description": "What do you think about Marguerite?",
+        "description": "What do you think of Marguerite?",
         "interaction_id": "A7",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "She's fun when she's coherent at least. Good luck making any sense of her after the first bottle, the poor dear. She could use a cup of coffee, I'd wager."
+        }
     },
     {
         "display_if_visited_interaction_id": "",
         "description": "Where were you at the time of the murder?",
         "interaction_id": "A8",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "I was powdering my nose."
+        }
     },
     {
         "display_if_visited_interaction_id": "S4",
         "description": "Actually, I heard you were with Elizabeth in the kitchen.",
         "interaction_id": "A9",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "Is it a crime for two women to have a conversation? I just happend to run into her on the way to the bathroom."
+        }
     },
     {
         "display_if_visited_interaction_id": "E3",
         "description": "Is there something going on between you and Elizabeth?",
         "interaction_id": "A10",
-        "object_id":"Anna"
+        "object_id": "Anna",
+        "reaction": {
+            "description": "Is it really that obvious? We've been having an affair for months now. Alas, my marriage to Jameson would have made things incredibly complicated. Not that I would murder him over that!"
+        }
     },
     {
         "description": "Examine",
         "interaction_id": "S1",
-        "object_id":"SirE"
-        
+        "object_id": "SirE",
+        "reaction": {
+            "description": "Upon closer examination you can't decide if Sir Edmond would be more at home bumping elbows with the posh intellectuals of Oxford or stalking big cats in Africa. He's dressed in a tailored three piece suit. Hanging from his pocket is a gold chain attached to a pocket watch. On his head is a topper that makes the impressive man appear to be a giant. "
+        }
     },
     {
-
         "description": "What brings you here from Britain?",
         "interaction_id": "S2",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "The sword of St. Thomas! Though that is something of a misnomer, as it has little religious significance. But to me it means the world. It's a priceless Graham family heirloom passed down from my most distant ancestors who fought alongside William the Conqueror himself! Priceless jewels line the hilt and sheath, and I'm told it was truly a sight to behold. Alas, my great grandfather was something of a drunkard and a foolhardy gambler, and he bet it away over a game of cards.  I've been searching for a long time but at last I believe I've found it, somewhere here at Llewellyn Manor. What good fortune that my friend had happened to purchase the very same manor himself. God rest his soul."
+        }
     },
     {
         "description": "What do you think of Annabelle?",
         "interaction_id": "S3",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "I've hardly had the chance to make her acquaintance but she seems a fine lady. She would have made a good wife to poor Jameson."
+        }
     },
     {
         "description": "What do you think of Elizabeth?",
         "interaction_id": "S4",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "A jealous, vindictive shrew. She could never forgive her family for passing over her in the inheritance and has held a grudge against her brother ever since. I saw her in the kitchen with Annabelle around the supposed time of the murder no doubt trying to turn her against her former fiance."
+        }
     },
     {
         "description": "What do you think of Jeremiah?",
         "interaction_id": "S5",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "Who? The groundskeeper? I haven't thought much of him at all."
+        }
     },
     {
         "description": "What do you think of Matthew?",
         "interaction_id": "S6",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "Oh he's a wonderful friend. In fact it was he who introduced me to Jameson in the first place. He and I were old Oxford chums."
+        }
     },
     {
         "description": "What do you think of Marguerite?",
         "interaction_id": "S7",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "The woman takes to drink like a fish to water. It was hard to tell if she was dancing earlier or just trying to walk a straight line to the bathroom."
+        }
     },
     {
         "display_if_visited_interaction_id": "M2",
         "description": "Tell me about your hunting trips with Matthew.",
         "interaction_id": "S8",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "Oh yes Matthew and I loved to go on safari. Was there ever a man who fancied the hunt as much as he? I would think not! Truly a skilled trap maker if there ever was one. Given the right tools, I'm certain he'd fashion a snare or two to give that dastardly criminal whatfor."
+        }
     },
     {
         "display_if_visited_interaction_id": "B8",
         "description": "I have a question about arrows.",
         "interaction_id": "S9",
-        "object_id":"SirE"
+        "object_id": "SirE",
+        "reaction": {
+            "description": "It sounds like you're talking about a crossbow bolt, not an arrow. Matthew uses crossbow-like mechanisms from time to time in his traps."
+        }
     },
     {
-        
+        "description": "Examine",
+        "interaction_id": "M1",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
+        }
+    },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "M2",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "Edmond and I go way back. Graduated Oxford together. I set up shop here on this side of the Atlantic while he set off adventuring to all sorts of parts unknown. Still from time to  time I will join him on a hunting excursion. The man is an incredible shot with a bow. A bit greedy for his own good though."
+        }
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "M3",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "A positively dull and boring woman. Not a spark of life in her at all. I don't see why Jameson would ever agree to marry her."
+        }
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "M4",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "She's been rather aggressive towards any of her previous suitors. One might think she had no interest at all in becoming a bride herself, save for perhaps in a so-called Boston marriage."
+        }
+    },
+    {
+        "description": "What do you think of Jeremiah?",
+        "interaction_id": "M5",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "The man has lived alone on the manor grounds for decades. The  locals tell me he comes into town once a fortnight for groceries and such. Keeps to himself. I wouldn't put it past him to murder someone though."
+        }
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "M6",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "You'd be hard pressed to find in her a moment of sobriety. I saw her conversing with a portrait in the hall for a good five minutes this evening."
+        }
+    },
+    {
+        "display_if_visited_interaction_id":"S8",
+        "description": "I hear you're a skilled trap maker",
+        "interaction_id": "M7",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "Some have called me that, yes.  My traps are as lethal as they are efficient. Pray you don't find yourself on the receiving end of one."
+        }
+    },
+    {
+        "display_if_visited_interaction_id":"J7",
+        "description": "Are you going after the sword of St. Thomas?",
+        "interaction_id": "M8",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "It's a rather valuable relic. I'm doing whatever I can to make sure I am the first to find it. Bless his heart, but I couldn't... can't let Sir Edmond get it first."
+        }
+    },
+    {
+        "description": "Examine",
+        "interaction_id": "E1",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": ""
+        }
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "E2",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "The one good decision my brother has ever made. I feel deeply for her, being saddled with a burden such as Jameson, but I suppose that's a silver-lining to this tragedy. I must admit I myself have become somewhat enamoured with her. Her delicate features, charming smile, angelic demeanor... she's far too good for that no-good brother of mine."
+        }
+    },
+    {
+        "display_if_visited_interaction_id":"M4",
+        "description": "What do you really think of Annabelle?",
+        "interaction_id": "E3",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "Are you insinuating something? I suppose  there's little use trying to hide it. She and I have grown exceptionally close during her time courting my brother. It is a condemnation of our cruel and unforgiving creator and the world we live in that our love is forbidden. But I would never kill Jameson for that. I would never be so callous as to murder my own brother."
+        }
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "E4",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "A scrawny lazybones who hasn't the slightest sense for business. That said, he has a mind for engineering and filed a patent or two that helped steady our company's cashflow. I hear he's been scheming something recently to make a quick buck for the company."
+        }
+    },
+    {
+        "description": "What do you think of Jeremiah?",
+        "interaction_id": "E5",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "The groundskeeper? I have a hard time discerning what that man is thinking. He's got a really unnerving stare."
+        }
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "E6",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "The poor woman was three sheets to the wind before she even showed up to the party. That maid, Olga, ought to be ashamed of herself for serving anyone drinks who's already so completely blotto."
+        }
+    },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "E7",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "He's a pompous blowhard who touts his esteemed family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
+        }
+    },
+    {
+        "description": "Examine",
+        "interaction_id": "M1",
+        "object_id": "Matt",
+        "reaction": {
+            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
+        }
     }
-]

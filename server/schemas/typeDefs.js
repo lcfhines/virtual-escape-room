@@ -38,7 +38,6 @@ const typeDefs = gql`
     room_id: Int
     name: String
     interactions: [Interaction]
-    motives: [Motive]
   }
 
   type Interaction{
@@ -48,6 +47,7 @@ const typeDefs = gql`
     description: String
     object_id: String
     reaction: String
+    motives: [Motive]
   }
 
   type GameUserInteraction{
@@ -60,7 +60,8 @@ const typeDefs = gql`
   type Motive{
     _id: ID
     description: String
-    object_id: String
+    motive_id: String
+    interaction_id: String
   }
 
   type Solution{

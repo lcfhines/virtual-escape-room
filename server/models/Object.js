@@ -28,12 +28,6 @@ const objectSchema = new Schema(
         ref: 'Interaction'
       }
     ],
-    motives: [
-      {
-        type:Schema.Types.ObjectId,
-        ref: 'Motive'
-      }
-    ]
   }
 );
 
