@@ -4,6 +4,13 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id });
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
     games: async () => {
       return Game.find({});
     },
@@ -70,15 +77,6 @@ const resolvers = {
       solutions: async () => {
         return Solution.find({});
       },
-  
-      // By adding context to our query, we can retrieve the logged in user without specifically searching for them
-      me: async (parent, args, context) => {
-        if (context.user) {
-          return User.findOne({ _id: context.user._id });
-        }
-        throw new AuthenticationError('You need to be logged in!');
-      },
-      
   },
 
   Mutation: {
@@ -87,6 +85,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -102,6 +101,10 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+
+    startGame: async (parent, _, context) => {
+     return await GameUserInteraction.deleteMany({ user_id: context.user._id });
     },
   },
 } 

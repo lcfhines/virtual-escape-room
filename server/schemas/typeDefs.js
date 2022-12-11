@@ -79,9 +79,9 @@ const typeDefs = gql`
     games: [Game]!
     game(gameId: Int!): Game 
     room(roomId: Int!): Room 
-    objectInteractions(objectId: String!): Object  
+    objectInteractions(objectId: String!): [Interaction]!  
     me: User
-    
+
     users: [User]!
     rooms: [Room]!
     objects: [Object]!
@@ -95,7 +95,8 @@ const typeDefs = gql`
     addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     
-    startGame(user_id: ID!): Game  -- wipe out GameUserInteractions
+    startGame(): [GameUserInteraction]  
+
     addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction -- adds to gameuserinteractions
     
     checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Boolean
