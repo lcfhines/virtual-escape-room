@@ -43,9 +43,6 @@ const GameList = ({ games }) => {
             </div>
         );
       }
-    
-
-
 };
 
 export default GameList;
