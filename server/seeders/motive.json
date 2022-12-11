@@ -10,7 +10,7 @@
         "interaction_id": "A10"
     },
     {
-        "description": "He was killed so that MMatthew could take the sword for himself.",
+        "description": "He was killed so that Matthew could take the sword for himself.",
         "motive_id": "swo1",
         "interaction_id": "M8"
     },
@@ -28,20 +28,10 @@
         "description": "He was killed so that Elizabeth could inherit the family fortune",
         "motive_id": "inhe",
         "interaction_id": "S4"
+    },
+    {
+        "description": "He was killed by Marguerite in her drunken stupor because she's an absolute menace.",
+        "motive_id": "drun",
+        "interaction_id": "B7"
     }
 ]
-// {
-//     "description": "",
-//     "motive_id": "",
-//     "interaction_id": ""
-// },
-// {
-//     "description": "",
-//     "motive_id": "",
-//     "interaction_id": ""
-// },
-// {
-//     "description": "",
-//     "motive_id": "",
-//     "interaction_id": ""
-// },
