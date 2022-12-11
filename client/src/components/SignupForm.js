@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
+// import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const SignupForm = () => {
@@ -12,7 +12,7 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  // const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -29,16 +29,16 @@ const SignupForm = () => {
       event.stopPropagation();
     }
 
-    try {
-      const { data } = await addUser({
-        variables: { ...userFormData },
-      });
+    // try {
+    // //   const { data } = await addUser({
+    // //     variables: { ...userFormData },
+    // //   });
 
-      Auth.login(data.addUser.token);
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
-    }
+    //   Auth.login(data.addUser.token);
+    // } catch (err) {
+    //   console.error(err);
+    //   setShowAlert(true);
+    // }
 
     setUserFormData({
       email: '',
@@ -56,16 +56,29 @@ const SignupForm = () => {
         </Alert>
 
         <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
+          <Form.Label htmlFor='firstname'>first name</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Your username'
-            name='username'
+            placeholder='Your first name'
+            name='firstname'
             onChange={handleInputChange}
-            value={userFormData.username}
+            value={userFormData.firstname}
             required
           />
-          <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>First name is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='lastname'>Last name</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your lastname'
+            name='lastname'
+            onChange={handleInputChange}
+            value={userFormData.lastname}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Last name is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
@@ -94,7 +107,7 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(userFormData.username && userFormData.email && userFormData.password)}
+          disabled={!(userFormData.firstname && userFormData.lastname && userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
