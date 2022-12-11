@@ -15,7 +15,7 @@ const objectSchema = new Schema(
       default: false,
     },
     room_id: {
-      type: Schema.Types.ObjectId,
+      type: Number,
       required: true,
     },
     name: {
@@ -27,7 +27,7 @@ const objectSchema = new Schema(
         type:Schema.Types.ObjectId,
         ref: 'Interaction'
       }
-    ]
+    ],
   }
 );
 
