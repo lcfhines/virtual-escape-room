@@ -104,7 +104,34 @@ const resolvers = {
     },
 
     startGame: async (parent, _, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+
      return await GameUserInteraction.deleteMany({ user_id: context.user._id });
+    },
+
+    addGameUserInteraction: async (parent, {interaction_id}, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+
+      // check if already interacted
+      const interaction = GameUserInteraction.findOne({
+        user_id: context.user._id,
+        interaction_id
+      });
+
+      // create only if not interacted yet
+      let userInteraction = null;
+      if (!interaction) {
+        userInteraction = await GameUserInteraction.create({ 
+          user_id: context.user._id,
+          interaction_id 
+        });
+      }
+
+      return userInteraction;
     },
   },
 } 

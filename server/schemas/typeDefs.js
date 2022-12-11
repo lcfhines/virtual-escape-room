@@ -97,7 +97,7 @@ const typeDefs = gql`
     
     startGame(): [GameUserInteraction]  
 
-    addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction -- adds to gameuserinteractions
+    addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
     
     checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Boolean
 
