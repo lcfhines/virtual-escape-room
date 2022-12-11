@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER , GET_ME } from '../utils/queries';
@@ -8,31 +8,25 @@ import Auth from '../utils/auth';
 const GameList = ({ games }) => {
     const { _id: userParam } = useParams();
 
-    const { loading, data } = useQuery(userParam ? QUERY_USER : GET_ME, {
+    const { data } = useQuery(userParam ? QUERY_USER : GET_ME, {
       variables: { _id: userParam },
     });
   
     const user = data?.me || data?.user || {};
 
     if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
-        // if (!games.length) {
-        //     return <h3>No games available yet!</h3>;
-        // }
+        // change link to go to the game page based on game._id
         return (
             <div>
             {games && games.map((game) => (
                 <div key={game._id}>
-                    <Link to={}>
+                    <Link to={`/rules`}>
                         <p>{games.title}</p>
                     </Link>
                 </div>
             ))}
             </div>
         )
-      }
-
-      if (loading) {
-        return <div>Loading...</div>;
       }
 
       if (!user?._id) {
