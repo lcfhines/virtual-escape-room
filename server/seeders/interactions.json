@@ -239,7 +239,7 @@
         "interaction_id": "E1",
         "object_id": "Eliz",
         "reaction": {
-            "description": ""
+            "description": "Elizabeth is a severe looking woman, but rather than detracting from her beauty it intensifies it. "
         }
     },
     {
@@ -305,7 +305,7 @@
         "interaction_id": "J1",
         "object_id": "Jere",
         "reaction": {
-            "description": ""
+            "description": "Jeremiah is a weathered man. His hands are rough from a lifetime of hard work. His skin is blistered from the sun's cruel treatment of people who survive under its scornful glare. His clothes are dirty from topsoil. He stares at you although you were a pesky weed blocking out sunlight for his most prized plants."
         }
     },
     {
@@ -362,7 +362,7 @@
         "interaction_id": "B1",
         "object_id": "Marg",
         "reaction": {
-            "description": "She mumbles something about him being lucky he wasn't around but it's too incoherent to make out."
+            "description": "Marguerite has all the trappings of a wealthy and charming woman, and I'm sure that's how she looks when she exits her home. Currently, she looks like a high-class courtisan who was stuck on the path during a gale. Her bright red lipstick is smudged nearly coming halfway up to her nose. Her clothes are polka-dotted with stains from every part of the house including blood on her lower leg. The woman is a mess"
         }
     },
     {
@@ -543,25 +543,105 @@
             "description": "Upon closer examination of the coffee cup you see it was clearly intended to sober up miss Featherbottom, you place it in front of her and she starts to drink. set coffee cup to true?"
         }
     },
+    {
+        "description": "Examine Fern Bed",
+        "interaction_id": "Fb1",
+        "object_id": "fern",
+        "reaction": {
+            "description": "Upon closer examination of the trampled bed of ferns you see a bloodied cloth."
+        }
+    },
+    {
+        "description": "Examine Spade",
+        "interaction_id": "Sp1",
+        "object_id": "spad",
+        "reaction": {
+            "description": "Upon closer examination of the spade you see that the handle is and the end is splintered to a point."
+        }
+    },
+    {
+        "description": "Examine Gravestone",
+        "interaction_id": "Gs1",
+        "object_id": "grav",
+        "reaction": {
+            "description": "Upon closer examination of the gravestone you see it belongs to Mr. Llewellyn, with an epitaph that says here lies a great and generous man. The word bastard is painted over the last word."
+        }
+    },
+    {
+        "description": "Examine Plunger",
+        "interaction_id": "Pl1",
+        "object_id": "plun",
+        "reaction": {
+            "description": "upon closer examination of the plunger, you see a little bit of blood on the handle. You decide to unclog the toilet."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "Pl1",
+        "description": "Examine Arrow",
+        "interaction_id": "Ar1",
+        "object_id": "arro",
+        "reaction": {
+            "description": "Upon closer examination of the now emptied toilet you find an arrow"
+        }
+    },
+    {
+        "description": "Examine Toilet",
+        "interaction_id": "To1",
+        "object_id": "toil",
+        "reaction": {
+            "description": "Upon closer examination of the toilet, It's filled with vomit."
+        }
+    },
+    {
+        "description": "Examine Wine Bottle",
+        "interaction_id": "Bo1",
+        "object_id": "wine",
+        "reaction": {
+            "description": "Upon closer examination of the bottle you find red lipstick on the lip of the bottle."
+        }
+    },
+    {
+        "description": "Examine Mirror",
+        "interaction_id": "Mi1",
+        "object_id": "mirr",
+        "reaction": {
+            "description": "Upon closer examination of the mirror you see that the room is smaller than it should be, as though the adjacent room is bigger than it seems."
+        }
+    },
+    {
+        "description": "Examine Window",
+        "interaction_id": "Wi1",
+        "object_id": "wind",
+        "reaction": {
+            "description": "Upon closer examination of the window, it looks too small for a person to get through, but maybe something else."
+        }
+    },
+    {
+        "description": "Examine Crossbow Mechanism",
+        "interaction_id": "Cm1",
+        "object_id": "cros",
+        "reaction": {
+            "description": "Upon closer examination of the mechanism it's clear that it is a trap of sorts. The wire is connected to a trigger in the study. That trigger causes the crossbow to fire a bolt through a small hole cut into the book-case."
+        }
+    },
+    {
+        "description": "Examine Wall",
+        "interaction_id": "Wa1",
+        "object_id": "empt",
+        "reaction": {
+            "description": "Upon closer examination of the empty space on the wall you see see that a couple days worth of dust replaced the crossbow."
+        }
+    },
+    {
+        "description": "Examine Sword of St. Thomas",
+        "interaction_id": "St2",
+        "object_id": "swor",
+        "reaction": {
+            "description": "Upon closer examination of the sword looks as though it has both shed blood and had blood shed over it."
+        }
+    }
 ]
 
 
 
 
-{
-    "description": "",
-    "interaction_id": "",
-    "object_id": "",
-    "reaction": {
-        "description": ""
-    }
-},
-
-{
-    "description": "",
-    "interaction_id": "",
-    "object_id": "",
-    "reaction": {
-        "description": ""
-    }
-},
