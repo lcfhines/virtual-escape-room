@@ -4,6 +4,22 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    games: async () => {
+      return Game.find({});
+    },
+
+    game: async (parent, { gameId }) => {
+      return Game.findOne({ game_id: gameId }).populate('rooms');
+    },
+
+    room: async (parent, { roomId }) => {
+      return Room.findOne({ room_id: roomId }).populate('objects');
+    },
+    
+    object: async (parent, { objectId }) => {
+      return Object.findOne({ object_id: objectId }).populate('interactions');
+    },
+
       users: async () => {
         return User.find();
       },
@@ -18,20 +34,8 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      games: async () => {
-        return Game.find({}).populate('rooms');
-      },
-  
-      game: async (parent, { game_id }) => {
-        return Game.findOne({ game_id: game_id }).populate('rooms');
-      },
 
-      room: async (parent, { roomId }) => {
-        return Room.findOne({ _id: roomId }).populate('objects');
-      },
-      object: async (parent, { objectId }) => {
-        return Object.findOne({ _id: objectId }).populate('interactions');
-      },
+
 
       interaction: async (parent, { game_id }) => {
         return Interaction.findOne({ _id: game_id });
