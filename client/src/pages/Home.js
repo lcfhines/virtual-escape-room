@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_GAMES } from '../utils/queries';
 import GameList from '../components/GameList';
 
-export default Home = () => {
+const Home = () => {
     const { loading, data } = useQuery(QUERY_GAMES);
     const games = data?.games || [];
 
@@ -22,3 +22,5 @@ export default Home = () => {
         </main>
     );
 }
+
+export default Home;
