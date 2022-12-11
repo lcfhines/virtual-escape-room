@@ -5,7 +5,6 @@ const typeDefs = gql`
     _id: ID
     first_name: String
     last_name: String
-    username: String
     email: String
     password: String
     games_played: Int
@@ -61,7 +60,7 @@ const typeDefs = gql`
   type Motive{
     _id: ID
     description: String
-    reaction_id: ID
+    object_id: String
   }
 
   type Solution{
@@ -89,7 +88,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(name: String!, email: String!, password: String!): Auth
+    addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
+    updateUser(userId: ID!, games_played: Int, best_score: Int): User
     login(email: String!, password: String!): Auth
     startGame(user_id: ID!): Game
     addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction
