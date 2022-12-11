@@ -9,6 +9,7 @@ const interactionSchema = new Schema(
     },
     display_if_visited_interaction_id: {  
       type: String,
+      default: ''
     },
     description: {
       type: String,

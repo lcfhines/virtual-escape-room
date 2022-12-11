@@ -7,8 +7,8 @@ const typeDefs = gql`
     last_name: String
     email: String
     password: String
-    games_played: Int
-    best_score: Int
+    number_of_attempts: Int
+    final_solution_time: Int
   }
 
   type Game {
@@ -52,9 +52,8 @@ const typeDefs = gql`
 
   type GameUserInteraction{
     _id: ID
-    title: String
-    story_line: String
-    time_limit: Int
+    user_id: String
+    interaction_id: String
   }
 
   type Motive{
@@ -77,28 +76,29 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]!
-    user(userId: ID!): User
-    me: User
     games: [Game]!
-    game(game_id: Int!): Game
-    room(roomId: Int!): Room
-    object(objectId: String!): Object    
-    interaction(interactionId: String!): Interaction
-    checkUserInteraction(interactionId: String!): GameUserInteraction
+    game(gameId: Int!): Game 
+    room(roomId: Int!): Room 
+    objectInteractions(objectId: String!): [Interaction]!  
+    me: User
+
+    users: [User]!
+    rooms: [Room]!
+    objects: [Object]!
+    interactions: [Interaction]!
+    gameUserInteractions: [GameUserInteraction]!
+    motives: [Motive]!
+    solutions: [Solution]!
   }
 
   type Mutation {
     addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
-    updateUser(userId: ID!, games_played: Int, best_score: Int): User
     login(email: String!, password: String!): Auth
-    startGame(user_id: ID!): Game
-    addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction
-    checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Boolean
+    startGame(start: Boolean): [GameUserInteraction]  
+    addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
+    checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Solution
+    endGame(solutionTime: Int): User
   }
 `;
-//startGame - start game in mutation will wipe out game user interaction table for that userId and start coutndown timer, switch room, click on object
-// addUserInteraction - add user interaction, Interactions written to game user interaction table
-// checkSolution - check 3 dropdowns (character id, object id and motive id) against background solution table to see if they match and if so we return true or false
 
 module.exports = typeDefs;
