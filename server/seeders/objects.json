@@ -103,6 +103,13 @@
         "description": "documents"
     },
     {
+        "object_id": "glas",
+        "room_id": "2",
+        "type": "thing",
+        "isWeapon": false,
+        "description": "two glasses"
+    },
+    {
         "object_id": "knif",
         "room_id": "3",
         "type": "thing",
@@ -115,6 +122,13 @@
         "type": "thing",
         "isWeapon": false,
         "description": "tray of snacks"
+    },
+    {
+        "object_id": "cloc",
+        "room_id": "4",
+        "type": "thing",
+        "isWeapon": false,
+        "description": "clock"
     },
     {
         "object_id": "shie",

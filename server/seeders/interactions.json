@@ -209,6 +209,14 @@
         }
     },
     {
+        "display_if_visited_interaction_id":"Bd1",
+        "interaction_id":"M9",
+        "object_id": "Matt",
+        "reaction":{
+            "description":"It's true.  He made a rather foolish investment and it nearly sunk the company. But he dipped into his own personal wealth to make up most of the damage. But that hardly constitutes a motive for murder, wouldn't you agree?"
+        }
+    },
+    {
         "display_if_visited_interaction_id":"S8",
         "description": "I hear you're a skilled trap maker",
         "interaction_id": "M7",
@@ -231,7 +239,7 @@
         "interaction_id": "E1",
         "object_id": "Eliz",
         "reaction": {
-            "description": ""
+            "description": "Elizabeth is a severe woman, but rather than detracting from her beauty it intensifies it. She wears her gown like it's a suit. Her eyes reflect her knowledge of the world and the injustice that pervades it."
         }
     },
     {
@@ -280,14 +288,360 @@
         "interaction_id": "E7",
         "object_id": "Eliz",
         "reaction": {
-            "description": "He's a pompous blowhard who touts his esteemed family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
+            "description": "He's a pompous blowhard who touts his 'esteemed' family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
+        }
+    },
+    {
+        "display_if_visited_interaction_id":"Bd1",
+        "description":"I heard your brother lost his company a lot of money.",
+        "interaction_id":"E8",
+        "object_id":"Eliz",
+        "reaction":{
+            "description":"Yes, he made a terrible investment that cost the company dearly. And then he decided to squander a sizable chunk of our family fortune to settle the debt. I would never have been so foolish with our family's inheritance."
         }
     },
     {
         "description": "Examine",
-        "interaction_id": "M1",
-        "object_id": "Matt",
+        "interaction_id": "J1",
+        "object_id": "Jere",
         "reaction": {
-            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
+            "description": "Jeremiah is a weathered man. His hands are rough from a lifetime of hard work. His skin is blistered from the sun's cruel treatment of people who survive under its scornful glare. His clothes are dirty from topsoil. He stares at you although you were a pesky weed blocking out sunlight for his most prized plants."
+        }
+    },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "J2",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "Is he that arrogant Brit? That loudmouth could really stand to hould his tongue for a moment or two."
+        }
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "J3",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "Miss bride-to-be? I hardly know 'er. My condolences, I guess."
+        }
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "J4",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "Oh that guy. Saw him at the general store the other day. Practically followed me back to the mansion. He was fiddling around in the study quite a bit this past week. I wonder what he was doing? Supposedly the study is where the late Lord Llewellyn hid that valuable sword of his."
+        }
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "J5",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "She's mighty pretty, that one. Don't know anything about her though."
+        }
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "J6",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "She's puking all over the damn place, isn't she? Gonna be a real mess to clean."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "M7",
+        "description": "Do you think Matthew could have been setting a trap?",
+        "interaction_id": "J7",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "A trap?  I guess it's possible. Trying to keep other people out? Did he want the sword?"
+        }
+    },
+    {
+        "description": "Examine",
+        "interaction_id": "B1",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "Marguerite has all the trappings of a wealthy and charming woman, and I'm sure that's how she looks when she exits her home. Currently, she looks like a high-class courtisan who was stuck on the path during a gale. Her bright red lipstick is smudged nearly coming halfway up to her nose. Her clothes are polka-dotted with stains from every part of the house including blood on her lower leg. The woman is a mess"
+        }
+    },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "B2",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about him being lucky he wasn't around but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "B3",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about a secret affair but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "B4",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about a sword and Sir Edmond but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "B5",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about money and inheritance but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Jeremiah?",
+        "interaction_id": "B6",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about the death of the late Lord Llewellyn but it's too incoherent to make out."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "Cc1",
+        "description": "Bring her a cup of coffee",
+        "interaction_id": "B7",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "Huh? Oh thank ya... I needed this. I uhhh saw Mistuh Halloway collapsed on the ground with a big 'ol thing jutting out his chest. I tried to help, honest and for true.  But then I thought I'd get in trouble so I threw the arrow thingy in the toilet. Whole thing made me super nautious so I vomitted."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "B7",
+        "description": "Ask her about the arrow",
+        "interaction_id": "B8",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "No idea where it came from. Not like there were any bows or whatever around. Sir Eddy is an archer though. Maybe he could tell ya."
+        }
+    },
+    {
+        "description": "Examine stairs",
+        "interaction_id": "St1",
+        "object_id": "stai",
+        "reaction": {
+            "description": "Upon closer examination of the stairs you see that their integrity has been compromised, and it would be unwise to go up them."
+        }
+    },
+    {
+        "description": "Examine Debris",
+        "interaction_id": "De1",
+        "object_id": "debr",
+        "reaction": {
+            "description": "Upon closer examination of the debris you find shards of glass belonging to a wine bottle."
+        }
+    },
+    {
+        "description": "Examine Large Door",
+        "interaction_id": "Do1",
+        "object_id": "door",
+        "reaction": {
+            "description": "Upon closer examination of the large door you decide there's no way to leave without the constable's approval."
+        }
+    },
+    {
+        "description": "Examine Jameson's Body",
+        "interaction_id": "Jb1",
+        "object_id": "Jame",
+        "reaction":{
+            "description": "Upon closer examination of the body there is an obvious wound from where he was pierced by an object. Any allusions to what could have caused the wound leading to his premature death would require knowledge that you don't have."
+        }
+    },
+    {
+        "description": "Examine Business Documents",
+        "interaction_id": "Bd1",
+        "object_id": "docu",
+        "reaction":{
+            "description": "Upon closer examination it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss"
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "Mi1",
+        "description": "Examine Bookshelf",
+        "object_id": "Bs1",
+        "reaction": {
+            "description": "Upon closer examination you see that one of the books is clearly askew. You put push the book into place and the bookshelf creeks open, and reveals a secret room."
+        }
+    },
+    {
+        "description": "Examine Glasses",
+        "interaction_id": "Tg1",
+        "object_id": "glas",
+        "reaction": {
+            "description": "Upon Closer examination The first glass has a smudge of red lipstick on the rim and appears to be only half- finished where the second is empty but some residue remains from a recently finished drink."
+        }
+    },
+    {
+        "description": "Examine Knife",
+        "interaction_id": "Kn1",
+        "object_id": "knife",
+        "reaction": {
+            "description": "Upon closer examination the knife has chunks of meat sticking to it, they look seasoned."
+        }
+    },
+    {
+        "description": "Examine Tray of Snacks",
+        "interaction_id": "Ts1",
+        "object_id": "tray",
+        "reaction": {
+            "description": "Upon closer examination of the snacks it looks as though none of the snacks have been eaten. It looks like they were never served to guests."
+        }
+    },
+    {
+        "description": "Examine Shield",
+        "interaction_id": "Ss1",
+        "object_id": "shie",
+        "reaction": {
+            "description": "Upon closer examination of the shield it looks as though there used to be two spears mounted behind it."
+        }
+    },
+    {
+        "description": "Examine Letters",
+        "interaction_id": "Le1",
+        "object_id": "lett",
+        "reaction": {
+            "description": "Upon closer examination of the letters you see they're all addressed to Annabelle and one has been torn into pieces."
+        }
+    },
+    {
+        "description": "Examine Fireplace Tools",
+        "interaction_id": "Ft1",
+        "object_id": "fire",
+        "reaction": {
+            "description": "Upon closer examination of the fireplace tools, you find a brook, shovel and claw used to grab logs. It's clearly missing the fireplace poker."
+        }
+    },
+    {
+        "description": "Examine Clocks",
+        "interaction_id": "Cl1",
+        "object_id": "cloc",
+        "reaction": {
+            "description": "Upon closer examination of the clock it looks as though it has been years since it last worked properly."
+        }
+    },
+    {
+        "description": "Examine Ice Pick",
+        "interaction_id": "Ip1",
+        "object_id": "icep",
+        "reaction": {
+            "description": "Upon closer examination of the ice pick you see that that it was only recently driven into the ice block."
+        }
+    },
+    {
+        "description": "Examine Cup of Coffee",
+        "interaction_id": "Cc1",
+        "object_id": "cupo",
+        "reaction": {
+            "description": "Upon closer examination of the coffee cup you see it was clearly intended to sober up miss Featherbottom, you place it in front of her and she starts to drink. set coffee cup to true?"
+        }
+    },
+    {
+        "description": "Examine Fern Bed",
+        "interaction_id": "Fb1",
+        "object_id": "fern",
+        "reaction": {
+            "description": "Upon closer examination of the trampled bed of ferns you see a bloodied cloth."
+        }
+    },
+    {
+        "description": "Examine Spade",
+        "interaction_id": "Sp1",
+        "object_id": "spad",
+        "reaction": {
+            "description": "Upon closer examination of the spade you see that the handle is and the end is splintered to a point."
+        }
+    },
+    {
+        "description": "Examine Gravestone",
+        "interaction_id": "Gs1",
+        "object_id": "grav",
+        "reaction": {
+            "description": "Upon closer examination of the gravestone you see it belongs to Mr. Llewellyn, with an epitaph that says here lies a great and generous man. The word bastard is painted over the last word."
+        }
+    },
+    {
+        "description": "Examine Plunger",
+        "interaction_id": "Pl1",
+        "object_id": "plun",
+        "reaction": {
+            "description": "upon closer examination of the plunger, you see a little bit of blood on the handle. You decide to unclog the toilet."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "Pl1",
+        "description": "Examine Arrow",
+        "interaction_id": "Ar1",
+        "object_id": "arro",
+        "reaction": {
+            "description": "Upon closer examination of the now emptied toilet you find an arrow"
+        }
+    },
+    {
+        "description": "Examine Toilet",
+        "interaction_id": "To1",
+        "object_id": "toil",
+        "reaction": {
+            "description": "Upon closer examination of the toilet, It's filled with vomit."
+        }
+    },
+    {
+        "description": "Examine Wine Bottle",
+        "interaction_id": "Bo1",
+        "object_id": "wine",
+        "reaction": {
+            "description": "Upon closer examination of the bottle you find red lipstick on the lip of the bottle."
+        }
+    },
+    {
+        "description": "Examine Mirror",
+        "interaction_id": "Mi1",
+        "object_id": "mirr",
+        "reaction": {
+            "description": "Upon closer examination of the mirror you see that the room is smaller than it should be, as though the adjacent room is bigger than it seems."
+        }
+    },
+    {
+        "description": "Examine Window",
+        "interaction_id": "Wi1",
+        "object_id": "wind",
+        "reaction": {
+            "description": "Upon closer examination of the window, it looks too small for a person to get through, but maybe something else."
+        }
+    },
+    {
+        "description": "Examine Crossbow Mechanism",
+        "interaction_id": "Cm1",
+        "object_id": "cros",
+        "reaction": {
+            "description": "Upon closer examination of the mechanism it's clear that it is a trap of sorts. The wire is connected to a trigger in the study. That trigger causes the crossbow to fire a bolt through a small hole cut into the book-case."
+        }
+    },
+    {
+        "description": "Examine Wall",
+        "interaction_id": "Wa1",
+        "object_id": "empt",
+        "reaction": {
+            "description": "Upon closer examination of the empty space on the wall you see see that a couple days worth of dust replaced the crossbow."
+        }
+    },
+    {
+        "description": "Examine Sword of St. Thomas",
+        "interaction_id": "St2",
+        "object_id": "swor",
+        "reaction": {
+            "description": "Upon closer examination of the sword looks as though it has both shed blood and had blood shed over it."
         }
     }
+]
+
+
+
+
