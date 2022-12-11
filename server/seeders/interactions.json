@@ -260,11 +260,27 @@
         }
     },
     {
-        "description": "Examine",
-        "interaction_id": "M1",
-        "object_id": "Matt",
+        "description": "What do you think of Jeremiah?",
+        "interaction_id": "E5",
+        "object_id": "Eliz",
         "reaction": {
-            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
+            "description": "The groundskeeper? I have a hard time discerning what that man is thinking. He's got a really unnerving stare."
+        }
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "E6",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "The poor woman was three sheets to the wind before she even showed up to the party. That maid, Olga, ought to be ashamed of herself for serving anyone drinks who's already so completely blotto."
+        }
+    },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "E7",
+        "object_id": "Eliz",
+        "reaction": {
+            "description": "He's a pompous blowhard who touts his esteemed family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
         }
     },
     {
@@ -274,20 +290,4 @@
         "reaction": {
             "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
         }
-    },
-    {
-        "description": "Examine",
-        "interaction_id": "M1",
-        "object_id": "Matt",
-        "reaction": {
-            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
-        }
-    },
-    {
-        "description": "Examine",
-        "interaction_id": "M1",
-        "object_id": "Matt",
-        "reaction": {
-            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
-        }
-    },
+    }
