@@ -94,7 +94,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    startGame(): [GameUserInteraction]  
+    startGame(start: Boolean): [GameUserInteraction]  
     addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
     checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Solution
     endGame(solutionTime: Int): User
