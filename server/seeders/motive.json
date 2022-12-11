@@ -1,5 +1,47 @@
 [
     {
-        "description": ""
+        "description": "He was killed so that Elizabeth could have Annabelle to themself.",
+        "motive_id": "lez1",
+        "interaction_id": "E3"
+    },
+    {
+        "description": "He was killed so that Annabelle could continue her relationship with Jameson",
+        "motive_id": "lez2",
+        "interaction_id": "A10"
+    },
+    {
+        "description": "He was killed so that MMatthew could take the sword for himself.",
+        "motive_id": "swo1",
+        "interaction_id": "M8"
+    },
+    {
+        "description": "He was killed so that Sir Edmond could take the sword.",
+        "motive_id": "trhu",
+        "interaction_id": "S2"
+    },
+    {
+        "description": "He was killed because he was angry that Jameson bought the house",
+        "motive_id": "hous",
+        "interaction_id": "A2"
+    },
+    {
+        "description": "He was killed so that Elizabeth could inherit the family fortune",
+        "motive_id": "inhe",
+        "interaction_id": "S4"
     }
 ]
+{
+    "description": "",
+    "motive_id": "",
+    "interaction_id": ""
+},
+{
+    "description": "",
+    "motive_id": "",
+    "interaction_id": ""
+},
+{
+    "description": "",
+    "motive_id": "",
+    "interaction_id": ""
+},
