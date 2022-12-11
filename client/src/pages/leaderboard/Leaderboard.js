@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useUserContext } from './UserContext';
 
+
 export default function Leaderboard(){
 const { users } = useUserContext();
 
