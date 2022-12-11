@@ -13,3 +13,14 @@ export const GET_ME = gql`
         }
     }
 `;
+
+export const QUERY_GAMES = gql`
+query Games {
+    games {
+      _id
+      title
+      game_id
+      story_line
+      time_limit
+    } 
+`;
