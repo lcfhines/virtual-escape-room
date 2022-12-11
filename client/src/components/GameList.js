@@ -18,9 +18,9 @@ const GameList = ({ games }) => {
         // change link to go to the game page based on game._id
         return (
             <div>
-            {games && games.map((game) => (
-                <div key={game._id}>
-                    <Link to={`/rules`}>
+            {games && games.map((game, idx) => (
+                <div key={idx}>
+                    <Link to={`/games/${game.gameId}`}>
                         <p>{games.title}</p>
                     </Link>
                 </div>
