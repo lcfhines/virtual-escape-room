@@ -280,14 +280,130 @@
         "interaction_id": "E7",
         "object_id": "Eliz",
         "reaction": {
-            "description": "He's a pompous blowhard who touts his esteemed family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
+            "description": "He's a pompous blowhard who touts his 'esteemed' family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
         }
     },
     {
         "description": "Examine",
-        "interaction_id": "M1",
-        "object_id": "Matt",
+        "interaction_id": "J1",
+        "object_id": "Jere",
         "reaction": {
-            "description": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
+            "description": ""
         }
     },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "J2",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "Is he that arrogant Brit? That loudmouth could really stand to hould his tongue for a moment or two."
+        }
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "J3",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "Miss bride-to-be? I hardly know 'er. My condolences, I guess."
+        }
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "J4",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "Oh that guy. Saw him at the general store the other day. Practically followed me back to the mansion. He was fiddling around in the study quite a bit this past week. I wonder what he was doing? Supposedly the study is where the late Lord Llewellyn hid that valuable sword of his."
+        }
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "J5",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "She's mighty pretty, that one. Don't know anything about her though."
+        }
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "J6",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "She's puking all over the damn place, isn't she? Gonna be a real mess to clean."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "M7",
+        "description": "Do you think Matthew could have been setting a trap?",
+        "interaction_id": "J7",
+        "object_id": "Jere",
+        "reaction": {
+            "description": "A trap?  I guess it's possible. Trying to keep other people out? Did he want the sword?"
+        }
+    },
+    {
+        "description": "Examine",
+        "interaction_id": "B1",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about him being lucky he wasn't around but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Sir Edmond?",
+        "interaction_id": "B2",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about him being lucky he wasn't around but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "B3",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about a secret affair but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "B4",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about a sword and Sir Edmond but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "B5",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about money and inheritance but it's too incoherent to make out."
+        }
+    },
+    {
+        "description": "What do you think of Jeremiah?",
+        "interaction_id": "B6",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "She mumbles something about the death of the late Lord Llewellyn but it's too incoherent to make out."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "Coffee",
+        "description": "Bring her a cup of coffee",
+        "interaction_id": "B7",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "Huh? Oh thank ya... I needed this. I uhhh saw Mistuh Halloway collapsed on the ground with a big 'ol thing jutting out his chest. I tried to help, honest and for true.  But then I thought I'd get in trouble so I threw the arrow thingy in the toilet. Whole thing made me super nautious so I vomitted."
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "B7",
+        "description": "Ask her about the arrow",
+        "interaction_id": "B8",
+        "object_id": "Marg",
+        "reaction": {
+            "description": "No idea where it came from. Not like there were any bows or whatever around. Sir Eddy is an archer though. Maybe he could tell ya."
+        }
+    }
+]
