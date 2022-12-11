@@ -19,7 +19,7 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       },
       games: async () => {
-        return Game.find({});
+        return Game.find({}).populate('rooms');
       },
   
       game: async (parent, { game_id }) => {
