@@ -97,16 +97,11 @@ const resolvers = {
           number_of_attempts: this.number_of_attempts + 1,
           final_solution_time: solutionTime
         },
-
         { new: true },
-        
-        );
+      );
 
-      user.number_of_attempts++;
 
-      const user = await User.updateOne({ first_name, last_name, email, password });
-      const token = signToken(user);
-      return { token, user };
+      return user;
     },
 
     login: async (parent, { email, password }) => {

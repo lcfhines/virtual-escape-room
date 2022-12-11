@@ -94,14 +94,10 @@ const typeDefs = gql`
   type Mutation {
     addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    
     startGame(): [GameUserInteraction]  
-
     addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
-    
     checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Solution
-
-    updateUser(userId: ID!, number_of_attempts: Int, final_solution_time: Int): User
+    endGame(solutionTime: Int): User
   }
 `;
 //startGame - start game in mutation will wipe out game user interaction table for that userId and start coutndown timer, switch room, click on object
