@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const GameList = ({ games }) => {
     if (!games.length) {
@@ -15,4 +15,6 @@ const GameList = ({ games }) => {
             ))}
         </div>
     )
-}
+};
+
+export default GameList;
