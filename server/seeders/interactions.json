@@ -209,6 +209,14 @@
         }
     },
     {
+        "display_if_visited_interaction_id":"Bd1",
+        "interaction_id":"M9",
+        "object_id": "Matt",
+        "reaction":{
+            "description":"It's true.  He made a rather foolish investment and it nearly sunk the company. But he dipped into his own personal wealth to make up most of the damage. But that hardly constitutes a motive for murder, wouldn't you agree?"
+        }
+    },
+    {
         "display_if_visited_interaction_id":"S8",
         "description": "I hear you're a skilled trap maker",
         "interaction_id": "M7",
@@ -281,6 +289,15 @@
         "object_id": "Eliz",
         "reaction": {
             "description": "He's a pompous blowhard who touts his 'esteemed' family legacy at the slightest provocation. Would he murder my brother? Doubtful. But if he did, I've no doubt he'd be bragging about it."
+        }
+    },
+    {
+        "display_if_visited_interaction_id":"Bd1",
+        "description":"I heard your brother lost his company a lot of money.",
+        "interaction_id":"E8",
+        "object_id":"Eliz",
+        "reaction":{
+            "description":"Yes, he made a terrible investment that cost the company dearly. And then he decided to squander a sizable chunk of our family fortune to settle the debt. I would never have been so foolish with our family's inheritance."
         }
     },
     {
