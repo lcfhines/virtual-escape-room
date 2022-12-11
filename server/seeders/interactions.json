@@ -406,7 +406,7 @@
         }
     },
     {
-        "display_if_visited_interaction_id": "Coffee",
+        "display_if_visited_interaction_id": "Cc1",
         "description": "Bring her a cup of coffee",
         "interaction_id": "B7",
         "object_id": "Marg",
@@ -422,5 +422,24 @@
         "reaction": {
             "description": "No idea where it came from. Not like there were any bows or whatever around. Sir Eddy is an archer though. Maybe he could tell ya."
         }
+    },
+    {
+        "description": "Examine stairs",
+        "interaction_id": "St1",
+        "object_id": "stai",
+        "reaction": {
+            "description": "Upon closer examination of the stairs you see that their integrity has been compromised, and it would be unwise to go up them."
+        }
+    },
+    {
+        "description": "Examine Debris",
+        "interaction_id": "De1",
+        "object_id": "debr",
+        "reaction": {
+            "description": "Upon closer examination of the debris you find shards of glass belonging to a wine bottle."
+        }
+    },
+    {
+        
     }
 ]
