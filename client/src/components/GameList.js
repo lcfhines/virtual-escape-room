@@ -22,10 +22,12 @@ const GameList = ({ games }) => {
             <div>
             {games && games.map((game) => (
                 <div key={game._id}>
-                    <p><a href="#">{games.title}</a></p>
+                    <Link to={}>
+                        <p>{games.title}</p>
+                    </Link>
                 </div>
             ))}
-        </div>
+            </div>
         )
       }
 
@@ -35,9 +37,16 @@ const GameList = ({ games }) => {
 
       if (!user?._id) {
         return (
-          <h4>
-            You need to be logged in to see this. Use the navigation links above to sign up or log in!
-          </h4>
+            <div>
+                <h4>
+                    You need to be logged in to see this. Use the navigation links above to sign up or log in!
+                </h4>
+                {games && games.map((game) => (
+                <div key={game._id}>
+                    <p>{games.title}</p>
+                </div>
+                ))}
+            </div>
         );
       }
     
