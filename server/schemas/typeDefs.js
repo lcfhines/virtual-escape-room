@@ -7,8 +7,8 @@ const typeDefs = gql`
     last_name: String
     email: String
     password: String
-    games_played: Int
-    best_score: Int
+    number_of_attempts: Int
+    final_solution_time: Int
   }
 
   type Game {
@@ -99,9 +99,9 @@ const typeDefs = gql`
 
     addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
     
-    checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Boolean
+    checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Solution
 
-    updateUser(userId: ID!, games_played: Int, best_score: Int): User
+    updateUser(userId: ID!, number_of_attempts: Int, final_solution_time: Int): User
   }
 `;
 //startGame - start game in mutation will wipe out game user interaction table for that userId and start coutndown timer, switch room, click on object

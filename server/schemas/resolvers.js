@@ -86,6 +86,29 @@ const resolvers = {
       return { token, user };
     },
 
+    endGame: async (parent, { solutionTime = 0 }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+
+      const user = await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { 
+          number_of_attempts: this.number_of_attempts + 1,
+          final_solution_time: solutionTime
+        },
+
+        { new: true },
+        
+        );
+
+      user.number_of_attempts++;
+
+      const user = await User.updateOne({ first_name, last_name, email, password });
+      const token = signToken(user);
+      return { token, user };
+    },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -132,6 +155,14 @@ const resolvers = {
       }
 
       return userInteraction;
+    },
+
+    checkSolution: async (parent, {character_id, thing_id, motive_id}) => {
+     return await Solution.findOne({
+      character_id, 
+      thing_id, 
+      motive_id
+      });
     },
   },
 } 
