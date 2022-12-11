@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useUserContext } from './UserContext';
 
-
-export default function Leaderboard(){
+const Leaderboard = () => {
+// export default function Leaderboard(){
 const { users } = useUserContext();
 
 return(
@@ -44,3 +44,4 @@ return(
      </>
      );
 }
+export default Leaderboard;

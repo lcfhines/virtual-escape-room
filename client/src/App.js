@@ -10,6 +10,8 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Leaderboard from './pages/leaderboard/Leaderboard';
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
 
 // Construct our main GraphQL API endpoint
@@ -42,9 +44,13 @@ function App() {
       <Router>
           <Navbar />
           <Routes>
-            <Route 
+            {/* <Route 
               path='/' 
               element={<Leaderboard />} 
+            /> */}
+            <Route 
+              path='/' 
+              element={<SignupForm />} 
             />
             {/* <Route 
               path='/saved' 
