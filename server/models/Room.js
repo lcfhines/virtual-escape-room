@@ -28,7 +28,6 @@ const roomSchema = new Schema(
         ref: 'Object'
       }
     ]
-
   }
 );
 
