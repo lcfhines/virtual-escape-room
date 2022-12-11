@@ -27,6 +27,12 @@ const objectSchema = new Schema(
         type:Schema.Types.ObjectId,
         ref: 'Interaction'
       }
+    ],
+    motives: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Motive'
+      }
     ]
   }
 );

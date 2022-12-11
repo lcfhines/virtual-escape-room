@@ -6,6 +6,10 @@ const motiveSchema = new Schema(
       type: String,
       required: true,
     },
+    motive_id: {
+      type: String,
+      required: true,
+    },
     object_id: {
       type: String,
       required: true,
