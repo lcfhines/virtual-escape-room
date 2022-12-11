@@ -25,7 +25,7 @@ db.once('open', async () => {
         
       return {...interaction, motives: motiveIds}
     })
-    interactions = await Interactions.insertMany(interactions);
+    interactions = await Interaction.insertMany(interactions);
 
 
     let objects = objectSeeds.map(object=> {
@@ -36,7 +36,7 @@ db.once('open', async () => {
       
       return {...object, interactions: interactionIds}
     })
-    objects = await Objects.insertMany(objects);
+    objects = await Object.insertMany(objects);
 
 
     let rooms = roomSeeds.map(room=> {
@@ -45,10 +45,11 @@ db.once('open', async () => {
           .filter(object => object.room_id === room.room_id)
           .map(object => object._id);
       
-        return {...object, interactions: interactionIds}
+        return {...room, objects: objectIds}
     })
-    rooms = await Room.insertMany(roomSeeds);
+    rooms = await Room.insertMany(rooms);
 
+    
     // create an array of games, with generated room_ids
     let games = gameSeeds.map(game=> {
       const roomIds = 
