@@ -1,15 +1,24 @@
 import React from "react";
+import { useQuery } from "@apollo/client";
+import { QUERY_GAMES } from '../utils/queries';
+import GameList from '../components/GameList';
 
-export default function Home() => {
+export default Home = () => {
+    const { loading, data } = useQuery(QUERY_GAMES);
+    const games = data?.games || [];
+
     return (
         <main>
-            <h1>Virtual Escape Room</h1>
-            <div id="home">
-                <h2>Intro</h2>
-                <h2>Leader Board</h2>
-                <div id="play"><a href="#">PLAY</a></div>
-                <h2>How to Play / Rules</h2>
-                </div>
+            <h1>Available Games</h1>
+            <div id="challenges">
+                {loading ? (
+                    <div>Loading...</div>
+                ) : (
+                    <GameList 
+                        games={games}
+                    />
+                )}
+            </div>
         </main>
-    )
+    );
 }
