@@ -440,6 +440,128 @@
         }
     },
     {
-        
-    }
+        "description": "Examine Large Door",
+        "interaction_id": "Do1",
+        "object_id": "door",
+        "reaction": {
+            "description": "Upon closer examination of the large door you decide there's no way to leave without the constable's approval."
+        }
+    },
+    {
+        "description": "Examine Jameson's Body",
+        "interaction_id": "Jb1",
+        "object_id": "Jame",
+        "reaction":{
+            "description": "Upon closer examination of the body there is an obvious wound from where he was pierced by an object. Any allusions to what could have caused the wound leading to his premature death would require knowledge that you don't have."
+        }
+    },
+    {
+        "description": "Examine Business Documents",
+        "interaction_id": "Bd1",
+        "object_id": "docu",
+        "reaction":{
+            "description": "Upon closer examination it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss"
+        }
+    },
+    {
+        "display_if_visited_interaction_id": "Mi1",
+        "description": "Examine Bookshelf",
+        "object_id": "Bs1",
+        "reaction": {
+            "description": "Upon closer examination you see that one of the books is clearly askew. You put push the book into place and the bookshelf creeks open, and reveals a secret room."
+        }
+    },
+    {
+        "description": "Examine Glasses",
+        "interaction_id": "Tg1",
+        "object_id": "glas",
+        "reaction": {
+            "description": "Upon Closer examination The first glass has a smudge of red lipstick on the rim and appears to be only half- finished where the second is empty but some residue remains from a recently finished drink."
+        }
+    },
+    {
+        "description": "Examine Knife",
+        "interaction_id": "Kn1",
+        "object_id": "knife",
+        "reaction": {
+            "description": "Upon closer examination the knife has chunks of meat sticking to it, they look seasoned."
+        }
+    },
+    {
+        "description": "Examine Tray of Snacks",
+        "interaction_id": "Ts1",
+        "object_id": "tray",
+        "reaction": {
+            "description": "Upon closer examination of the snacks it looks as though none of the snacks have been eaten. It looks like they were never served to guests."
+        }
+    },
+    {
+        "description": "Examine Shield",
+        "interaction_id": "Ss1",
+        "object_id": "shie",
+        "reaction": {
+            "description": "Upon closer examination of the shield it looks as though there used to be two spears mounted behind it."
+        }
+    },
+    {
+        "description": "Examine Letters",
+        "interaction_id": "Le1",
+        "object_id": "lett",
+        "reaction": {
+            "description": "Upon closer examination of the letters you see they're all addressed to Annabelle and one has been torn into pieces."
+        }
+    },
+    {
+        "description": "Examine Fireplace Tools",
+        "interaction_id": "Ft1",
+        "object_id": "fire",
+        "reaction": {
+            "description": "Upon closer examination of the fireplace tools, you find a brook, shovel and claw used to grab logs. It's clearly missing the fireplace poker."
+        }
+    },
+    {
+        "description": "Examine Clocks",
+        "interaction_id": "Cl1",
+        "object_id": "cloc",
+        "reaction": {
+            "description": "Upon closer examination of the clock it looks as though it has been years since it last worked properly."
+        }
+    },
+    {
+        "description": "Examine Ice Pick",
+        "interaction_id": "Ip1",
+        "object_id": "icep",
+        "reaction": {
+            "description": "Upon closer examination of the ice pick you see that that it was only recently driven into the ice block."
+        }
+    },
+    {
+        "description": "Examine Cup of Coffee",
+        "interaction_id": "Cc1",
+        "object_id": "cupo",
+        "reaction": {
+            "description": "Upon closer examination of the coffee cup you see it was clearly intended to sober up miss Featherbottom, you place it in front of her and she starts to drink. set coffee cup to true?"
+        }
+    },
 ]
+
+
+
+
+{
+    "description": "",
+    "interaction_id": "",
+    "object_id": "",
+    "reaction": {
+        "description": ""
+    }
+},
+
+{
+    "description": "",
+    "interaction_id": "",
+    "object_id": "",
+    "reaction": {
+        "description": ""
+    }
+},
