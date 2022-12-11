@@ -2,11 +2,17 @@ const db = require('../config/connection');
 const { User, Game, Room, Object, Interaction, Motive, Solution, GameUserInteraction  } = require('../models');
 const gameSeeds = require('./games.json');
 const roomSeeds = require('./rooms.json');
+const objectSeeds = require('./objects.json');
+const interactionSeeds = require('./interactions.json');
+const motiveSeeds = require ('./motive.json');
 
 db.once('open', async () => {
   try {
     await Game.deleteMany({});
     await Room.deleteMany({});
+    await Object.deleteMany({});
+    await Interaction.deleteMany({});
+    await Motive.deleteMany({});
 
     // const interactions =  Interactions.insertMany
     // let objects = objectSeeds.map -- have new property interactions array with ids
