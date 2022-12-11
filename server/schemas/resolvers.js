@@ -16,17 +16,61 @@ const resolvers = {
       return Room.findOne({ room_id: roomId }).populate('objects');
     },
     
-    object: async (parent, { objectId }) => {
-      return Object.findOne({ object_id: objectId }).populate('interactions');
+    objectInteractions: async (parent, { objectId }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+
+      const resp = Interaction.findOne({ object_id: objectId });
+
+      // Check whether the interaction has to be displayed by checking whether
+      // another interaction has been performed, as tracked on the GameUserInteraction collection table
+      const interactions = resp.filter(item =>{
+        // if display_if_visited_interaction_id is populated, then check the GameUserInteraction collection for a logged in user
+        if (item.display_if_visited_interaction_id){
+          const gameUserInteraction = 
+            GameUserInteraction.findOne({
+              user_id: context.user._id,
+              interaction_id: item.display_if_visited_interaction_id 
+            });
+          // if found then return interaction
+          if (gameUserInteraction){ 
+            return true
+          }
+          else {
+            return false
+          }
+        } else {
+          return true
+        }
+      })
+
+      return interactions;
     },
 
+    // auxillary queries
       users: async () => {
-        return User.find();
+        return User.find({});
+      },
+      rooms: async () => {
+        return Room.find({});
+      },
+      objects: async () => {
+        return Object.find({});
+      },
+      interactions: async () => {
+        return Interaction.find({});
+      },
+      gameUserInteractions: async () => {
+        return GameUserInteraction.find({});
+      },
+      motives: async () => {
+        return Motive.find({});
+      },
+      solutions: async () => {
+        return Solution.find({});
       },
   
-      user: async (parent, { userId }) => {
-        return User.findOne({ _id: userId });
-      },
       // By adding context to our query, we can retrieve the logged in user without specifically searching for them
       me: async (parent, args, context) => {
         if (context.user) {
@@ -34,15 +78,7 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-
-
-
-      interaction: async (parent, { game_id }) => {
-        return Interaction.findOne({ _id: game_id });
-      },
-      checkUserInteraction: async (parent, { interactionId }) => {
-      return GameUserInteraction.findOne({ interactionId: interactionId });
-      },
+      
   },
 
   Mutation: {

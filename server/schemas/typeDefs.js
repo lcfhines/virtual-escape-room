@@ -38,7 +38,6 @@ const typeDefs = gql`
     room_id: Int
     name: String
     interactions: [Interaction]
-    motives: [Motive]
   }
 
   type Interaction{
@@ -48,19 +47,20 @@ const typeDefs = gql`
     description: String
     object_id: String
     reaction: String
+    motives: [Motive]
   }
 
   type GameUserInteraction{
     _id: ID
-    title: String
-    story_line: String
-    time_limit: Int
+    user_id: String
+    interaction_id: String
   }
 
   type Motive{
     _id: ID
     description: String
-    object_id: String
+    motive_id: String
+    interaction_id: String
   }
 
   type Solution{
@@ -79,21 +79,16 @@ const typeDefs = gql`
     games: [Game]!
     game(gameId: Int!): Game 
     room(roomId: Int!): Room 
-
-    object(objectId: String!): Object  
-
-    
-        
-    
-    
-    
-    interaction(interactionId: String!): Interaction
+    objectInteractions(objectId: String!): Object  
+    me: User
     
     users: [User]!
-    user(userId: ID!): User
-    me: User
-
-    checkUserInteraction(interactionId: String!): GameUserInteraction
+    rooms: [Room]!
+    objects: [Object]!
+    interactions: [Interaction]!
+    gameUserInteractions: [GameUserInteraction]!
+    motives: [Motive]!
+    solutions: [Solution]!
   }
 
   type Mutation {
@@ -102,6 +97,7 @@ const typeDefs = gql`
     
     startGame(user_id: ID!): Game  -- wipe out GameUserInteractions
     addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction -- adds to gameuserinteractions
+    
     checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Boolean
 
     updateUser(userId: ID!, games_played: Int, best_score: Int): User
