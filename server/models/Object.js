@@ -6,16 +6,20 @@ const objectSchema = new Schema(
       type: String,
       required: true,
     },
+    object_id: {
+      type: String,
+      required: true
+    },
     is_weapon: {   
       type: Boolean,
       default: false,
     },
-    description: {
-      type: String,
+    room_id: {
+      type: Number,
       required: true,
     },
-    room_id: {
-      type: Schema.Types.ObjectId,
+    name: {
+      type: String,
       required: true,
     },
     interactions: [
@@ -23,7 +27,7 @@ const objectSchema = new Schema(
         type:Schema.Types.ObjectId,
         ref: 'Interaction'
       }
-    ]
+    ],
   }
 );
 

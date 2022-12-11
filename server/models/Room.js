@@ -6,6 +6,10 @@ const roomSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    room_id: {
+      type: Number,
+      required: true,
+    },
     title: {
       type: String,
       required: true,
@@ -15,7 +19,7 @@ const roomSchema = new Schema(
       required: true,
     },
     game_id: {
-      type: Schema.Types.ObjectId,
+      type: Number,
       required: true,
     },
     objects: [
@@ -24,7 +28,6 @@ const roomSchema = new Schema(
         ref: 'Object'
       }
     ]
-
   }
 );
 

@@ -5,7 +5,6 @@ const typeDefs = gql`
     _id: ID
     first_name: String
     last_name: String
-    username: String
     email: String
     password: String
     games_played: Int
@@ -15,43 +14,40 @@ const typeDefs = gql`
   type Game {
     _id: ID
     title: String
+    game_id: Int
     story_line: String
     time_limit: Int
-    rooms:[Room]
+    rooms: [Room]
   }
 
   type Room {
     _id: ID
     is_default: Boolean
+    room_id: Int
     title: String
     description: String
-    game_id: ID
+    game_id: Int
     objects: [Object]
   }
 
   type Object{
     _id: ID
-    type: String  
+    type: String
+    object_id: String  
     is_weapon: Boolean
-    description: String
-    room_id: ID
+    room_id: Int
+    name: String
     interactions: [Interaction]
-    motives: [Motive]
   }
 
   type Interaction{
     _id: ID
     interaction_id: String
-    display_if_visited_interaction_id: ID
+    display_if_visited_interaction_id: String
     description: String
-    object_id: ID
-    reactions: [Reaction]
-  }
-
-  type Reaction{
-    _id: ID
-    description: String
-    interaction_id: ID
+    object_id: String
+    reaction: String
+    motives: [Motive]
   }
 
   type GameUserInteraction{
@@ -64,7 +60,8 @@ const typeDefs = gql`
   type Motive{
     _id: ID
     description: String
-    object_id: ID
+    motive_id: String
+    interaction_id: String
   }
 
   type Solution{
@@ -84,15 +81,16 @@ const typeDefs = gql`
     user(userId: ID!): User
     me: User
     games: [Game]!
-    game(gameId: ID!): Game
-    room: (roomId: ID!): Room
-    object: (objectId: ID!): Object    
-    interaction: (interactionId: ID!): Interaction
-    checkUserInteraction: (interactionId: ID!): GameUserInteraction
+    game(game_id: Int!): Game
+    room(roomId: Int!): Room
+    object(objectId: String!): Object    
+    interaction(interactionId: String!): Interaction
+    checkUserInteraction(interactionId: String!): GameUserInteraction
   }
 
   type Mutation {
-    addUser(name: String!, email: String!, password: String!): Auth
+    addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
+    updateUser(userId: ID!, games_played: Int, best_score: Int): User
     login(email: String!, password: String!): Auth
     startGame(user_id: ID!): Game
     addUserInteraction(user_id: ID!, interaction_id: ID!): GameUserInteraction

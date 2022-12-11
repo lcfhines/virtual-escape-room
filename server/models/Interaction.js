@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const {reactionSchema} = require ('./Reaction')
+// const reactionSchema = require ('./Reaction')
 
 const interactionSchema = new Schema(
   {
@@ -8,19 +8,26 @@ const interactionSchema = new Schema(
       required: true,
     },
     display_if_visited_interaction_id: {  
-      type: Schema.Types.ObjectId,
+      type: String,
     },
     description: {
       type: String,
       required: true,
     },
     object_id: {
-      type: Schema.Types.ObjectId,
+      type: String,
       required: true,
     },
     reaction: {
-      type: reactionSchema
-    }
+      type: String,
+      default: ''
+    },
+    motives: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Motive'
+      }
+    ]
   }
 );
 

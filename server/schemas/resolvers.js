@@ -19,11 +19,11 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       },
       games: async () => {
-        return Game.find();
+        return Game.find({}).populate('rooms');
       },
   
-      game: async (parent, { gameId }) => {
-        return Game.findOne({ _id: gameId }).populate('rooms');
+      game: async (parent, { game_id }) => {
+        return Game.findOne({ game_id: game_id }).populate('rooms');
       },
 
       room: async (parent, { roomId }) => {
@@ -33,8 +33,8 @@ const resolvers = {
         return Object.findOne({ _id: objectId }).populate('interactions');
       },
 
-      interaction: async (parent, { gameId }) => {
-        return Interaction.findOne({ _id: gameId });
+      interaction: async (parent, { game_id }) => {
+        return Interaction.findOne({ _id: game_id });
       },
       checkUserInteraction: async (parent, { interactionId }) => {
       return GameUserInteraction.findOne({ interactionId: interactionId });

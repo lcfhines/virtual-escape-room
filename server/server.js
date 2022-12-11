@@ -35,7 +35,8 @@ const startApolloServer = async (typeDefs, resolvers) => {
   db.once('open', () => {
     // express server is listening
     app.listen(PORT, () => {
-      console.log(`Server has started... Listening on http://localhost:${PORT}/`);
+      console.log(`API server running on port ${PORT}/`);
+      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
       console.log('Time:', Intl.DateTimeFormat('en-US',{dateStyle: 'long', timeStyle: 'long'}).format(new Date()));
     })
   })
