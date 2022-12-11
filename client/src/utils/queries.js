@@ -1,5 +1,19 @@
 import { gql } from '@apollo/client';
 
+export const GET_ME = gql`
+    query me {
+        me {
+            _id
+            first_name
+            last_name
+            email
+            password
+            games_played
+            best_score
+        }
+    }
+`;
+
 export const QUERY_GAMES = gql`
 query Games {
     games {
@@ -9,4 +23,4 @@ query Games {
       story_line
       time_limit
     } 
-`
+`;
