@@ -21,7 +21,13 @@ const interactionSchema = new Schema(
     reaction: {
       type: String,
       default: ''
-    }
+    },
+    motives: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Motive'
+      }
+    ]
   }
 );
 
