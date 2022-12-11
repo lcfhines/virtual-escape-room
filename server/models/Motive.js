@@ -6,8 +6,8 @@ const motiveSchema = new Schema(
       type: String,
       required: true,
     },
-    reaction_id: {
-      type: Schema.Types.ObjectId,
+    object_id: {
+      type: String,
       required: true,
     },
     
