@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction} = require('../models');
+const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, } = require('../models');
+const SolutionLetter = require('../models/SolututionLetter')
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -77,6 +78,9 @@ const resolvers = {
       solutions: async () => {
         return Solution.find({});
       },
+      // solutionLetter: async () => {
+      //   return SolutionLetter.find({});
+      // }
   },
 
   Mutation: {

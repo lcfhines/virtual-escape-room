@@ -1,10 +1,12 @@
 const db = require('../config/connection');
-const { User, Game, Room, Object, Interaction, Motive, Solution, GameUserInteraction  } = require('../models');
+const { User, Game, Room, Object, Interaction, Motive, Solution, GameUserInteraction, } = require('../models');
+const SolutionLetter = require('../models/SolututionLetter')
 const gameSeeds = require('./games.json');
 const roomSeeds = require('./rooms.json');
 const objectSeeds = require('./objects.json');
 const interactionSeeds = require('./interactions.json');
 const motiveSeeds = require ('./motive.json');
+const solutionLetterSeeds = require('./solutionLetter.json');
 
 db.once('open', async () => {
   try {
@@ -15,7 +17,10 @@ db.once('open', async () => {
     await Interaction.deleteMany({});
     await Motive.deleteMany({});
     await Solution.deleteMany({});
+    await SolutionLetter.deleteMany({})
 
+
+    const solutionLetter = await SolutionLetter.insertMany(solutionLetterSeeds)
     const motives = await Motive.insertMany(motiveSeeds);
 
     let interactions = interactionSeeds.map(interaction=> {

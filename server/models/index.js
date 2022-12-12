@@ -7,5 +7,6 @@ const Interaction = require('./Interaction');
 const Motive = require('./Motive');
 const Solution = require('./Solution');
 const GameUserInteraction = require('./GameUserInteraction');
+const SolutionLetter = require('./SolututionLetter');
 
-module.exports = { User, Game, Room, Object, Interaction,  Motive, Solution, GameUserInteraction };
+module.exports = { User, Game, Room, Object, Interaction,  Motive, Solution, GameUserInteraction, SolutionLetter};
