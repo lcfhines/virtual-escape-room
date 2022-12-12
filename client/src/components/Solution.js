@@ -83,7 +83,7 @@ const SolutionForm = () => {
           </section>
         </>
       ) : (
-        <span>Hmm... seems that you have not selected an option from every dropdown, please choose a suspect, weapond and motive for the murder!</span>
+        <span>Hmm... seems that you have not selected an option from every dropdown, please choose a suspect, weapon and motive for the murder!</span>
       )}
     </div>
   );
