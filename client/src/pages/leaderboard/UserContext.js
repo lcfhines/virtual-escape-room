@@ -1,12 +1,11 @@
 import React, { createContext, useContext, useState } from 'react';
 // import createId from './createId';
-
-const UserContext = createContext();
+export const UserContext = React.createContext();
 
 export const useUserContext = () => useContext(UserContext);
 
 
-export const UserProvider = ({ children }) => {
+export default function UserProvider({ children }) {
   const [users, setUsers] = useState([
     {
       rank: 1,
