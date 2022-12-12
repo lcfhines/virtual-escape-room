@@ -8,6 +8,7 @@ const motiveSeeds = require ('./motive.json');
 
 db.once('open', async () => {
   try {
+    await User.deleteMany({});
     await Game.deleteMany({});
     await Room.deleteMany({});
     await Object.deleteMany({});
@@ -49,7 +50,7 @@ db.once('open', async () => {
     })
     rooms = await Room.insertMany(rooms);
 
-    
+
     // create an array of games, with generated room_ids
     let games = gameSeeds.map(game=> {
       const roomIds = 

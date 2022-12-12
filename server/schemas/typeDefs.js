@@ -7,8 +7,15 @@ const typeDefs = gql`
     last_name: String
     email: String
     password: String
+  }
+
+  type LeaderBoard {
+    game_id: Int
+    user_id: ID
     number_of_attempts: Int
     final_solution_time: Int
+
+
   }
 
   type Game {
@@ -34,7 +41,7 @@ const typeDefs = gql`
     _id: ID
     type: String
     object_id: String  
-    is_weapon: Boolean
+    isWeapon: Boolean
     room_id: Int
     name: String
     interactions: [Interaction]
@@ -75,12 +82,21 @@ const typeDefs = gql`
     user: User
   }
 
+  type Intro {
+    introText: String
+    rulesText: String
+  }
+
   type Query {
     games: [Game]!
     game(gameId: Int!): Game 
     room(roomId: Int!): Room 
     objectInteractions(objectId: String!): [Interaction]!  
     me: User
+
+    leaderBoard(gameId: Int!): [User]!
+    introData: Intro
+    defaultRoom(gameId: Int!): Room
 
     users: [User]!
     rooms: [Room]!
@@ -93,10 +109,15 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(first_name: String!, last_name: String!, email: String!, password: String!): Auth
+
     login(email: String!, password: String!): Auth
+
     startGame(start: Boolean): [GameUserInteraction]  
+
     addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
+
     checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Solution
+
     endGame(solutionTime: Int): User
   }
 `;

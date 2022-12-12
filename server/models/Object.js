@@ -10,7 +10,7 @@ const objectSchema = new Schema(
       type: String,
       required: true
     },
-    is_weapon: {   
+    isWeapon: {   
       type: Boolean,
       default: false,
     },
