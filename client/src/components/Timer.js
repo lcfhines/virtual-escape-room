@@ -1,31 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const Timer = () => {
-    const [timer, setTimer] = useState({ m: '10', s:'00'});
+    const Ref = useRef(null);
 
-    const getTime = () => {
-        let m = timer.m > 9 ? timer.m : '0' + timer.m;
-        let s = timer.s > 9 ? timer.s : '0' + timer.s;
-        setTimer(`${m}:${s}`);
+    const [timer, setTimer] = useState('00:10');
+
+    const getTimeRemaining = (e) => {
+        const total = Date.parse(e) - Date.parse(new Date());
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const seconds = Math.floor((total / 1000) % 60);
+        return {
+            total, minutes, seconds
+        };
     };
 
-    const startTimer = (e) => {
-        setInterval(getTime, 1000);
+    function startTimer(e) {
+        const id = setInterval(() => {
+            let { total, minutes, seconds } = getTimeRemaining(e);
+            if (total >= 0) {
+                setTimer(
+                    (minutes > 9 ? minutes : '0' + minutes) + ':' +
+                    (seconds > 9 ? seconds : '0' + seconds)
+                )
+            }   
+        }, 1000);
+        Ref.current = id;
+    };
+
+    const stopTimer = (e) => {
+        if (Ref.current) {
+            let { total, minutes, seconds } = getTimeRemaining(e);
+            if (total >= 0) {
+                setTimer(
+                    (minutes > 9 ? minutes : '0' + minutes) + ':' +
+                    (seconds > 9 ? seconds : '0' + seconds)
+                )
+            };
+            clearInterval(Ref.current);
+        }
+    };
+
+    const getDeadTime = () => {
+        let deadline = new Date();
+        deadline.setSeconds(deadline.getSeconds() + 10);
+        return deadline;
+    };
+
+    const onClickStart = () => {
+        startTimer(getDeadTime());
     }
-
-    const stopTimer = () => {
-        clearInterval(startTimer);
-        // if correct answer, leaderboard user's best time for that game
-        // if incorrect answer, don't log time
-        // if time runs out, end game
-        // regardless, all 3 options add 1 attempt to user
-    };
-
-    // above functions as onClicks
 
     return (
         <div className='timer'>
-            <p>{timer}</p>
+            <h2>{timer}</h2>
+            <button onClick={onClickStart}>Start</button>
+            <button onClick={stopTimer}>Stop</button>
         </div>
     )
 }
