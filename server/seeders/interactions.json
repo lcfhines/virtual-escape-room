@@ -24,7 +24,7 @@
         }
     },
     {
-        "display_if_visited_interaction_id": "",
+
         "description": "What do you think of Jeremiah?",
         "interaction_id": "A4",
         "object_id": "Anna",
@@ -33,7 +33,6 @@
         }
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "What do you think of Elizabeth?",
         "interaction_id": "A5",
         "object_id": "Anna",
@@ -465,8 +464,9 @@
     },
     {
         "display_if_visited_interaction_id": "Mi1",
+        "interaction_id": "Bs1",
         "description": "Examine Bookshelf",
-        "object_id": "Bs1",
+        "object_id": "book",
         "reaction": {
             "description": "Upon closer examination you see that one of the books is clearly askew. You put push the book into place and the bookshelf creeks open, and reveals a secret room."
         }

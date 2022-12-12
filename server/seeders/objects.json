@@ -4,7 +4,6 @@
         "room_id": "4",
         "type": "character",
         "isWeapon": false,
-        "description": "",
         "name": "Annabelle Stone"
     },
     {
@@ -12,7 +11,6 @@
         "room_id": "",
         "type": "character",
         "isWeapon": false,
-        "description": "",
         "name": "Sir Edmond Graham"
     },
     {
@@ -20,7 +18,6 @@
         "room_id": "6",
         "type": "character",
         "isWeapon": false,
-        "description": "",
         "name": "Jeremiah Steele"
     },
     {
@@ -28,7 +25,6 @@
         "room_id": "4",
         "type": "character",
         "isWeapon": false,
-        "description": "",
         "name": "Elizabeth Halloway"
     },
     {
@@ -36,7 +32,6 @@
         "room_id": "5",
         "type": "character",
         "isWeapon": false,
-        "description": "",
         "name": "Matthew Wilde"
     },
     {
@@ -65,188 +60,188 @@
         "room_id": "1",
         "type": "thing",
         "isWeapon": false,
-        "description": "stairs"
+        "name": "stairs"
     },
     {
         "object_id": "debr",
         "room_id": "1",
         "type": "thing",
         "isWeapon": false,
-        "description": "debris"
+        "name": "debris"
     },
     {
         "object_id": "door",
         "room_id": "1",
         "type": "thing",
         "isWeapon": false,
-        "description": "door"
+        "name": "door"
     },
     {
         "object_id": "Jame",
         "room_id": "2",
         "type": "thing",
         "isWeapon": false,
-        "description": "Jameson"
+        "name": "Jameson"
     },
     {
         "object_id": "book",
         "room_id": "2",
         "type": "thing",
         "isWeapon": false,
-        "description": "bookshelf"
+        "name": "bookshelf"
     },
     {
         "object_id": "docu",
         "room_id": "2",
         "type": "thing",
         "isWeapon": false,
-        "description": "documents"
+        "name": "documents"
     },
     {
         "object_id": "glas",
         "room_id": "2",
         "type": "thing",
         "isWeapon": false,
-        "description": "two glasses"
+        "name": "two glasses"
     },
     {
         "object_id": "knif",
         "room_id": "3",
         "type": "thing",
         "isWeapon": true,
-        "description": "knife"
+        "name": "knife"
     },
     {
         "object_id": "tray",
         "room_id": "3",
         "type": "thing",
         "isWeapon": false,
-        "description": "tray of snacks"
+        "name": "tray of snacks"
     },
     {
         "object_id": "cloc",
         "room_id": "4",
         "type": "thing",
         "isWeapon": false,
-        "description": "clock"
+        "name": "clock"
     },
     {
         "object_id": "shie",
         "room_id": "4",
         "type": "thing",
         "isWeapon": true,
-        "description": "shield and spears"
+        "name": "shield and spears"
     },
     {
         "object_id": "lett",
         "room_id": "4",
         "type": "thing",
         "isWeapon": true,
-        "description": "letters and opener"
+        "name": "letters and opener"
     },
     {
         "object_id": "fire",
         "room_id": "4",
         "type": "thing",
         "isWeapon": true,
-        "description": "fireplace tools"
+        "name": "fireplace tools"
     },
     {
         "object_id": "icep",
         "room_id": "5",
         "type": "thing",
         "isWeapon": true,
-        "description": "ice-pick"
+        "name": "ice-pick"
     },
     {
         "object_id": "cupo",
         "room_id": "5",
         "type": "thing",
         "isWeapon": false,
-        "description": "cup of coffee"
+        "name": "cup of coffee"
     },
     {
         "object_id": "spad",
         "room_id": "6",
         "type": "thing",
         "isWeapon": true,
-        "description": "spade"
+        "name": "spade"
     },
     {
         "object_id": "fern",
         "room_id": "6",
         "type": "thing",
         "isWeapon": false,
-        "description": "bed of ferns"
+        "name": "bed of ferns"
     },
     {
         "object_id": "grav",
         "room_id": "6",
         "type": "thing",
         "isWeapon": false,
-        "description": "gravestone"
+        "name": "gravestone"
     },    
     {
         "object_id": "toil",
         "room_id": "8",
         "type": "thing",
         "isWeapon": false,
-        "description": "toilet"
+        "name": "toilet"
     },
     {
         "object_id": "plun",
         "room_id": "8",
         "type": "thing",
         "isWeapon": false,
-        "description": "letters and opener"
+        "name": "letters and opener"
     },
     {
         "object_id": "arro",
         "room_id": "8",
         "type": "thing",
         "isWeapon": true,
-        "description": "arrow"
+        "name": "arrow"
     },
     {
         "object_id": "mirr",
         "room_id": "8",
         "type": "thing",
         "isWeapon": false,
-        "description": "mirror"
+        "name": "mirror"
     },
     {
         "object_id": "wind",
         "room_id": "8",
         "type": "thing",
         "isWeapon": false,
-        "description": "window"
+        "name": "window"
     },
     {
         "object_id": "wine",
         "room_id": "8",
         "type": "thing",
         "isWeapon": true,
-        "description": "wine bottles"
+        "name": "wine bottles"
     },
     {
         "object_id": "cros",
         "room_id": "9",
         "type": "thing",
         "isWeapon": true,
-        "description": "crossbow mechanism"
+        "name": "crossbow mechanism"
     },
     {
         "object_id": "empt",
         "room_id": "9",
         "type": "thing",
         "isWeapon": false,
-        "description": "empty space on wall"
+        "name": "empty space on wall"
     },
     {
         "object_id": "swor",
         "room_id": "9",
         "type": "thing",
         "isWeapon": true,
-        "description": "Sword of St. Thomas"
+        "name": "Sword of St. Thomas"
     }
 ]

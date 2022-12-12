@@ -5,7 +5,7 @@
         "interaction_id": "E3"
     },
     {
-        "description": "He was killed so that Annabelle could continue her relationship with Jameson",
+        "description": "He was killed so that Annabelle could continue her relationship with Annabelle",
         "motive_id": "lez2",
         "interaction_id": "A10"
     },
@@ -20,7 +20,7 @@
         "interaction_id": "S2"
     },
     {
-        "description": "He was killed because he was angry that Jameson bought the house",
+        "description": "He was killed by Jeramiah because he was angry that Jameson bought the house",
         "motive_id": "hous",
         "interaction_id": "A2"
     },
@@ -38,5 +38,25 @@
         "description": "He was killed by accident when Matthew was trying to kill Sir Edmond.",
         "motive_id": "acci",
         "interaction_id": "M8"
-    }
+    },
+    {
+        "description": "He was killed after Olga had a bout of insanity over a lightly burnt Crumpet",
+        "motive_id": "insa",
+        "interaction_id": "Tr1"
+    },
+    {
+        "description": "He was killed by Matthew because he was jalous of his looks.",
+        "motive_id": "jeal",
+        "interaction_id": "A6"
+    },
+    {
+        "description": "He was killed by Annabelle because she always resented him for taking part in this arranged marriage.",
+        "motive_id": "arra",
+        "interaction_id": "Le1"
+    },
+    {
+        "description": "He was killed by Jeramiah because he looked similiar to the original owner of the house, and wanted to kepp Annabelle for himself.",
+        "motive_id": "wife",
+        "interaction_id": "Gs1"
+    },
 ]
