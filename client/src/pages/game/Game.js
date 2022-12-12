@@ -1,49 +1,43 @@
 import React, { useState } from 'react';
 // import { useUserContext } from '../leaderboard/UserContext';
 import { useQuery } from '@apollo/client';
-// import  { Link }  from 'react-router-dom';
+import  { Link }  from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import { QUERY_GAME_ROOMS } from '../../utils/queries';
 
 const Game = () => {
 
-// const { users } = useUserContext();
-// const { loading, data } = useQuery(QUERY_GAME_ROOMS);
-// const rooms = data?.rooms || [];
-
      const { gameId } = useParams();
-     console.log(gameId);
      const { loading, data } = useQuery(QUERY_GAME_ROOMS, {
           variables: { gameId: 1 },
      });
 
      const game = data?.game || {};
-     console.log(data);
      
 return(
      <>
-     <main id="leaderboard">
+     <main id="game">
           <h1>{game.title}</h1>
           <div id="intro">
                {/* <p>SCENERIO + PROMPT  HOW LONG YOU HAVE</p> */}
-               <h2>Short Description:</h2><p>{game.title}</p>
-               <h2>Story line Descriptions:</h2><p>{game.story_line}</p>
-               <h2>Time limit for game:</h2><p>{game.time_limit}</p>
+               <h3>Short Description:</h3><p>{game.title}</p>
+               <h3>Story line Descriptions:</h3><p>{game.story_line}</p>
+               <h3>Time limit for game:</h3><p>{game.time_limit}</p>
           </div>
           <div  id="start">
-          {/* <Link
+          <Link
                to={{
                pathname: "/room",
-               state: rooms
+               // state: {game.rooms.title}
                }}
           >
                START
-          </Link> */}
+          </Link>
           </div>
           <div >
-          <h2>Global Leader board</h2>
-               <table>
+          <h3>Global Leader board</h3>
+               {/* <table>
                 <thead>
                   <tr>
                     <th>Rank</th>
@@ -60,12 +54,11 @@ return(
                     <td>{user.time}</td>
                     <td>{user.click}</td>
                   </tr>
-                 ))} */}
+                 ))} *
                 </tbody>
-               </table>
+               </table> */}
           </div>
      </main>
-     <footer>footer content</footer>
      </>
      );
 }
