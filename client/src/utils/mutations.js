@@ -10,8 +10,6 @@ export const LOGIN_USER = gql`
               last_name
               email
               password
-              number_of_attempts
-              final_solution_time
           }
         }
     }
@@ -27,8 +25,6 @@ export const ADD_USER = gql`
               last_name
               email
               password
-              number_of_attempts
-              final_solution_time
           }
         }
     }
