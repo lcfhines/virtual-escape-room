@@ -9,8 +9,14 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import Leaderboard from './pages/leaderboard/Leaderboard'
+import Game from './pages/game/Game'
+// import Home from './pages/Home';
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import { GameProvider } from './utils/GlobalState';
 
 
 const httpLink = createHttpLink({
@@ -41,6 +47,10 @@ function App() {
             <Route 
               path='/' 
               element={<Home />} 
+            />
+             <Route 
+              path='/game' 
+              element={<Game />} 
             />
             {/* <Route 
               path='/game/:game_id' 
