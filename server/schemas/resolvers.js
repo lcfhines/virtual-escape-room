@@ -78,7 +78,7 @@ const resolvers = {
       solutions: async () => {
         return Solution.find({});
       },
-      // solutionLetter: async () => {
+      // solutionLetters: async () => {
       //   return SolutionLetter.find({});
       // }
   },
