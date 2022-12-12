@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+
 import { useMutation } from '@apollo/client';
-// import { ADD_USER } from '../utils/mutations';
+import { ADD_USER } from '../utils/mutations';
+
 import Auth from '../utils/auth';
 
 const SignupForm = () => {
   // set initial form state
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+  const [userFormData, setUserFormData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '', 
+    password: '' });
+
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  // const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -29,18 +36,21 @@ const SignupForm = () => {
       event.stopPropagation();
     }
 
-    // try {
-    // //   const { data } = await addUser({
-    // //     variables: { ...userFormData },
-    // //   });
+    try {
+      console.log(userFormData);
+      const { data } = await addUser({
+        variables: { ...userFormData },
+      });
 
-    //   Auth.login(data.addUser.token);
-    // } catch (err) {
-    //   console.error(err);
-    //   setShowAlert(true);
-    // }
+      Auth.login(data.addUser.token);
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
 
     setUserFormData({
+      first_name: '',
+      last_name: '',
       email: '',
       password: '',
     });
@@ -60,7 +70,7 @@ const SignupForm = () => {
           <Form.Control
             type='text'
             placeholder='Your first name'
-            name='firstname'
+            name='first_name'
             onChange={handleInputChange}
             value={userFormData.firstname}
             required
@@ -73,7 +83,7 @@ const SignupForm = () => {
           <Form.Control
             type='text'
             placeholder='Your lastname'
-            name='lastname'
+            name='last_name'
             onChange={handleInputChange}
             value={userFormData.lastname}
             required
@@ -107,7 +117,7 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(userFormData.firstname && userFormData.lastname && userFormData.email && userFormData.password)}
+          disabled={!(userFormData.first_name && userFormData.last_name && userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
