@@ -35,3 +35,17 @@ query Games {
     }
   } 
 `;
+
+export const QUERY_ROOM = gql`
+query Room($roomId: Int!) {
+    room(roomId: $roomId) {
+      description
+      title
+      objects {
+        name
+        type
+        is_weapon
+      }
+    }
+  }
+`;
