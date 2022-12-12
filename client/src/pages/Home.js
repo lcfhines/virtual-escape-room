@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <main>
             <h1>Available Games</h1>
-            {/* <div id="challenges">
+            <div id="challenges">
                 {loading ? (
                     <div>Loading...</div>
                 ) : (
@@ -18,7 +18,7 @@ const Home = () => {
                         games={games}
                     />
                 )}
-            </div> */}
+            </div>
         </main>
     );
 }
