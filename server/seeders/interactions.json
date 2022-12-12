@@ -32,21 +32,18 @@
         "reaction": "She's been a ray of sunshine in my life. Sure she has something of sibling rivalry with Jameson, but what brother and sister don't? She's smart and witty and I was so looking forward to being a part of her family."
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "What do you think of Matthew?",
         "interaction_id": "A6",
         "object_id": "Anna",
         "reaction": "Oh that weasel? A scummy layabout who's done nothing for my fiance's business, but still demands 50% ownership. I don't know what Jameson saw in him"
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "What do you think of Marguerite?",
         "interaction_id": "A7",
         "object_id": "Anna",
         "reaction": "She's fun when she's coherent at least. Good luck making any sense of her after the first bottle, the poor dear. She could use a cup of coffee, I'd wager."
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "Where were you at the time of the murder?",
         "interaction_id": "A8",
         "object_id": "Anna",
@@ -318,25 +315,25 @@
         "description": "What do you think of Annabelle?",
         "interaction_id": "O2",
         "object_id": "Olga",
-        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
     },
     {
         "description": "What do you think of Sir Edmund?",
         "interaction_id": "O3",
         "object_id": "Olga",
-        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
     },
     {
         "description": "What do you think of Matthew?",
         "interaction_id": "O4",
         "object_id": "Olga",
-        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
     },
     {
         "description": "What do you think of Elizabeth?",
         "interaction_id": "O5",
         "object_id": "Olga",
-        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
     },
     {
         "description": "What do you think of Jeramiah?",

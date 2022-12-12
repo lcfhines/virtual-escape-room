@@ -73,6 +73,10 @@
         "description": "Jeramiah killed him because Jerome had uncovered evidence related to him murdering the previous owner of the house.",
         "motive_id": "coup",
         "interaction_id": "B6"
+    },
+    {
+        "description": "Matthew killed Jerome because he didn't defend his honor after Annabelle called him a little rat boy.",
+        "motive_id": "rboy",
+        "interaction_id": "A6"
     }
-
 ]
