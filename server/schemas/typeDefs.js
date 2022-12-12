@@ -92,7 +92,7 @@ const typeDefs = gql`
     objectInteractions(objectId: String!): [Interaction]!  
     me: User
 
-    leaderBoard(gameId: Int!): [User]!
+    leaderBoard(gameId: Int!): [LeaderBoard]!
     introData: Intro
     defaultRoom(gameId: Int!): Room
 
