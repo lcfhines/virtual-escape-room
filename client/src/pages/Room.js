@@ -26,7 +26,7 @@ const Room = ({rooms}) => {
                   <select name="rooms" id="rooms">
                     {rooms && rooms.map((room, idx) => (
                         <option key={idx}>
-                        <Link to={`/Room/${room.roomId}`}>{room.title}</Link>
+                        <Link to={`/room/${room.roomId}`}>{room.title}</Link>
                         </option>          
                     ))}
                   </select>
