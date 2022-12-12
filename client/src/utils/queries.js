@@ -36,5 +36,6 @@ query Games {
       game_id
       story_line
       time_limit
-    } 
+    }
+  } 
 `;
