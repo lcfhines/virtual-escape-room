@@ -15,6 +15,7 @@ const Home = () => {
       
       return (
         <div>
+          {/* Intro */}
           <h1 className="intro">Solve a murder mystery or escape from a psycho killer all from the comfort of your couch.</h1>
           <h2>Available Games</h2>
           {/* {games.map((game, idx) => (
