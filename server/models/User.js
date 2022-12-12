@@ -22,11 +22,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    games_played: {
+    number_of_attempts: {
       type: Number,
       default: 0
     },
-    best_score: {
+    final_solution_time: {
       type: Number,
       default: 0
     },
