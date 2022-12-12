@@ -56,7 +56,7 @@ function App() {
               element={<Game />} 
             />
             <Route 
-              path='/room/:game_id:room_id' 
+              path='/room/:room_id' 
               element={<Room />} 
             /> */}
             <Route 

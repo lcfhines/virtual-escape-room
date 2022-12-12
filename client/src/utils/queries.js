@@ -8,8 +8,6 @@ export const GET_ME = gql`
             last_name
             email
             password
-            games_played
-            best_score
         }
     }
 `;
@@ -22,8 +20,6 @@ export const QUERY_USER = gql`
             last_name
             email
             password
-            games_played
-            best_score
         }
     }
 `;
@@ -50,6 +46,20 @@ query Games {
       rooms {
         title
         room_id
+      }
+    }
+  }
+  `;
+
+export const QUERY_ROOM = gql`
+query Room($roomId: Int!) {
+    room(roomId: $roomId) {
+      description
+      title
+      objects {
+        name
+        type
+        is_weapon
       }
     }
   }
