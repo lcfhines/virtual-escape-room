@@ -1,60 +1,27 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Timer = () => {
-    const Ref = useRef(null);
+    const timeoutRef = useRef(null);
+    const [timeLeft, setTimeLeft] = useState(60);
+    const [timerRunning, setTimerRunning] = useState(false);
 
-    const [timer, setTimer] = useState('00:10');
-
-    const getTimeRemaining = (e) => {
-        const total = Date.parse(e) - Date.parse(new Date());
-        const minutes = Math.floor((total / 1000 / 60) % 60);
-        const seconds = Math.floor((total / 1000) % 60);
-        return {
-            total, minutes, seconds
-        };
-    };
-
-    function startTimer(e) {
-        const id = setInterval(() => {
-            let { total, minutes, seconds } = getTimeRemaining(e);
-            if (total >= 0) {
-                setTimer(
-                    (minutes > 9 ? minutes : '0' + minutes) + ':' +
-                    (seconds > 9 ? seconds : '0' + seconds)
-                )
-            }   
-        }, 1000);
-        Ref.current = id;
-    };
-
-    const stopTimer = (e) => {
-        if (Ref.current) {
-            let { total, minutes, seconds } = getTimeRemaining(e);
-            if (total >= 0) {
-                setTimer(
-                    (minutes > 9 ? minutes : '0' + minutes) + ':' +
-                    (seconds > 9 ? seconds : '0' + seconds)
-                )
-            };
-            clearInterval(Ref.current);
+    useEffect(() => {
+        if (timeLeft > 0 && timerRunning) {
+            timeoutRef.current = setTimeout(() => {
+                timerRunning
+                ? setTimeLeft(timeLeft - 1)
+                : clearTimeout(timeoutRef);
+            }, 1000);
         }
-    };
-
-    const getDeadTime = () => {
-        let deadline = new Date();
-        deadline.setSeconds(deadline.getSeconds() + 10);
-        return deadline;
-    };
-
-    const onClickStart = () => {
-        startTimer(getDeadTime());
-    }
+    }, [timeLeft, timerRunning]);
 
     return (
-        <div className='timer'>
-            <h2>{timer}</h2>
-            <button onClick={onClickStart}>Start</button>
-            <button onClick={stopTimer}>Stop</button>
+        <div>
+            <h2>Timer: {timeLeft}</h2>
+            <button onClick={() => setTimerRunning(true)}>Start</button>
+            <button onClick={() => {
+                clearTimeout(timeoutRef.current);
+                setTimerRunning(false)}}>Stop</button>
         </div>
     )
 }
