@@ -14,8 +14,6 @@ const typeDefs = gql`
     user_id: ID
     number_of_attempts: Int
     final_solution_time: Int
-
-
   }
 
   type Game {
