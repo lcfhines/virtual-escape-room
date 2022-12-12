@@ -25,38 +25,18 @@ const Home = () => {
             </div>
             ))} */}
           <GameList />
-          {/* <p>The above should be in a GameList component</p> */}
         </div>
       )
     } else {
       return (
         <div>
+          {/* Intro */}
           <h1 className="intro">Solve a murder mystery or escape from a psycho killer all from the comfort of your couch.</h1>
-          {/* <p>Intro</p>
-          <p>Leaderboard</p>
-          <p>How to play rules</p>
-          <p>The above should be in an Intro component</p> */}
+         {/* <p>How to play rules</p> */}
           <Rules />
         </div>
       )
     }
-
-    
-    // return (
-      
-    //     // <main>
-    //     //     <h1>Available Games</h1>
-    //     //     <div id="challenges">
-    //     //         {loading ? (
-    //     //             <div>Loading...</div>
-    //     //         ) : (
-    //     //             <GameList 
-    //     //                 games={games}
-    //     //             />
-    //     //         )}
-    //     //     </div>
-    //     // </main>
-    // );
 }
 
 export default Home;
