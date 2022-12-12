@@ -309,6 +309,48 @@
         "reaction": "She mumbles something about the death of the late Lord Llewellyn but it's too incoherent to make out."
     },
     {
+        "description": "Examine",
+        "interaction_id": "O1",
+        "object_id": "Olga",
+        "reaction": "Olga looks like she's lived a thousand lifetimes in one night. The only thing more pronounced than her disdain for everyone around her are the frown lines carved into her face. Her servant's garb is stained with the disrespect of people who can't function without the help of people they consider beneath them."
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "O2",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+    },
+    {
+        "description": "What do you think of Sir Edmund?",
+        "interaction_id": "O3",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "O4",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "O5",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that is somewhere between a prayer and a curse."
+    },
+    {
+        "description": "What do you think of Jeramiah?",
+        "interaction_id": "O6",
+        "object_id": "Olga",
+        "reaction": "The corners of Olga's mouth turn up the slightest bit before returning to the same blank stare."
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "O7",
+        "object_id": "Olga",
+        "reaction": "Olga stops cleaning the dish, and is completely still except for a violent twitch in her eye. After two breathless minutes she picks up her dish and returns to her duties."
+    },
+    {
         "display_if_visited_interaction_id": "Cc1",
         "description": "Bring her a cup of coffee",
         "interaction_id": "B7",
@@ -354,7 +396,6 @@
     },
     {
         "display_if_visited_interaction_id": "Mi1",
-        "interaction_id": "Bs1",
         "description": "Examine Bookshelf",
         "interaction_id": "Bs1",
         "object_id": "book",

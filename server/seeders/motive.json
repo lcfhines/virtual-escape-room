@@ -25,9 +25,9 @@
         "interaction_id": "A2"
     },
     {
-        "description": "He was killed so that Elizabeth could inherit the family fortune",
+        "description": "He was killed because Elizabeth, still angry about being passed over as heir, wanted contol of the family fortune.",
         "motive_id": "inhe",
-        "interaction_id": "S4"
+        "interaction_id": "E8"
     },
     {
         "description": "He was killed by Marguerite in her drunken stupor because she's an absolute menace.",
@@ -58,5 +58,21 @@
         "description": "He was killed by Jeramiah because he looked similiar to the original owner of the house, and wanted to kepp Annabelle for himself.",
         "motive_id": "wife",
         "interaction_id": "Gs1"
+    },
+    {
+        "description": "Sir Edmund killed Jerome for the thrill of the hunt.",
+        "motive_id": "hunt",
+        "interaction_id": "E7"
+    },
+    {
+        "description": "Olga killed Jameson in a fit of rage for allowing Marguerite into the house, and expecting her to cluen up her path of destruction.",
+        "motive_id": "puke",
+        "interaction_id": "O7"
+    },
+    {
+        "description": "Jeramiah killed him because Jerome had uncovered evidence related to him murdering the previous owner of the house.",
+        "motive_id": "coup",
+        "interaction_id": "B6"
     }
+
 ]
