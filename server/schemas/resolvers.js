@@ -88,6 +88,9 @@ const resolvers = {
       solutions: async () => {
         return Solution.find({});
       },
+      // solutionLetters: async () => {
+      //   return SolutionLetter.find({});
+      // }
   },
 
   Mutation: {
