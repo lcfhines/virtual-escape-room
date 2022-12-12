@@ -72,7 +72,7 @@ const SignupForm = () => {
             placeholder='Your first name'
             name='first_name'
             onChange={handleInputChange}
-            value={userFormData.firstname}
+            value={userFormData.first_name}
             required
           />
           <Form.Control.Feedback type='invalid'>First name is required!</Form.Control.Feedback>
@@ -85,7 +85,7 @@ const SignupForm = () => {
             placeholder='Your lastname'
             name='last_name'
             onChange={handleInputChange}
-            value={userFormData.lastname}
+            value={userFormData.last_name}
             required
           />
           <Form.Control.Feedback type='invalid'>Last name is required!</Form.Control.Feedback>
