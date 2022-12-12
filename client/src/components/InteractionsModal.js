@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Collapse from 'react-bootstrap/Collapse';
-import { useState } from 'react';
 
-const InteractionModal = (props) => {
+
+const InteractionModal = () => {
     // useParams to get object_id, query interactions to get all interactions
-
+    const [showModal, setShowModal] = useState(false);
     const [open, setOpen] = useState(false);
 
     return (
         <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
+        size='lg'
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby='interactions-modal'>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             Insert name of object here
@@ -42,7 +41,7 @@ const InteractionModal = (props) => {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
+          <Button onClick={setShowModal(false)}>Close</Button>
         </Modal.Footer>
       </Modal>
     )
