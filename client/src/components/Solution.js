@@ -6,11 +6,14 @@ import { useGameContext } from '../utils/GlobalState'
 const SolutionForm = () => {
     const [state] = useGameContext();
 
-  // Initialize state for new students and new student majors
+    const [suspect, setSuspect] = useState("")
+    const [weapon, setWeapon] = useState("")
+    const [motive, setMotive] = useState("")
+
 
   return (
     <div>
-      {solutions ? (
+      {solution ? (
         <>
           <section className="solution-dropdown">
             <table>
@@ -24,9 +27,9 @@ const SolutionForm = () => {
               <tbody>
                 {solution.map((solution) => (
                   <tr key={solution.id}>
-                    <td>{character.id}</td>
-                    <td>{object.id}</td>
-                    <td>{motive.id}</td>
+                    <td>{character_id}</td>
+                    <td>{object_id}</td>
+                    <td>{motive_id}</td>
                   </tr>
                 ))}
               </tbody>
@@ -34,37 +37,36 @@ const SolutionForm = () => {
             <div>
             <div>
             <select
-                onChange={(e) => setNew(e.target.value)}
-                value={newStudentMajor}>
-                <option>Choose major...</option>
-                {majors.map((major) => (
-                  <option key={major} value={major}>
-                    {major}
+                onChange={(e) => setSuspect(e.target.value)}
+                value={suspect}>
+                <option>Choose your prime suspect...</option>
+                {state.solutions.suspects.map((suspect, index) => (
+                  <option key={index} value={suspect.object_id}>
+                    {suspect.name}
                   </option>
                 ))}
               </select>
               </div>    
               <div>
               <select
-                onChange={(e) => setNewStudentMajor(e.target.value)}
-                value={newStudentMajor}>
-                <option>Choose major...</option>
-                {majors.map((major) => (
-                  <option key={major} value={major}>
-                    {major}
+                onChange={(e) => setWeapon(e.target.value)}
+                value={weapon}>
+                <option>Choose the murder weapon...</option>
+                {state.solutions.weapons.map((weapon, index) => (
+                  <option key={index} value={weapon.object_id}>
+                    {weapon.name}
                   </option>
                 ))}
               </select>
               </div>
               <div>
               <select
-                onChange={(e) => setNewStudentMajor(e.target.value)}
-                value={newStudentMajor}
-              >
-                <option>Choose major...</option>
-                {majors.map((major) => (
-                  <option key={major} value={major}>
-                    {major}
+                onChange={(e) => setMotive(e.target.value)}
+                value={motive}>
+                <option>Choose the suspect's motive...</option>
+                {state.solutions.motives.map((motive, index) => (
+                  <option key={index} value={motive}>
+                    {motive.description}
                   </option>
                 ))}
               </select>
@@ -72,10 +74,7 @@ const SolutionForm = () => {
               <button
                 type="button"
                 onClick={() => {
-                  addStudent({ name: newStudentName, major: newStudentMajor });
-                  // Empty the input field and reset the dropdown after buttons is clicked
-                  setNewStudentMajor('');
-                  setNewStudentName('');
+                  addSolution({ suspect: suspect, weapon: weapon, motive: motive});
                 }}
               >
                 Submit Solution
@@ -84,11 +83,10 @@ const SolutionForm = () => {
           </section>
         </>
       ) : (
-        <span>Hmm... seems that you have not selected an option from every dropdown!</span>
+        <span>Hmm... seems that you have not selected an option from every dropdown, please choose a suspect, weapond and motive for the murder!</span>
       )}
     </div>
   );
- 
   }
 
 export default SolutionForm;
