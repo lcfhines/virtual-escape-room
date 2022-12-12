@@ -38,9 +38,17 @@ function App() {
       <Router>
           <Navbar />
           <Routes>
-            {/* <Route 
+            <Route 
               path='/' 
               element={<Home />} 
+            />
+            {/* <Route 
+              path='/game/:game_id' 
+              element={<Game />} 
+            />
+            <Route 
+              path='/room/:game_id:room_id' 
+              element={<Room />} 
             /> */}
             <Route 
               path='*'
