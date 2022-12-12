@@ -16,6 +16,7 @@ import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import { GameProvider } from './utils/GlobalState';
 
 
 const httpLink = createHttpLink({
