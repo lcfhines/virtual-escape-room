@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_GAMES } from '../utils/queries';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
+import Rules from '../components/Rules';
 
 // import GameList from '../components/GameList';
 
@@ -27,10 +28,12 @@ const Home = () => {
     } else {
       return (
         <div>
-          <p>Intro</p>
+          <h1 className="intro">Solve a murder mystery or escape from a psycho killer all from the comfort of your couch.</h1>
+          {/* <p>Intro</p>
           <p>Leaderboard</p>
           <p>How to play rules</p>
-          <p>The above should be in an Intro component</p>
+          <p>The above should be in an Intro component</p> */}
+          <Rules />
         </div>
       )
     }
