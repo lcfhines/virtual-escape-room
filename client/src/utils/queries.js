@@ -40,16 +40,17 @@ query Games {
   } 
 `;
 
-export const QUERY_GAME_ROOMS = gql`
-query Game($gameId: Int!) {
-    game(game_id: $gameId) {
+
+  export const QUERY_GAME_ROOMS = gql`
+  query Query($gameId: Int!) {
+    game(gameId: $gameId) {
       story_line
-      title
       time_limit
+      title
       rooms {
-        room_id
         title
+        room_id
       }
     }
   }
-  `;
+`;

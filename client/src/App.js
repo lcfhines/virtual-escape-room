@@ -47,6 +47,10 @@ function App() {
               path='/' 
               element={<Home />} 
             />
+             <Route 
+              path='/game' 
+              element={<Game />} 
+            />
             {/* <Route 
               path='/game/:game_id' 
               element={<Game />} 

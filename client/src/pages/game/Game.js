@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useUserContext } from '../leaderboard/UserContext';
+// import { useUserContext } from '../leaderboard/UserContext';
 import { useQuery } from '@apollo/client';
-import  { Link }  from 'react-router-dom';
+// import  { Link }  from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import { QUERY_GAME_ROOMS } from '../../utils/queries';
@@ -11,31 +11,25 @@ const Game = () => {
 // const { users } = useUserContext();
 // const { loading, data } = useQuery(QUERY_GAME_ROOMS);
 // const rooms = data?.rooms || [];
+
      const { gameId } = useParams();
-
+     console.log(gameId);
      const { loading, data } = useQuery(QUERY_GAME_ROOMS, {
-     // pass URL parameter
-     variables: { gameId: gameId },
-
+          variables: { gameId: 1 },
      });
+
      const game = data?.game || {};
+     console.log(data);
+     
 return(
      <>
-     {/* <header>
-          <div id="logo">Name/Logo</div>
-          <ul id="links">
-               <li><a href="#">Leader Board</a></li>
-               <li><a href="#">Rules</a></li>
-               <li><a href="#">Logout</a></li>
-          </ul>
-     </header> */}
      <main id="leaderboard">
-          <h1>Virtual Escape Room</h1>
+          <h1>{game.title}</h1>
           <div id="intro">
                {/* <p>SCENERIO + PROMPT  HOW LONG YOU HAVE</p> */}
-               <h2>Short Description:</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam deleniti facere excepturi nemo molestiae laborum, aliquam cumque alias voluptates vero fugit laboriosam iusto corporis?</p>
-               <h2>Story line Descriptions:</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam deleniti facere excepturi nemo molestiae laborum, aliquam cumque alias voluptates vero fugit laboriosam iusto corporis?</p>
-               <h2>Time limit for game:</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsam deleniti facere excepturi nemo molestiae laborum, aliquam cumque alias voluptates vero fugit laboriosam iusto corporis?</p>
+               <h2>Short Description:</h2><p>{game.title}</p>
+               <h2>Story line Descriptions:</h2><p>{game.story_line}</p>
+               <h2>Time limit for game:</h2><p>{game.time_limit}</p>
           </div>
           <div  id="start">
           {/* <Link
