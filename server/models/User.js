@@ -22,14 +22,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    number_of_attempts: {
-      type: Number,
-      default: 0
-    },
-    final_solution_time: {
-      type: Number,
-      default: 0
-    },
+   
   },
   // set this to use virtual below
   {

@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction} = require('../models');
+const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, LeaderBoard} = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -54,6 +54,17 @@ const resolvers = {
 
       return interactions;
     },
+
+    // leaderBoard: async (parent, {game_id}) => {
+    //   const leaderBoard = await LeaderBoard.findOne({game_id});
+    //   const user = await User.findById({ _id: leaderBoard.user_id });
+    //   return {
+    //     ...leaderBoard,
+    //     user.first_name,
+    //     user.last_name
+    //   }
+
+    //  },
 
     // auxillary queries
       users: async () => {
@@ -159,6 +170,8 @@ const resolvers = {
       motive_id
       });
     },
+
+    
   },
 } 
    
