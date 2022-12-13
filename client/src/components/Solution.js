@@ -15,7 +15,7 @@ const SolutionForm = (props) => {
     <div>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Guess your solution to escapte the mansion
+            Guess your solution to escape the mansion
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
