@@ -10,6 +10,7 @@ export const reducer = (state, action) => {
     case ADD_GAME:
       const 
         {
+          game_id,
           title,
           story_line,
           time_limit,
@@ -51,6 +52,7 @@ export const reducer = (state, action) => {
       return {
         ...state, 
         game: {
+          game_id,
           title,
           story_line,
           time_limit
