@@ -7,15 +7,21 @@ import RoomList from '../components/RoomList'
 import { useGameContext } from '../utils/GlobalState';
 import Timer from '../components/Timer';
 import Object from '../components/Object';
+import Solution from '../components/Solution';
+import SolutionForm from "../components/Solution";
+import  { Modal }  from 'react-bootstrap';
 
 // import CommentList from '../components/CommentList';
 
 const Room = () => {
     const [state] = useGameContext();
+    const [showModal, setShowModal] = useState(false)
     const {room_id} = useParams();
     const room = state.rooms?.find(room => room.room_id === parseInt(room_id)) || {}; 
     console.log(room);
     console.log(room_id);
+
+
 
     return (
         <main>
@@ -50,7 +56,17 @@ const Room = () => {
              </div>
         </div> */}
         {parseInt(room_id) === state.defaultRoomId 
-          && (<div id="solve"><a href="#">I know who did it</a></div>)
+          && ( 
+            <div>
+            <Link onClick = {() => setShowModal(true)}> I know who did it! </Link>
+                <Modal
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered>
+                    < SolutionForm/>
+
+                </Modal>
+            </div>)
           } 
    </main>
     )
