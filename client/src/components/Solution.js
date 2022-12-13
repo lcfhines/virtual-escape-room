@@ -12,12 +12,13 @@ const SolutionForm = (props) => {
     const [motive, setMotive] = useState("")
 
   return (
-    <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
+    // <Modal
+    //     {...props}
+    //     size="lg"
+    //     aria-labelledby="contained-modal-title-vcenter"
+    //     centered
+    //   >
+    <div>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             Guess your solution to escapte the mansion
@@ -25,22 +26,22 @@ const SolutionForm = (props) => {
         </Modal.Header>
         <Modal.Body>
             <div>
-            <DropdownButton id="dropdown-basic-button" title="Dropdown button"
+            <DropdownButton id="dropdown-basic-button" title="Choose your prime suspect..."
                 onChange={(e) => setSuspect(e.target.value)}
                 value={suspect}>
-                <option>Choose your prime suspect...</option>
+                {/* <option>Choose your prime suspect...</option> */}
                 {state.solutions.suspects.map((suspect, index) => (
                   <Dropdown.Item key={index} value={suspect.object_id}>
                     {suspect.name}
                   </Dropdown.Item>
                 ))}
               </DropdownButton>
-              </div>    
+              </div>   
               <div>
-              <DropdownButton id="dropdown-basic-button" title="Dropdown button"
+              <DropdownButton id="dropdown-basic-button" title="Choose the murder weapon..."
                 onChange={(e) => setWeapon(e.target.value)}
                 value={weapon}>
-                <option>Choose the murder weapon...</option>
+                {/* <option>Choose the murder weapon...</option> */}
                 {state.solutions.weapons.map((weapon, index) => (
                   <Dropdown.Item key={index} value={weapon.object_id}>
                     {weapon.name}
@@ -49,23 +50,23 @@ const SolutionForm = (props) => {
               </DropdownButton>
               </div>
               <div>
-              <DropdownButton id="dropdown-basic-button" title="Dropdown button"
+              <DropdownButton id="dropdown-basic-button" title="Choose the motive..."
                 onChange={(e) => setMotive(e.target.value)}
                 value={motive}>
-                <option>Choose the suspect's motive...</option>
+                {/* <option>Choose the suspect's motive...</option> */}
                 {state.solutions.motives.map((motive, index) => (
                   <Dropdown.Item key={index} value={motive}>
                     {motive.description}
                     </Dropdown.Item>
                 ))}
               </DropdownButton>
-              </div> 
+              </div>  
               <div>    
               <button
                 type="button"
-                onClick={() => {
-                  addSolution({ suspect: suspect, weapon: weapon, motive: motive});
-                }}
+                // onClick={() => {
+                //   addSolution({ suspect: suspect, weapon: weapon, motive: motive});
+                // }}
               >
                 Submit Solution
               </button>
@@ -74,7 +75,7 @@ const SolutionForm = (props) => {
         <Modal.Footer>
               <Button onClick={props.onHide}>Close</Button>
         </Modal.Footer>
-        </Modal>
+        </div>
   )}
 
 export default SolutionForm;

@@ -60,6 +60,8 @@ const Room = () => {
             <div>
             <Link onClick = {() => setShowModal(true)}> I know who did it! </Link>
                 <Modal
+                show={showModal}
+                onHide={() => setShowModal(false)}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered>
