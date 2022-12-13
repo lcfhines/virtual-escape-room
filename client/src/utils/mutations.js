@@ -29,3 +29,16 @@ export const ADD_USER = gql`
         }
     }
 `;
+export const END_GAME = gql`
+  mutation Mutation($gameId: Int!, $finalSolutionTime: Int) {
+    endGame(gameId: $gameId, final_solution_time: $finalSolutionTime) {
+      _id
+      game_id
+      user_id
+      first_name
+      last_name
+      number_of_attempts
+      final_solution_time
+    }
+  }
+`;
