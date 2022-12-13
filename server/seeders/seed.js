@@ -20,7 +20,6 @@ db.once('open', async () => {
     await Interaction.deleteMany({});
     await Motive.deleteMany({});
     await Solution.deleteMany({});
-    await User.deleteMany({});
     await SolutionLetter.deleteMany({});
     await LeaderBoard.deleteMany({});
 

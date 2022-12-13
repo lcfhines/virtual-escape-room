@@ -16,7 +16,6 @@ const resolvers = {
     },
 
     game: async (parent, { gameId }) => {
-
       const game =  await Game.findOne({ game_id: gameId })
         .populate({
           path: 'rooms',

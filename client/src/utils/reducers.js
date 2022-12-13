@@ -14,7 +14,8 @@ export const reducer = (state, action) => {
           title,
           story_line,
           time_limit,
-          rooms
+          rooms,
+          solution
         } = action.game;
 
       
@@ -31,10 +32,6 @@ export const reducer = (state, action) => {
           }
         })
       })
-        // rooms.map(room => {
-        //   room.objects.filter(object => object.type === 'character')
-        //   .map(object => { return {character_id: object.object_id, name: object.name} });
-        // }
 
       return {
         ...state, 
@@ -45,7 +42,8 @@ export const reducer = (state, action) => {
         },
         rooms,
         defaultRoomId,
-        characters
+        characters,
+        correctSolution: solution
       }
     // case UPDATE_USER_INTERACTION:
     // This saves us from a crash.
