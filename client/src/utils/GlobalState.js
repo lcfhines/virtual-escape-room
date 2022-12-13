@@ -17,9 +17,17 @@ const GameProvider = ({ value = [], ...props }) => {
     
     solutions: {
       suspects: {
-        object_id: '',
-        name: ''
-      }
+        object_id: '1',
+        name: 'Laura'
+      },
+     weapons: {
+      object_id: '2',
+      name: 'Broom'
+     },
+     motives:{
+      object_id: '3',
+      description: `didn't finish coding project in time`
+     }
     }
   });
 
