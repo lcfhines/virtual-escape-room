@@ -3,44 +3,47 @@ import { useQuery } from "@apollo/client";
 import { useParams } from 'react-router-dom';
 import { QUERY_ROOM } from '../utils/queries';
 import { Link } from 'react-router-dom';
+import RoomList from '../components/RoomList'
+import { useGameContext } from '../utils/GlobalState';
+import Timer from '../components/Timer';
+import Object from '../components/Object';
+import Solution from '../components/Solution';
+import SolutionForm from "../components/Solution";
+import  { Modal }  from 'react-bootstrap';
 
 // import CommentList from '../components/CommentList';
 
-const Room = ({rooms}) => {
-  // Use `useParams()` to retrieve value of the route parameter `:profileId`
-  const [roomArray] = useState(rooms);
-  const { roomId } = useParams();
+const Room = () => {
+    const [state] = useGameContext();
+    const [showModal, setShowModal] = useState(false)
+    const {room_id} = useParams();
+    const room = state.rooms?.find(room => room.room_id === parseInt(room_id)) || {}; 
+    console.log(room);
+    console.log(room_id);
 
-  const { loading, data } = useQuery(QUERY_ROOM, {
-    // pass URL parameter
-    variables: { roomId: roomId },
-  });
 
-    const room = data?.room || {};
-   
+
     return (
         <main>
         <div id="room">
              <div>
-                  <h2>Room</h2>
-                  <select name="rooms" id="rooms">
-                    {rooms && rooms.map((room, idx) => (
-                        <option key={idx}>
-                        <Link to={`/room/${room.roomId}`}>{room.title}</Link>
-                        </option>          
-                    ))}
-                  </select>
+                  <h2>{room.title}</h2>
+                  <RoomList/>
              </div>
              <h2>Timer</h2>
+             <Timer />
         </div>
-        <div id="character">
+        {/* <div id="character">
              <a href="#"><img src="./assets/char.png"/></a>
-        </div>
+        </div> */}
         <div id="room-desc">
-             <h2>Description of room</h2>
-             <p></p>
+             <h2>description</h2>
+             <p> {room.description} </p>
         </div>
-        <div id="object">
+        {room.objects.map((object, idx) => {
+          return <Object key={idx} object={object}/>
+        })}
+        {/* <div id="object">
              <div className="row">
                   <a href="#" ><img src="assets/comingSoon.png" alt=""/></a>
                   <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
@@ -51,10 +54,23 @@ const Room = ({rooms}) => {
                   <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
                   <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
              </div>
-        </div>
-        <div id="solve"><a href="#">I know who did it</a></div>
-   </main>
+        </div> */}
+        {parseInt(room_id) === state.defaultRoomId 
+          && ( 
+            <div>
+            <Link onClick = {() => setShowModal(true)}> I know who did it! </Link>
+                <Modal
+                show={showModal}
+                onHide={() => setShowModal(false)}
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered>
+                    < SolutionForm/>
 
+                </Modal>
+            </div>)
+          } 
+   </main>
     )
 }
 

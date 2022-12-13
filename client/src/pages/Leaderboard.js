@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import { useUserContext } from './UserContext';
-
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
+import { QUERY_GET_LEADERBOARD } from '../utils/queries';
 const Leaderboard = () => {
 
 const { users } = useUserContext();
-
+const { game_id } = useParams();
+const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD, 
+  {
+    variables: 
+      { gameId: parseInt(game_id) },
+  }
+);
 return(
      <>
      <main id="leaderboard">
