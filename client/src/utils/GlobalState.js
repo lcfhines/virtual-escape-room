@@ -8,6 +8,13 @@ const GameProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useGameReducer({
     game: {},
     rooms: [],
+
+    characters: [],
+    weaponInteractions: [],
+    motiveInteractions: [],
+
+    gameInteractions: [],
+    
     solutions: {
       suspects: {
         object_id: '',
