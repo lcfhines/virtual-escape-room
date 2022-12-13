@@ -5,6 +5,7 @@ import { QUERY_ROOM } from '../utils/queries';
 import { Link } from 'react-router-dom';
 import RoomList from '../components/RoomList'
 import { useGameContext } from '../utils/GlobalState';
+import Timer from '../components/Timer';
 
 // import CommentList from '../components/CommentList';
 
@@ -23,6 +24,7 @@ const Room = () => {
                   <RoomList/>
              </div>
              <h2>Timer</h2>
+             <Timer />
         </div>
         <div id="character">
              <a href="#"><img src="./assets/char.png"/></a>
