@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Timer = () => {
     const timeoutRef = useRef(null);
     const [timeLeft, setTimeLeft] = useState(60);
-    const [timerRunning, setTimerRunning] = useState(false);
+    const [timerRunning, setTimerRunning] = useState(true);
 
     useEffect(() => {
         if (timeLeft > 0 && timerRunning) {
