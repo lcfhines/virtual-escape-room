@@ -35,7 +35,7 @@ const Object = ({object}) => {
     const [modalShow, setModalShow] = useState(false);
     return (
     <>
-        <Button variant="primary" onClick={() => setModalShow(true)}>{object.name}
+        <Button variant="outline-danger" size="lg"onClick={() => setModalShow(true)}>{object.name}
         </Button>
         <ObjectModal 
         show={modalShow} 
