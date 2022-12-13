@@ -25,6 +25,7 @@ const typeDefs = gql`
     story_line: String
     time_limit: Int
     rooms: [Room]
+    solution: Solution
   }
 
   type Room {
@@ -72,8 +73,8 @@ const typeDefs = gql`
 
   type Solution{
     _id: ID
-    character_id: String
-    object_id: String
+    suspect_id: String
+    weapon_id: String
     motive_id: String
   }
 

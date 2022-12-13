@@ -1,23 +1,23 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, Solution, LeaderBoard, SolutionLetter } = require('../models');
 const { signToken } = require('../utils/auth');
-const ObjectId = require('mongodb').ObjectId;
 
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return await User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
 
     games: async () => {
-      return Game.find({});
+      return await Game.find({});
     },
 
     game: async (parent, { gameId }) => {
-      return Game.findOne({ game_id: gameId })
+
+      const game =  await Game.findOne({ game_id: gameId })
         .populate({
           path: 'rooms',
             populate: {
@@ -29,11 +29,16 @@ const resolvers = {
                     }
                 }
             }
-        })
+      });
+
+      const solution = await Solution.findOne();
+      game.solution = solution;
+
+      return game;
     },
 
     room: async (parent, { roomId }) => {
-      return Room.findOne({ room_id: roomId }).populate('objects');
+      return await Room.findOne({ room_id: roomId }).populate('objects');
     },
     
 
@@ -42,7 +47,7 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       }
 
-      const resp = Interaction.findOne({ object_id: objectId });
+      const resp = await Interaction.findOne({ object_id: objectId });
 
       // Check whether the interaction has to be displayed by checking whether
       // another interaction has been performed, as tracked on the GameUserInteraction collection table
@@ -75,31 +80,31 @@ const resolvers = {
 
     // auxillary queries
       users: async () => {
-        return User.find({});
+        return await User.find({});
       },
       rooms: async () => {
-        return Room.find({});
+        return await Room.find({});
       },
       objects: async () => {
-        return Object.find({});
+        return await Object.find({});
       },
       interactions: async () => {
-        return Interaction.find({});
+        return await Interaction.find({});
       },
       gameUserInteractions: async () => {
-        return GameUserInteraction.find({});
+        return await GameUserInteraction.find({});
       },
       motives: async () => {
-        return Motive.find({});
+        return await Motive.find({});
       },
       solutions: async () => {
-        return Solution.find({});
+        return await Solution.find({});
       },
       solutionLetters: async () => {
-        return SolutionLetter.find({});
+        return await SolutionLetter.find({});
       },
       leaderBoards: async () => {
-        return LeaderBoard.find({});
+        return await LeaderBoard.find({});
       },
   },
 
@@ -159,7 +164,7 @@ const resolvers = {
       }
 
       // check if already interacted
-      const interaction = GameUserInteraction.findOne({
+      const interaction = await GameUserInteraction.findOne({
         user_id: context.user._id,
         interaction_id
       });
