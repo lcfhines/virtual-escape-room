@@ -1,9 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useGameContext } from '../utils/GlobalState';
 
 const Timer = () => {
+    const [state] = useGameContext();
+    const time_limit = state.game.time_limit;
+
     const timeoutRef = useRef(null);
-    const [timeLeft, setTimeLeft] = useState(60);
+    const [timeLeft, setTimeLeft] = useState(time_limit * 60);
     const [timerRunning, setTimerRunning] = useState(true);
+
+    let timer = '';
+    let minutes = Math.floor((timeLeft / 60) % 60);
+    let seconds = Math.floor(timeLeft % 60);
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    timer = `${minutes}:${seconds}`
 
     useEffect(() => {
         if (timeLeft > 0 && timerRunning) {
@@ -17,7 +29,7 @@ const Timer = () => {
 
     return (
         <div>
-            <h2>{timeLeft}</h2>
+            <h2>{timer}</h2>
             <button onClick={() => setTimerRunning(true)}>Start</button>
             <button onClick={() => {
                 clearTimeout(timeoutRef.current);
