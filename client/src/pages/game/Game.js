@@ -14,7 +14,7 @@ const Game = () => {
      });
 
      const game = data?.game || {};
-     
+     console.log(game);
 return(
      <>
      <main id="game">
@@ -29,7 +29,7 @@ return(
           <Link
                to={{
                pathname: "/room",
-               // state: {game.rooms.title}
+               // state: {game.rooms}
                }}
           >
                START
