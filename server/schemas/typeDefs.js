@@ -11,7 +11,9 @@ const typeDefs = gql`
 
   type LeaderBoard {
     game_id: Int
-    user_id: ID
+    user_id: String
+    first_name: String
+    last_name: String
     number_of_attempts: Int
     final_solution_time: Int
   }
@@ -70,9 +72,15 @@ const typeDefs = gql`
 
   type Solution{
     _id: ID
-    character_id: ID
-    object_id: ID
-    motive_id: ID
+    character_id: String
+    object_id: String
+    motive_id: String
+  }
+
+  type SolutionLetter{
+    _id: ID
+    success: Boolean
+    message: String
   }
 
   type Auth {
@@ -92,7 +100,10 @@ const typeDefs = gql`
     objectInteractions(objectId: String!): [Interaction]!  
     me: User
 
+    leaderBoards: [LeaderBoard]!
+
     leaderBoard(gameId: Int!): [LeaderBoard]!
+
     introData: Intro
     defaultRoom(gameId: Int!): Room
 
@@ -103,6 +114,7 @@ const typeDefs = gql`
     gameUserInteractions: [GameUserInteraction]!
     motives: [Motive]!
     solutions: [Solution]!
+    solutionLetters: [SolutionLetter]!
   }
 
   type Mutation {

@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, LeaderBoard} = require('../models');
+const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, Solution, LeaderBoard, SolutionLetter } = require('../models');
 const { signToken } = require('../utils/auth');
+const ObjectId = require('mongodb').ObjectId;
 
 const resolvers = {
   Query: {
@@ -35,6 +36,7 @@ const resolvers = {
       return Room.findOne({ room_id: roomId }).populate('objects');
     },
     
+
     objectInteractions: async (parent, { objectId }, context) => {
       if (!context.user) {
         throw new AuthenticationError('You need to be logged in!');
@@ -67,16 +69,9 @@ const resolvers = {
       return interactions;
     },
 
-    // leaderBoard: async (parent, {game_id}) => {
-    //   const leaderBoard = await LeaderBoard.findOne({game_id});
-    //   const user = await User.findById({ _id: leaderBoard.user_id });
-    //   return {
-    //     ...leaderBoard,
-    //     user.first_name,
-    //     user.last_name
-    //   }
-
-    //  },
+    leaderBoard: async (parent, { gameId }) => {
+      return await LeaderBoard.find({ game_id: gameId });
+    },
 
     // auxillary queries
       users: async () => {
@@ -99,6 +94,12 @@ const resolvers = {
       },
       solutions: async () => {
         return Solution.find({});
+      },
+      solutionLetters: async () => {
+        return SolutionLetter.find({});
+      },
+      leaderBoards: async () => {
+        return LeaderBoard.find({});
       },
   },
 
