@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useGameContext } from '../utils/GlobalState'
-import  { DropdownButton, Dropdown }  from 'react-bootstrap';
+import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
 
 
-const SolutionForm = () => {
+const SolutionForm = (props) => {
     const [state] = useGameContext();
 
     const [suspect, setSuspect] = useState("")
@@ -12,29 +12,18 @@ const SolutionForm = () => {
     const [motive, setMotive] = useState("")
 
   return (
-    <div>
-      {solution ? (
-        <>
-          <section className="solution-dropdown">
-            <table>
-              <thead>
-                <tr>
-                  <th>Suspect</th>
-                  <th>Weapon</th>
-                  <th>Motive</th>
-                </tr>
-              </thead>
-              <tbody>
-                {solution.map((solution) => (
-                  <tr key={solution.id}>
-                    <td>{character_id}</td>
-                    <td>{object_id}</td>
-                    <td>{motive_id}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div>
+    <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Guess your solution to escapte the mansion
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
             <div>
             <DropdownButton id="dropdown-basic-button" title="Dropdown button"
                 onChange={(e) => setSuspect(e.target.value)}
@@ -43,7 +32,7 @@ const SolutionForm = () => {
                 {state.solutions.suspects.map((suspect, index) => (
                   <Dropdown.Item key={index} value={suspect.object_id}>
                     {suspect.name}
-                    </Dropdown.Item>
+                  </Dropdown.Item>
                 ))}
               </DropdownButton>
               </div>    
@@ -70,7 +59,8 @@ const SolutionForm = () => {
                     </Dropdown.Item>
                 ))}
               </DropdownButton>
-              </div>      
+              </div> 
+              <div>    
               <button
                 type="button"
                 onClick={() => {
@@ -80,13 +70,11 @@ const SolutionForm = () => {
                 Submit Solution
               </button>
             </div>
-          </section>
-        </>
-      ) : (
-        <span>Hmm... seems that you have not selected an option from every dropdown, please choose a suspect, weapon and motive for the murder!</span>
-      )}
-    </div>
-  );
-  }
+        </Modal.Body>
+        <Modal.Footer>
+              <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+        </Modal>
+  )}
 
 export default SolutionForm;
