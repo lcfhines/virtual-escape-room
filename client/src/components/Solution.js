@@ -12,12 +12,6 @@ const SolutionForm = (props) => {
     const [motive, setMotive] = useState("")
 
   return (
-    // <Modal
-    //     {...props}
-    //     size="lg"
-    //     aria-labelledby="contained-modal-title-vcenter"
-    //     centered
-    //   >
     <div>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
