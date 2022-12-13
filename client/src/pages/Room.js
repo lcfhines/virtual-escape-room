@@ -9,11 +9,11 @@ import { useGameContext } from '../utils/GlobalState';
 // import CommentList from '../components/CommentList';
 
 const Room = () => {
-    const [state] = useGameContext()
-    const {room_id} = useParams()
-    const room = state.rooms?.find(room => room.room_id === parseInt(room_id)); 
-    console.log(room)
-    console.log(room_id)
+    const [state] = useGameContext();
+    const {room_id} = useParams();
+    const room = state.rooms?.find(room => room.room_id === parseInt(room_id)) || {}; 
+    console.log(room);
+    console.log(room_id);
 
     return (
         <main>
