@@ -39,8 +39,8 @@ return(
                   <tr key={user.id}>
                     <td>{user.rank}</td>
                     <td>{user.name}</td>
-                    <td>{user.time}</td>
-                    <td>{user.click}</td>
+                    <td>{user.number_of_attempts}</td>
+                    <td>{user.final_solution_time}</td>
                   </tr>
                  ))}
                 </tbody>
