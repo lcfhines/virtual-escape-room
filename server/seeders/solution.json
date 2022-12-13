@@ -1,7 +1,7 @@
 [
     {
-        "character_id": "Matt",
-        "object_id": "cros",
+        "suspect_id": "Matt",
+        "weapon_id": "cros",
         "motive_id": "acci"
     }
 ]
