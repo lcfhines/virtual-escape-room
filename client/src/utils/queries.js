@@ -44,6 +44,7 @@ query Games {
       time_limit
       title
       rooms {
+        is_default
         title
         room_id
       }
@@ -64,3 +65,37 @@ query Room($roomId: Int!) {
     }
   }
 `;
+
+export const QUERY_GET_GAME = gql`
+query GetGame($gameId: Int!) {
+  game(gameId: $gameId) {
+    game_id
+    title
+    story_line
+    time_limit
+    rooms {
+      room_id
+      is_default
+      title
+      description
+      objects {
+        object_id
+        name
+        type
+        isWeapon
+        interactions {
+          interaction_id
+          display_if_visited_interaction_id
+          description
+          reaction
+          motives {
+            motive_id
+            description
+          }
+        }
+      }
+    }
+  }
+}
+`;
+

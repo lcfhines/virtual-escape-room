@@ -16,7 +16,19 @@ const resolvers = {
     },
 
     game: async (parent, { gameId }) => {
-      return Game.findOne({ game_id: gameId }).populate('rooms');
+      return Game.findOne({ game_id: gameId })
+        .populate({
+          path: 'rooms',
+            populate: {
+              path: 'objects',
+                populate: {
+                  path: 'interactions',
+                    populate: {
+                      path: 'motives'
+                    }
+                }
+            }
+        })
     },
 
     room: async (parent, { roomId }) => {
