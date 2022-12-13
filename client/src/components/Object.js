@@ -5,7 +5,7 @@ import { useGameContext } from '../utils/GlobalState';
 import InteractionList from './InteractionList';
 import { useParams } from 'react-router-dom';
 
-const ObjectModal = (props) => {
+const ObjectModal = (props, object, idx) => {
     const [state] = useGameContext();
     // const {object_id} = useParams();
     // const object = state.objects?.find(object => object.object_id === parseInt(object_id)) || {};
@@ -18,10 +18,13 @@ const ObjectModal = (props) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        object={object}
+        key={idx}
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             insert object name here
+            {object.name}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -45,11 +48,15 @@ const ObjectModal = (props) => {
 
 const Object = ({object}) => {
     const [modalShow, setModalShow] = useState(false);
+    // const handleClose = () => setModalShow(false);
+    // const handleShow = () => setModalShow(true);
+    
     return (
     <>
         <Button variant="outline-danger" size="lg"onClick={() => setModalShow(true)}>{object.name}
         </Button>
         <ObjectModal 
+        object={object}
         show={modalShow} 
         onHide={() => setModalShow(false)}
         />
