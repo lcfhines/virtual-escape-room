@@ -50,7 +50,7 @@ query Games {
       }
     }
   }
-  `;
+`;
 
 export const QUERY_ROOM = gql`
 query Room($roomId: Int!) {
@@ -95,7 +95,22 @@ query GetGame($gameId: Int!) {
         }
       }
     }
+    solution {
+      suspect_id
+      weapon_id
+      motive_id
+    }
   }
 }
 `;
 
+export const QUERY_GET_LEADERBOARD = gql`
+query LeaderBoard($gameId: Int!) {
+  leaderBoard(gameId: $gameId) {
+    number_of_attempts
+    final_solution_time
+    first_name
+    last_name
+  }
+}
+`;

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useGameContext } from '../utils/GlobalState'
+import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
 
 
-const SolutionForm = () => {
+const SolutionForm = (props) => {
     const [state] = useGameContext();
 
     const [suspect, setSuspect] = useState("")
@@ -12,80 +13,63 @@ const SolutionForm = () => {
 
   return (
     <div>
-      {solution ? (
-        <>
-          <section className="solution-dropdown">
-            <table>
-              <thead>
-                <tr>
-                  <th>Suspect</th>
-                  <th>Weapon</th>
-                  <th>Motive</th>
-                </tr>
-              </thead>
-              <tbody>
-                {solution.map((solution) => (
-                  <tr key={solution.id}>
-                    <td>{character_id}</td>
-                    <td>{object_id}</td>
-                    <td>{motive_id}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Guess your solution to escapte the mansion
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
             <div>
-            <div>
-            <select
+            <DropdownButton id="dropdown-basic-button" title="Choose your prime suspect..."
                 onChange={(e) => setSuspect(e.target.value)}
                 value={suspect}>
-                <option>Choose your prime suspect...</option>
-                {state.solutions.suspects.map((suspect, index) => (
-                  <option key={index} value={suspect.object_id}>
+                {/* <option>Choose your prime suspect...</option> */}
+                {state.suspects.map((suspect, index) => (
+                  <Dropdown.Item key={index} value={suspect.object_id}>
                     {suspect.name}
-                  </option>
+                  </Dropdown.Item>
                 ))}
-              </select>
-              </div>    
+              </DropdownButton>
+              </div>   
               <div>
-              <select
+              <DropdownButton id="dropdown-basic-button" title="Choose the murder weapon..."
                 onChange={(e) => setWeapon(e.target.value)}
                 value={weapon}>
-                <option>Choose the murder weapon...</option>
-                {state.solutions.weapons.map((weapon, index) => (
-                  <option key={index} value={weapon.object_id}>
+                {/* <option>Choose the murder weapon...</option> */}
+                {state.weapons.map((weapon, index) => (
+                  <Dropdown.Item key={index} value={weapon.object_id}>
                     {weapon.name}
-                  </option>
+                    </Dropdown.Item>
                 ))}
-              </select>
+              </DropdownButton>
               </div>
               <div>
-              <select
+              <DropdownButton id="dropdown-basic-button" title="Choose the motive..."
                 onChange={(e) => setMotive(e.target.value)}
                 value={motive}>
-                <option>Choose the suspect's motive...</option>
-                {state.solutions.motives.map((motive, index) => (
-                  <option key={index} value={motive}>
+                {/* <option>Choose the suspect's motive...</option> */}
+                {state.motives.map((motive, index) => (
+                  <Dropdown.Item key={index} value={motive.motive_id}>
                     {motive.description}
-                  </option>
+                    </Dropdown.Item>
                 ))}
-              </select>
-              </div>      
+              </DropdownButton>
+              </div>  
+              <div>    
               <button
                 type="button"
-                onClick={() => {
-                  addSolution({ suspect: suspect, weapon: weapon, motive: motive});
-                }}
+                // onClick={() => {
+                //   addSolution({ suspect: suspect, weapon: weapon, motive: motive});
+                // }}
               >
                 Submit Solution
               </button>
             </div>
-          </section>
-        </>
-      ) : (
-        <span>Hmm... seems that you have not selected an option from every dropdown, please choose a suspect, weapon and motive for the murder!</span>
-      )}
-    </div>
-  );
-  }
+        </Modal.Body>
+        <Modal.Footer>
+              <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+        </div>
+  )}
 
 export default SolutionForm;

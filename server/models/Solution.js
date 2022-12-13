@@ -2,11 +2,11 @@ const { Schema, model } = require('mongoose');
 
 const solutionSchema = new Schema(
   {
-    character_id: {
+    suspect_id: {
       type: String,
       required: true,
     },
-    object_id: {
+    weapon_id: {
       type: String,
       required: true,
     },
