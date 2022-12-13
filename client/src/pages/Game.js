@@ -7,17 +7,17 @@ import { QUERY_GAME_ROOMS, QUERY_GET_GAME } from '../utils/queries';
 
 import { useGameContext } from '../utils/GlobalState';
 import {
-  UPDATE_GAME,
+  ADD_GAME,
 } from '../utils/actions';
 
 const Game = () => {
   // const [defaultRoom, setDefaultRoom] = useState({});
   const [state, dispatch] = useGameContext();
-  const { gameId } = useParams();
+  const { game_id } = useParams();
   const {loading,  data } = useQuery(QUERY_GET_GAME, 
     {
       variables: 
-        { gameId: 1 },
+        { gameId: parseInt(game_id) },
     }
   );
   
@@ -30,7 +30,7 @@ const Game = () => {
    useEffect(() => {
     if (!loading){
       dispatch({
-        type: UPDATE_GAME,
+        type: ADD_GAME,
         game,
       });
     }
