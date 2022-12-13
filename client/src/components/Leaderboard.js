@@ -53,7 +53,6 @@ return(
                     <td>{user.first_name}</td>
                     <td>{user.number_of_attempts}</td>
                     <td>{timeMins+" mins " +timeSec +" sec"}</td>
-                    <td>{user.final_solution_time}</td>
                 </tr>
                 )})}
                 </tbody>
