@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useGameContext } from '../utils/GlobalState'
+import  { DropdownButton, Dropdown }  from 'react-bootstrap';
 
 
 const SolutionForm = () => {
@@ -35,40 +36,40 @@ const SolutionForm = () => {
             </table>
             <div>
             <div>
-            <select
+            <DropdownButton id="dropdown-basic-button" title="Dropdown button"
                 onChange={(e) => setSuspect(e.target.value)}
                 value={suspect}>
                 <option>Choose your prime suspect...</option>
                 {state.solutions.suspects.map((suspect, index) => (
-                  <option key={index} value={suspect.object_id}>
+                  <Dropdown.Item key={index} value={suspect.object_id}>
                     {suspect.name}
-                  </option>
+                    </Dropdown.Item>
                 ))}
-              </select>
+              </DropdownButton>
               </div>    
               <div>
-              <select
+              <DropdownButton id="dropdown-basic-button" title="Dropdown button"
                 onChange={(e) => setWeapon(e.target.value)}
                 value={weapon}>
                 <option>Choose the murder weapon...</option>
                 {state.solutions.weapons.map((weapon, index) => (
-                  <option key={index} value={weapon.object_id}>
+                  <Dropdown.Item key={index} value={weapon.object_id}>
                     {weapon.name}
-                  </option>
+                    </Dropdown.Item>
                 ))}
-              </select>
+              </DropdownButton>
               </div>
               <div>
-              <select
+              <DropdownButton id="dropdown-basic-button" title="Dropdown button"
                 onChange={(e) => setMotive(e.target.value)}
                 value={motive}>
                 <option>Choose the suspect's motive...</option>
                 {state.solutions.motives.map((motive, index) => (
-                  <option key={index} value={motive}>
+                  <Dropdown.Item key={index} value={motive}>
                     {motive.description}
-                  </option>
+                    </Dropdown.Item>
                 ))}
-              </select>
+              </DropdownButton>
               </div>      
               <button
                 type="button"
