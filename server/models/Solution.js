@@ -3,15 +3,15 @@ const { Schema, model } = require('mongoose');
 const solutionSchema = new Schema(
   {
     character_id: {
-      type: Schema.Types.ObjectId,
+      type: String,
       required: true,
     },
     object_id: {
-      type: Schema.Types.ObjectId,
+      type: String,
       required: true,
     },
     motive_id: {
-      type: Schema.Types.ObjectId,
+      type: String,
       required: true,
     },
   }

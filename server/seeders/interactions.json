@@ -19,35 +19,31 @@
         "reaction": "He's a long time friend of Jameson, but I hardly know him. He's been galavanting around the world for as long as I've known Jameson"
     },
     {
-        "display_if_visited_interaction_id": "",
+
         "description": "What do you think of Jeremiah?",
         "interaction_id": "A4",
         "object_id": "Anna",
         "reaction": "He murdered my fiance. I just know it"
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "What do you think of Elizabeth?",
         "interaction_id": "A5",
         "object_id": "Anna",
         "reaction": "She's been a ray of sunshine in my life. Sure she has something of sibling rivalry with Jameson, but what brother and sister don't? She's smart and witty and I was so looking forward to being a part of her family."
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "What do you think of Matthew?",
         "interaction_id": "A6",
         "object_id": "Anna",
         "reaction": "Oh that weasel? A scummy layabout who's done nothing for my fiance's business, but still demands 50% ownership. I don't know what Jameson saw in him"
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "What do you think of Marguerite?",
         "interaction_id": "A7",
         "object_id": "Anna",
         "reaction": "She's fun when she's coherent at least. Good luck making any sense of her after the first bottle, the poor dear. She could use a cup of coffee, I'd wager."
     },
     {
-        "display_if_visited_interaction_id": "",
         "description": "Where were you at the time of the murder?",
         "interaction_id": "A8",
         "object_id": "Anna",
@@ -68,7 +64,7 @@
         "reaction": "Is it really that obvious? We've been having an affair for months now. Alas, my marriage to Jameson would have made things incredibly complicated. Not that I would murder him over that!"
     },
     {
-        "description": "Examine",
+        "description": "Examine Sir Edmund",
         "interaction_id": "S1",
         "object_id": "SirE",
         "reaction": "Upon closer examination you can't decide if Sir Edmond would be more at home bumping elbows with the posh intellectuals of Oxford or stalking big cats in Africa. He's dressed in a tailored three piece suit. Hanging from his pocket is a gold chain attached to a pocket watch. On his head is a topper that makes the impressive man appear to be a giant. "
@@ -308,6 +304,48 @@
         "interaction_id": "B6",
         "object_id": "Marg",
         "reaction": "She mumbles something about the death of the late Lord Llewellyn but it's too incoherent to make out."
+    },
+    {
+        "description": "Examine",
+        "interaction_id": "O1",
+        "object_id": "Olga",
+        "reaction": "Olga looks like she's lived a thousand lifetimes in one night. The only thing more pronounced than her disdain for everyone around her are the frown lines carved into her face. Her servant's garb is stained with the disrespect of people who can't function without the help of people they consider beneath them."
+    },
+    {
+        "description": "What do you think of Annabelle?",
+        "interaction_id": "O2",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
+    },
+    {
+        "description": "What do you think of Sir Edmund?",
+        "interaction_id": "O3",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
+    },
+    {
+        "description": "What do you think of Matthew?",
+        "interaction_id": "O4",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
+    },
+    {
+        "description": "What do you think of Elizabeth?",
+        "interaction_id": "O5",
+        "object_id": "Olga",
+        "reaction": "Olga continues to look straight ahead washing and drying the same dish. The only noise she makes is whispered chanting that sounds like a prayer but is spoken like a curse."
+    },
+    {
+        "description": "What do you think of Jeramiah?",
+        "interaction_id": "O6",
+        "object_id": "Olga",
+        "reaction": "The corners of Olga's mouth turn up the slightest bit before returning to the same blank stare."
+    },
+    {
+        "description": "What do you think of Marguerite?",
+        "interaction_id": "O7",
+        "object_id": "Olga",
+        "reaction": "Olga stops cleaning the dish, and is completely still except for a violent twitch in her eye. After two breathless minutes she picks up her dish and returns to her duties."
     },
     {
         "display_if_visited_interaction_id": "Cc1",

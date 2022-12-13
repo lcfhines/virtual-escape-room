@@ -4,63 +4,63 @@
       "is_default": true,
       "room_id": 1,
       "title": "Entrance-Hall",
-      "description": "Upon entering the entrance hall you see the constable, looking at you suspiciously. He stands in front of a large door with tobacco leaves carved into it. Opposite the door is a large staircase that leads to the second level. The railing on the left side of it has been destroyed with the remnants lying on the ground below it. Moving further into the house you can see doors that lead to every room on the ground level.  ",
+      "description": "Upon entering the entrance hall you see the constable, looking at you suspiciously. He stands in front of a large door with tobacco leaves carved into it. Opposite the door is a large staircase that leads to the second level. The railing on the left side of it has been destroyed with the remnants lying on the ground below it. Moving further into the house you can see doors that lead to every room on the ground level.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 2,
       "title": "Study",
-      "description": "Upon entering the study, you are hit with the rich fragrance of Mahogany, and old books. The wall to your right is lined with bookshelves,containing a large variety of leather-bound books, with various artifacts dispersed amongst the shelves. On the opposite wall there is a large stone fireplace with a table in front situated between two large leather chairs. Atop the table are a pair of lowball glasses. The first glass has a smudge of red lipstick on the rim and appears to be only half- finished where the second is empty but some residue remains from a recently finished drink.  Lying between the glasses is a quill, bloodied at the top, but clean at the point. In front of the chairs, sprawled across the priceless oriental rug is the body of Jameson lying face up in a pool of blood. Opposite the door hangs a large portrait of the previous lady of the house. In front of the painting stands Sir Edmund, staring up at the painting swirling the remnants of his own drink in a glass. Situated below the painting is a large desk, scattered with documents. Upon closer examination it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss. Turning away from the desk one sees a length of wire lying on the ground curiously snaking throughout the room.",
+      "description": "Upon entering the study, you are hit with the rich fragrance of mahogany and old books. The wall to your right is lined with bookshelves,containing a large variety of leather-bound books, with various artifacts interspersed amongst the shelves. On the opposite wall there is a large stone fireplace with a table in front situated between two large leather chairs. Atop the table is a pair of lowball glasses. The first glass has a smudge of red lipstick on the rim and appears to be only half-finished whereas the second is empty but some residue remains from a recently finished drink.  Lying between the glasses is a quill, bloodied at the top, but clean at the point. In front of the chairs, sprawled across the priceless oriental rug is the body of Jameson lying face up in a pool of blood. Opposite the door hangs a large portrait of the previous lady of the house. In front of the painting stands Sir Edmond, staring up at the painting swirling the remnants of his own drink in a glass. Situated below the painting is a large desk, scattered with documents. Upon closer examination it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss. Turning away from the desk one sees a length of wire lying on the ground curiously snaking throughout the room.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 3,
       "title": "Kitchen",
-      "description": "Upon entering the kitchen you are greeted by the rich smells of cokked food, and freshly made coffee. Lining the walls are cupboards containing every variety of glassware, cutlery and flatware. The sink is overflowing with dishes leftover from Dinner. Olga stands at the sink rinsing and drying the same dish without ever putting it away. On the counter to her left is a large knife sticky from blood. On a table in the center of the room, there is a tray of snacks.",
+      "description": "Upon entering the kitchen you are greeted by the rich smells of cooked food, and freshly made coffee. Lining the walls are cupboards containing every variety of glassware, cutlery and flatware. The sink is overflowing with dishes leftover from dinner. Olga stands at the sink rinsing and drying the same dish without ever putting it away. On the counter to her left is a large knife sticky from blood. On a table in the center of the room, there is a tray of snacks.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 4,
       "title": "Parlor",
-      "description": "Upon entering the Parlor you hear a hushed conversation between Annabelle and Elizabeth quickly come to an end. The only thing you overhear before conversation ceases is Annabelle saying 'I never loved him.' The room itself is very busy. The walls are covered in seemingly anything and everything. On the wall in front of you there is a large clock with gold trim the hands stuck on 8:55. Mounted on the wall to your left is a medieval shield with a single spear. To your right there is a glass door stove with a stack of logs beside it. Next to the logs is a wrought iron stand with fireplace tools hanging from it. Looking up at the ceiling there is a large chandelier. Scattered throughout the room is a variety of furniture. Sitting on a green velvet couch clasping steaming cups of tea are Annabelle and Elizabeth. On the table in front of them is a stack of letters, and a letter opener.",
+      "description": "Upon entering the Parlor you hear a hushed conversation between Annabelle and Elizabeth quickly come to an end. The only thing you overhear before conversation ceases is Annabelle saying 'I never loved him.' The room itself is very busy. The walls are covered in seemingly anything and everything. On the wall in front of you there is a large clock with gold trim, the hands stuck on 8:55. Mounted on the wall to your left is a medieval shield with a single spear. To your right there is a glass door stove with a stack of logs beside it. Next to the logs is a wrought iron stand with fireplace tools hanging from it. Looking up at the ceiling there is a large chandelier. Scattered throughout the room is a variety of furniture. Sitting on a green velvet couch clasping steaming cups of tea are Annabelle and Elizabeth. On the table in front of them is a stack of letters, and a letter opener.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 5,
       "title": "Dining-Hall",
-      "description": "Upon entering the dining room, you see a long table adorned with ornate cutlery and fine china. Surrounding the table are oak chairs with red velvet upholstery. Across from you, there is a large bay window overlooking the fields . On your right lining the wall is a bar. To the right of right of the bar is is an ice bucket with a pick driven into the ice. Sitting at the table, sweating profusely, is Margarite with her head down on the table. Across from her is Matthew.",
+      "description": "Upon entering the dining room, you see a long table adorned with ornate cutlery and fine china. Surrounding the table are oak chairs with red velvet upholstery. Across from you, there is a large bay window overlooking the fields . On your right lining the wall is a bar. To the right of the bar is is an ice bucket with a pick driven into the ice. Sitting at the table, sweating profusely, is Margarite with her head down on the table. Across from her is Matthew.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 6,
       "title": "Gardens",
-      "description": "Upon walking out into the gardens your senses are assaulted by a floral smell. Stone pathways cut their way through the various flowerbeds. There's a large variety of flora as far as the eyes can see. Stuck into a bed of roses and daises is a gardening spade. Leaning against the house is Jeremiah smoking a pipe, and staring at nothing in particular. To his left under a window is a bed of ferns that looks as though it has been trampled. At the far end of the gardens there's a headstone surrounded by petunias.",
+      "description": "Upon walking out into the gardens your senses are assaulted by a floral aroma. Stone pathways cut their way through the various flowerbeds. There's a large variety of flora as far as the eyes can see. Stuck into a bed of roses and daises is a gardening spade. Leaning against the house is Jeremiah smoking a pipe, and staring at nothing in particular. To his left under a window is a bed of ferns that looks as though it has been trampled. At the far end of the gardens there's a headstone surrounded by petunias.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 7,
       "title": "Occupied-Bathroom",
-      "description": "Upon trying to enter the bathroom you find the door to be locked, You hear someone groaning before sayay, 'Come back Later!'",
+      "description": "Upon trying to enter the bathroom you find the door to be locked, You hear someone groaning before saying, 'Come back Later!'",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 8,
       "title": "Bathroom",
-      "description": "Upon entering the bathroom you are assualted by the smell of vomit. To your right is a toilet clogged from sickness. Sitting beside the toilet is a plunger. In front of you is a partially open window that overlooks the gardens. On your left is a large ornate mirror gilded at its edges. Below it is a sink also filled with vomit. Floating in the sink are two empty wine bottles.",
+      "description": "Upon entering the bathroom you are assailed by the smell of vomit. To your right is a toilet clogged from sickness. Sitting beside the toilet is a plunger. In front of you is a partially open window that overlooks the gardens. On your left is a large ornate mirror gilded at its edges. Below it is a sink also filled with vomit. Resting in the sink are two empty wine bottles.",
       "game_id": 1
   },
   {
       "is_default": false,
       "room_id": 9,
       "title": "Secret-Room",
-      "description": "Upon adjusting the book a a section of bookshelf opens revealing a secret room. Weapons and paintings cover the walls. There is only one empty space where a crossbow used to exist. In the center of the room is a table sized display case containing the Sword of St. Thomas. The gemstones decorating its hilt and scabbards throw colorful splashes of light around the room. On top of the display case is a bizarre mechanism with a severed length of cord running towards the exit. Inside of it is the cross- bow missing from the wall.",
+      "description": "Upon adjusting the book a a section of bookshelf opens revealing a secret room. Weapons and paintings cover the walls. There is only one empty space where a crossbow used to exist. In the center of the room is a table sized display case containing the Sword of St. Thomas. The gemstones decorating its hilt and scabbard throw colorful splashes of light around the room. On top of the display case is a bizarre mechanism with a severed length of cord running towards the exit. Inside of it is the crossbow missing from the wall.",
       "game_id": 1
   }
   

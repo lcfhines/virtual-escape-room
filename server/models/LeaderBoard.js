@@ -7,7 +7,7 @@ const leaderBoardSchema = new Schema(
       required: true
     },
     user_id: {
-      type:Schema.Types.ObjectId,
+      type: String,
       required: true
     },
      number_of_attempts: {

@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, LeaderBoard} = require('../models');
+const { User, Game, Room, Object, Interaction, Motive, GameUserInteraction, Solution, LeaderBoard, SolutionLetter } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -72,8 +72,8 @@ const resolvers = {
     //   const user = await User.findById({ _id: leaderBoard.user_id });
     //   return {
     //     ...leaderBoard,
-    //     user.first_name,
-    //     user.last_name
+    //     first_name,
+    //     last_name
     //   }
 
     //  },
@@ -99,6 +99,9 @@ const resolvers = {
       },
       solutions: async () => {
         return Solution.find({});
+      },
+      solutionLetters: async () => {
+        return SolutionLetter.find({});
       },
   },
 
