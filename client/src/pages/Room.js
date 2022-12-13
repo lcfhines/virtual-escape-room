@@ -49,9 +49,10 @@ const Room = () => {
                   <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
              </div>
         </div> */}
-        <div id="solve"><a href="#">I know who did it</a></div>
+        {parseInt(room_id) === state.defaultRoomId 
+          && (<div id="solve"><a href="#">I know who did it</a></div>)
+          } 
    </main>
-
     )
 }
 
