@@ -16,7 +16,7 @@ const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD,
       { gameId:1 },
   }
 );
-const leaderBoard = data?.leaderBoard || {};
+const leaderBoard = data?.leaderBoard || [];
 console.log(leaderBoard);
 
 
@@ -36,13 +36,12 @@ return(
                 </thead>  
                 <tbody>
                 {leaderBoard.map((user) => (
-                  <tr key={user.id}>
-                    <td>{user.rank}</td>
-                    <td>{user.name}</td>
+                <tr key={user.user_id}>
+                    <td>{user.first_name}</td>
                     <td>{user.number_of_attempts}</td>
                     <td>{user.final_solution_time}</td>
-                  </tr>
-                 ))}
+                </tr>
+                ))}
                 </tbody>
                </table>
           </div>
