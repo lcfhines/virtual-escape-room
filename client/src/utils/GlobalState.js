@@ -9,26 +9,31 @@ const GameProvider = ({ value = [], ...props }) => {
     game: {},
     rooms: [],
 
-    characters: [],
+    suspects: [],
+    weapons: [],
+    motives: [],
+    
+    correctSolution: {},
+
     weaponInteractions: [],
     motiveInteractions: [],
 
     gameInteractions: [],
     
-    solutions: {
-      suspects: {
-        object_id: '1',
-        name: 'Laura'
-      },
-     weapons: {
-      object_id: '2',
-      name: 'Broom'
-     },
-     motives:{
-      object_id: '3',
-      description: `didn't finish coding project in time`
-     }
-    }
+    // solutions: {
+    //   suspects: {
+    //     object_id: '1',
+    //     name: 'Laura'
+    //   },
+    //  weapons: {
+    //   object_id: '2',
+    //   name: 'Broom'
+    //  },
+    //  motives:{
+    //   object_id: '3',
+    //   description: `didn't finish coding project in time`
+    //  }
+    // }
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
