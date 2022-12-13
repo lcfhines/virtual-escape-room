@@ -1,0 +1,32 @@
+[
+    {
+        "game_id": 1,
+        "user_id": "6398a31cece79a26ad274d11",
+        "number_of_attempts": 4,
+        "final_solution_time": 10
+    },
+    {
+        "game_id": 1,
+        "user_id": "6398a587f6c134f356915036",
+        "number_of_attempts": 2,
+        "final_solution_time": 20
+    },
+    {
+        "game_id": 1,
+        "user_id": "6398a587f6c134f356915037",
+        "number_of_attempts": 1,
+        "final_solution_time": 25
+    },
+    {
+        "game_id": 1,
+        "user_id": "6398a587f6c134f356915038",
+        "number_of_attempts": 6,
+        "final_solution_time": 5
+    },
+    {
+        "game_id": 1,
+        "user_id": "6398a587f6c134f356915039",
+        "number_of_attempts": 15,
+        "final_solution_time": 25
+    }
+]
