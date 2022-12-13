@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useGameContext } from '../utils/GlobalState';
 import InteractionList from './InteractionList';
+import { useParams } from 'react-router-dom';
 
 const ObjectModal = (props) => {
+    const [state] = useGameContext();
+    // const {object_id} = useParams();
+    // const object = state.objects?.find(object => object.object_id === parseInt(object_id)) || {};
+    // console.log(object);
+    // console.log(object_id);
+
     return (
         <Modal
         {...props}
@@ -18,7 +26,11 @@ const ObjectModal = (props) => {
         </Modal.Header>
         <Modal.Body>
           <p>insert object description here</p>
-          {/* map through interactions, for each: */}
+          {/* {state.object.interactions && state.object.interactions.map((interaction, idx) => (
+                <div>
+                    <InteractionList key={idx} interaction={interaction}/>
+                </div>
+          ))} */}
           <div>
             <InteractionList />
           </div>
