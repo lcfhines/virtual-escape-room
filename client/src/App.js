@@ -10,12 +10,13 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Leaderboard from './pages/leaderboard/Leaderboard'
-import Game from './pages/game/Game'
+import Game from './pages/Game'
 // import Home from './pages/Home';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Room from './pages/Room';
 import { GameProvider } from './utils/GlobalState';
 
 
@@ -42,33 +43,31 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-          <div>
-            <GameProvider>
-              <Navbar />
-              <Routes>
-                <Route 
-                  path='/' 
-                  element={<Home />} 
-                />
-                 <Route 
-                  path='/game' 
-                  element={<Game />} 
-                />
-                {/* <Route 
-                  path='/game/:game_id' 
-                  element={<Game />} 
-                />
-                <Route 
-                  path='/room/:room_id' 
-                  element={<Room />} 
-                /> */}
-                <Route 
-                  path='*'
-                  element={<h1 className='display-2'>Wrong page!</h1>}
-                />
-              </Routes>
-            </GameProvider>
-          </div>
+        <GameProvider>
+          <Navbar />
+          <Routes>
+            <Route 
+              path='/' 
+              element={<Home />} 
+            />
+             <Route 
+              path='/game' 
+              element={<Game />} 
+            />
+            {/* <Route 
+              path='/game/:game_id' 
+              element={<Game />} 
+            /> */}
+            <Route 
+              path='/room/:room_id' 
+              element={<Room />} 
+            />
+            <Route 
+              path='*'
+              element={<h1 className='display-2'>Wrong page!</h1>}
+            />
+          </Routes>
+        </GameProvider>
       </Router>
     </ApolloProvider>
   );
