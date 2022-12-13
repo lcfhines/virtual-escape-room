@@ -1,7 +1,6 @@
 const db = require('../config/connection');
-const { User, Game, Room, Object, Interaction, Motive, Solution, GameUserInteraction, LeaderBoard } = require('../models');
+const { User, Game, Room, Object, Interaction, Motive, Solution, GameUserInteraction, LeaderBoard, SolutionLetter } = require('../models');
 
-const SolutionLetter = require('../models/SolututionLetter')
 const gameSeeds = require('./games.json');
 const roomSeeds = require('./rooms.json');
 const objectSeeds = require('./objects.json');
