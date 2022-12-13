@@ -8,7 +8,6 @@ import {
 export const reducer = (state, action) => {
   switch (action.type) {
     case ADD_GAME:
-      console.log('ADD_GAME');
       const 
         {
           title,
@@ -21,15 +20,31 @@ export const reducer = (state, action) => {
       
       const {room_id: defaultRoomId} = rooms.find(room => room.is_default); 
      
-      const characters = [];
+      const suspects = [];
+      const weapons = [];
+      const motives = [];
       rooms.forEach(room => {
         room.objects.forEach(object => {
           if (object.type === 'character') {
-            characters.push({
-              character_id: object.object_id, 
+            suspects.push({
+              object_id: object.object_id, 
+              name: object.name
+            })
+          } else if (object.type === 'thing' && object.isWeapon){
+            weapons.push({
+              object_id: object.object_id, 
               name: object.name
             })
           }
+          object.interactions.forEach(interaction => {
+            interaction.motives.forEach(motive => {
+              motives.push({
+                motive_id: motive.motive_id, 
+                description: motive.description
+              })
+            })
+          })
+            
         })
       })
 
@@ -42,8 +57,10 @@ export const reducer = (state, action) => {
         },
         rooms,
         defaultRoomId,
-        characters,
-        correctSolution: solution
+        correctSolution: solution,
+        suspects,
+        weapons,
+        motives
       }
     // case UPDATE_USER_INTERACTION:
     // This saves us from a crash.
