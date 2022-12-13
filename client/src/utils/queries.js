@@ -44,6 +44,7 @@ query Games {
       time_limit
       title
       rooms {
+        is_default
         title
         room_id
       }
