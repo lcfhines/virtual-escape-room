@@ -24,7 +24,7 @@ const SolutionForm = (props) => {
                 onChange={(e) => setSuspect(e.target.value)}
                 value={suspect}>
                 {/* <option>Choose your prime suspect...</option> */}
-                {state.solutions.suspects.map((suspect, index) => (
+                {state.suspects.map((suspect, index) => (
                   <Dropdown.Item key={index} value={suspect.object_id}>
                     {suspect.name}
                   </Dropdown.Item>
@@ -36,7 +36,7 @@ const SolutionForm = (props) => {
                 onChange={(e) => setWeapon(e.target.value)}
                 value={weapon}>
                 {/* <option>Choose the murder weapon...</option> */}
-                {state.solutions.weapons.map((weapon, index) => (
+                {state.weapons.map((weapon, index) => (
                   <Dropdown.Item key={index} value={weapon.object_id}>
                     {weapon.name}
                     </Dropdown.Item>
@@ -48,8 +48,8 @@ const SolutionForm = (props) => {
                 onChange={(e) => setMotive(e.target.value)}
                 value={motive}>
                 {/* <option>Choose the suspect's motive...</option> */}
-                {state.solutions.motives.map((motive, index) => (
-                  <Dropdown.Item key={index} value={motive}>
+                {state.motives.map((motive, index) => (
+                  <Dropdown.Item key={index} value={motive.motive_id}>
                     {motive.description}
                     </Dropdown.Item>
                 ))}
