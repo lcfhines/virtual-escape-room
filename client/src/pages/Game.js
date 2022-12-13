@@ -1,21 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { useUserContext } from '../leaderboard/UserContext';
 import { useQuery } from '@apollo/client';
 import  { Link }  from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { QUERY_GAME_ROOMS, QUERY_GET_GAME } from '../utils/queries';
 
-import { QUERY_GAME_ROOMS } from '../../utils/queries';
+import { useGameContext } from '../utils/GlobalState';
+import {
+  ADD_GAME,
+} from '../utils/actions';
 
 const Game = () => {
+  // const [defaultRoom, setDefaultRoom] = useState({});
+  const [state, dispatch] = useGameContext();
+  const { game_id } = useParams();
+  const {loading,  data } = useQuery(QUERY_GET_GAME, 
+    {
+      variables: 
+        { gameId: parseInt(game_id) },
+    }
+  );
+  
+  
+  const game = data?.game || {};
+  const defaultRoom = game.rooms?.find(room => room.is_default) || {};
 
-     const { gameId } = useParams();
-     const { loading, data } = useQuery(QUERY_GAME_ROOMS, {
-          variables: { gameId: 1 },
-     });
+  // console.log(game);
+  
+   useEffect(() => {
+    if (!loading){
+      dispatch({
+        type: ADD_GAME,
+        game,
+      });
+    }
+   }, [loading, game, dispatch]);
 
-     const game = data?.game || {};
      
-return(
+  return (
      <>
      <main id="game">
           <h1>{game.title}</h1>
@@ -28,7 +50,7 @@ return(
           <div  id="start">
           <Link
                to={{
-               pathname: "/room",
+               pathname: `/room/${defaultRoom.room_id}`
                // state: {game.rooms.title}
                }}
           >
@@ -62,4 +84,5 @@ return(
      </>
      );
 }
+
 export default Game;

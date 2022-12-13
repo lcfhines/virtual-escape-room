@@ -37,7 +37,7 @@ db.once('open', async () => {
 
     let objects = objectSeeds.map(object=> {
       const interactionIds = 
-        motives
+      interactions
             .filter(interaction => interaction.object_id === object.object_id)
             .map(interaction => interaction._id); 
       
