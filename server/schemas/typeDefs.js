@@ -10,8 +10,11 @@ const typeDefs = gql`
   }
 
   type LeaderBoard {
+    _id: ID
     game_id: Int
     user_id: String
+    first_name: String
+    last_name: String
     number_of_attempts: Int
     final_solution_time: Int
   }
@@ -23,6 +26,7 @@ const typeDefs = gql`
     story_line: String
     time_limit: Int
     rooms: [Room]
+    solution: Solution
   }
 
   type Room {
@@ -70,8 +74,8 @@ const typeDefs = gql`
 
   type Solution{
     _id: ID
-    character_id: String
-    object_id: String
+    suspect_id: String
+    weapon_id: String
     motive_id: String
   }
 
@@ -98,7 +102,10 @@ const typeDefs = gql`
     objectInteractions(objectId: String!): [Interaction]!  
     me: User
 
+    leaderBoards: [LeaderBoard]!
+
     leaderBoard(gameId: Int!): [LeaderBoard]!
+
     introData: Intro
     defaultRoom(gameId: Int!): Room
 
