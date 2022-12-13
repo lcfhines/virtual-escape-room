@@ -49,6 +49,7 @@ return(
                     <td>{idx+1}</td>
                     <td>{user.first_name}</td>
                     <td>{user.number_of_attempts}</td>
+                    <td>{Math.round((user.final_solution_time)/60)+" mins"}</td>
                     <td>{user.final_solution_time}</td>
                 </tr>
                 ))}
