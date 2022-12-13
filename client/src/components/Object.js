@@ -16,13 +16,13 @@ const ObjectModal = (props, object, idx) => {
         <Modal
         {...props}
         size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
+        aria-labelledby="object-modal"
         centered
         object={object}
         key={idx}
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Title id="object-modal">
             insert object name here
             {object.name}
           </Modal.Title>
