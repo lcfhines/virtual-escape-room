@@ -51,13 +51,9 @@ function App() {
               element={<Home />} 
             />
              <Route 
-              path='/game' 
-              element={<Game />} 
-            />
-            {/* <Route 
               path='/game/:game_id' 
               element={<Game />} 
-            /> */}
+            /> 
             <Route 
               path='/room/:room_id' 
               element={<Room />} 
