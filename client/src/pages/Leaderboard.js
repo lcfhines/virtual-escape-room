@@ -7,15 +7,17 @@ import { QUERY_GET_LEADERBOARD } from '../utils/queries';
 const Leaderboard = () => {
 
 // const { users } = useUserContext();
-// const { game_id } = useParams();
-// const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD, 
-//   {
-//     variables: 
-//       { gameId: parseInt(game_id) },
-//   }
-// );
+const { game_id } = useParams();
+const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD, 
+  {
+    variables: 
+      { gameId: parseInt(game_id) },
+  }
+);
 
 // const leaderboard = data?.leaderboard || {};
+const user = data?.user || {};
+console.log(user);
 return(
      <>
      <main id="leaderboard">
@@ -31,14 +33,14 @@ return(
                   </tr>
                 </thead>  
                 <tbody>
-                 {/* {leaderboard.map((user) => (
+                 {/* {leaderboard.map((user) => ( */}
                   <tr key={user.user_id}>
-                    <td>{user.rank}</td>
-                    <td>{user.name}</td>
+                    {/* <td>{user.rank}</td>
+                    <td>{user.name}</td> */}
                     <td>{user.number_of_attempts}</td>
                     <td>{user.final_solution_time}</td>
                   </tr>
-                 ))} */}
+                 {/* )  )} */}
                 </tbody>
                </table>
           </div>
