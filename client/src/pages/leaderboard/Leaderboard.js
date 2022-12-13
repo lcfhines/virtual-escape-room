@@ -7,14 +7,6 @@ const { users } = useUserContext();
 
 return(
      <>
-     {/* <header>
-          <div id="logo">Name/Logo</div>
-          <ul id="links">
-               <li><a href="#">Leader Board</a></li>
-               <li><a href="#">Rules</a></li>
-               <li><a href="#">Logout</a></li>
-          </ul>
-     </header> */}
      <main id="leaderboard">
           <h1>Global Leader board</h1>
           <div >
@@ -40,7 +32,6 @@ return(
                </table>
           </div>
      </main>
-     {/* <footer>footer content</footer> */}
      </>
      );
 }
