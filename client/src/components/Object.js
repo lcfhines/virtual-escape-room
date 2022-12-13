@@ -1,12 +1,10 @@
-import React from "react";
-import { useGameContext } from '../utils/GlobalState'
+import React from 'react'
 
-const Object = () => {
-    const [state] = useGameContext();
+const Object = ({object}) => {
 
     return (
-        <div>
-            
-        </div>
+        <div>{object.name}</div>
     )
 }
+
+export default Object
