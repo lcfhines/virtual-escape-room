@@ -10,7 +10,6 @@ const SolutionForm = () => {
     const [weapon, setWeapon] = useState("")
     const [motive, setMotive] = useState("")
 
-
   return (
     <div>
       {solution ? (
