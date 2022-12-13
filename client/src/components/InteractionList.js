@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import Accordion from 'react-bootstrap/Accordion';
 
 
 
-const InteractionList = () => {
-    // useParams to get object_id
-    // query object to get all interactions?
-    // const { data } = useQuery();
-    // const interactions = data?.interactions || [];
+const InteractionList = ({interaction}) => {
 
     return (
-      // for each interaction, create an accordian item
+      // <div>
+      //   {interaction.description}
+      // </div>
       <Accordion>
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
+        <Accordion.Header>insert interaction description here</Accordion.Header>
         <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          insert reaction here
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
