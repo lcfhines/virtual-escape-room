@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import  { Link }  from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { QUERY_GAME_ROOMS } from '../utils/queries';
+import { QUERY_GAME_ROOMS, QUERY_GET_GAME } from '../utils/queries';
 
 import { useGameContext } from '../utils/GlobalState';
 import {
@@ -14,7 +14,7 @@ const Game = () => {
   // const [defaultRoom, setDefaultRoom] = useState({});
   const [state, dispatch] = useGameContext();
   const { gameId } = useParams();
-  const {loading,  data } = useQuery(QUERY_GAME_ROOMS, 
+  const {loading,  data } = useQuery(QUERY_GET_GAME, 
     {
       variables: 
         { gameId: 1 },
@@ -25,7 +25,7 @@ const Game = () => {
   const game = data?.game || {};
   const defaultRoom = game.rooms?.find(room => room.is_default) || {};
 
-  console.log(game);
+  // console.log(game);
   
    useEffect(() => {
     if (!loading){
