@@ -17,7 +17,7 @@ const Timer = () => {
 
     return (
         <div>
-            <h2>Timer: {timeLeft}</h2>
+            <h2>{timeLeft}</h2>
             <button onClick={() => setTimerRunning(true)}>Start</button>
             <button onClick={() => {
                 clearTimeout(timeoutRef.current);
