@@ -1,7 +1,9 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 
 const Rules = () => {
     return (
+        <Container>
         <div>
             <h1>Do you dare to escape where countless have tried and failed?</h1>
             <div id="instruction">
@@ -24,6 +26,7 @@ const Rules = () => {
                 </ul>
             </div>
         </div>
+        </Container>
     );
 }
 
