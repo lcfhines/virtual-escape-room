@@ -10,6 +10,7 @@ const typeDefs = gql`
   }
 
   type LeaderBoard {
+    _id: ID
     game_id: Int
     user_id: String
     first_name: String
