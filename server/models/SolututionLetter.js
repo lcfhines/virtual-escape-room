@@ -10,10 +10,6 @@ const solutionLetterSchema = new Schema(
       type: String,
       required: true,
     },
-    game_id: {
-        type: Number,
-        required: true,
-    }
   }
 );
 

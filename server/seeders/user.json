@@ -10,5 +10,23 @@
         "last_name": "Jazzerton",
         "email": "wrong-notes@brokensaxaphone.com",
         "password": "boopskoop"
+    },
+    {
+        "first_name": "Billy",
+        "last_name": "Bluepants",
+        "email": "red-pants-no-thankyou@bluepants4life.com",
+        "password": "bp4life"
+    },
+    {
+        "first_name": "Henry",
+        "last_name": "Montblanc",
+        "email": "MBkiester4@kiestersquared.com",
+        "password": "password"
+    },
+    {
+        "first_name": "Jim",
+        "last_name": "Jay",
+        "email": "abc123@bcat.com",
+        "password": "password"
     }
 ]
