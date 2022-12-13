@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import { useUserContext } from './UserContext';
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import { QUERY_GET_LEADERBOARD } from '../utils/queries';
-
+import { useGameContext } from '../utils/GlobalState';
 const Leaderboard = () => {
 
 // const { users } = useUserContext();
-const { game_id } = useParams();
+// const [state, dispatch] = useGameContext();
+// const { game_id } = useParams();
+
 const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD, 
   {
     variables: 
-      { gameId: parseInt(game_id) },
+      { gameId:1 },
   }
 );
+const leaderBoard = data?.leaderBoard || {};
+console.log(leaderBoard);
 
-// const leaderboard = data?.leaderboard || {};
-const user = data?.user || {};
-console.log(user);
+
 return(
      <>
      <main id="leaderboard">
@@ -33,14 +35,14 @@ return(
                   </tr>
                 </thead>  
                 <tbody>
-                 {/* {leaderboard.map((user) => ( */}
-                  <tr key={user.user_id}>
-                    {/* <td>{user.rank}</td>
-                    <td>{user.name}</td> */}
-                    <td>{user.number_of_attempts}</td>
-                    <td>{user.final_solution_time}</td>
+                {leaderBoard.map((user) => (
+                  <tr key={user.id}>
+                    <td>{user.rank}</td>
+                    <td>{user.name}</td>
+                    <td>{user.time}</td>
+                    <td>{user.click}</td>
                   </tr>
-                 {/* )  )} */}
+                 ))}
                 </tbody>
                </table>
           </div>
