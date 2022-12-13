@@ -6,6 +6,7 @@ const { Provider } = GameContext;
 
 const GameProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useGameReducer({
+    game: {},
     rooms: [],
     solutions: {
       suspects: {
