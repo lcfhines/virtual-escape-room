@@ -50,7 +50,7 @@ query Games {
       }
     }
   }
-  `;
+`;
 
 export const QUERY_ROOM = gql`
 query Room($roomId: Int!) {
