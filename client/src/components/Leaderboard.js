@@ -44,15 +44,18 @@ return(
                   </tr>
                 </thead>  
                 <tbody style={styles.tbody}>
-                {leaderBoard.map((user,idx) => (
+                {leaderBoard.map((user,idx) =>{ 
+                  const timeMins=Math.floor(user.final_solution_time/60);
+                  const timeSec=user.final_solution_time%60
+                  return (
                 <tr key={user.idx}>
                     <td>{idx+1}</td>
                     <td>{user.first_name}</td>
                     <td>{user.number_of_attempts}</td>
-                    <td>{Math.round((user.final_solution_time)/60)+" mins"}</td>
+                    <td>{timeMins+" mins " +timeSec +" sec"}</td>
                     <td>{user.final_solution_time}</td>
                 </tr>
-                ))}
+                )})}
                 </tbody>
                </table>
           </div>
