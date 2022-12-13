@@ -114,22 +114,48 @@ const resolvers = {
       return { token, user };
     },
 
-    endGame: async (parent, { solutionTime = 0 }, context) => {
+    endGame: async (parent, { gameId, final_solution_time = 0 }, context) => {
       if (!context.user) {
         throw new AuthenticationError('You need to be logged in!');
       }
 
-      const user = await User.findOneAndUpdate(
-        { _id: context.user._id },
+      let leaderboard = await LeaderBoard.findOne(
         { 
-          number_of_attempts: this.number_of_attempts + 1,
-          final_solution_time: solutionTime
-        },
-        { new: true },
+          user_id: context.user._id,
+          game_id: gameId
+        }
       );
+      
+      if (leaderboard){
+        if (leaderboard.final_solution_time === 0) {        
+          leaderboard = await LeaderBoard.updateOne(
+            { 
+              user_id: context.user._id,
+              game_id: gameId
+            },
+            { 
+              number_of_attempts: leaderboard.number_of_attempts + 1,
+              final_solution_time: 
+              leaderboard.final_solution_time > 0 
+                  ? leaderboard.final_solution_time 
+                  : final_solution_time
+            },
+            { new: true }
+          )
+          console.log(leaderboard);
+          }
+      } else {
+          const user = await User.findOne({ _id: context.user._id });
+          leaderboard = await LeaderBoard.create({
+            game_id: gameId,
+            user_id: context.user._id,
+            first_name: user.first_name,
+            last_name: user.last_name,
+          })
+      };
 
 
-      return user;
+      return leaderboard;
     },
 
     login: async (parent, { email, password }) => {
@@ -179,16 +205,6 @@ const resolvers = {
 
       return userInteraction;
     },
-
-    checkSolution: async (parent, {character_id, thing_id, motive_id}) => {
-     return await Solution.findOne({
-      character_id, 
-      thing_id, 
-      motive_id
-      });
-    },
-
-    
   },
 } 
    
