@@ -1,0 +1,20 @@
+#filler {
+    height: 600px;
+    padding: 0;
+    background: #33032F;
+}
+
+.homepage {
+    background: #33032F;
+    color: white;
+    border-style: solid;
+    border-width: 25px;
+    border-color: #33032F;
+    padding: 0;
+    margin: 0;
+}
+
+.fullheight{
+    min-height: 100vh;
+    min-width: 100%;
+}

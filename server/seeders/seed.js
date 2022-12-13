@@ -9,7 +9,6 @@ const motiveSeeds = require('./motive.json');
 const solutionLetterSeeds = require('./solutionLetter.json');
 const solutionSeeds = require('./solution.json');
 const userSeeds = require('./user.json');
-// const leaderboardSeeds = require('./leaderboard.json');
 
 db.once('open', async () => {
   try {
@@ -24,10 +23,11 @@ db.once('open', async () => {
     await LeaderBoard.deleteMany({});
 
     const solution = await Solution.insertMany(solutionSeeds);
-    const user = await User.insertMany(userSeeds);
     const solutionLetter = await SolutionLetter.insertMany(solutionLetterSeeds);
     const motives = await Motive.insertMany(motiveSeeds);
     
+    const user = await User.insertMany(userSeeds);
+
     let leaderboards = [];
     user.forEach(user =>{
       const leaderboard = {
@@ -38,11 +38,10 @@ db.once('open', async () => {
         number_of_attempts: Math.floor(Math.random() * 20),
         final_solution_time: Math.floor(Math.random() * 1800)
       }
-      leaderboards.push(leaderboard)
+      leaderboards.push(leaderboard);
     })
     const leaderboard = await LeaderBoard.insertMany(leaderboards);
     
-
 
     // apply motives to interactions
     let interactions = interactionSeeds.map(interaction => {

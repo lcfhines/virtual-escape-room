@@ -5,6 +5,7 @@ import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
 
 import Auth from '../utils/auth';
+import '../styles/Navbar.css'
 
 const AppNavbar = () => {
   // set modal display state
@@ -12,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar role= 'navigation' className='navi' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
             Virtual Escape Room
