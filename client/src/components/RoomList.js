@@ -6,15 +6,15 @@ const RoomList = () => {
     const [state, dispatch] = useGameContext()
     return (
         <div>
-         <div>
+         <select name="rooms" id="rooms">
             {state.rooms && state.rooms.map((room) => (
-                <div key={room._id}>
+                <option key={room._id}>
                     <Link to={`/room/${room.room_id}`}>
-                        <p>{room.title}</p>
+                        {room.title}
                     </Link>
-                </div>
+                </option>
             ))}
-            </div>
+        </select>
         </div>
     )
 };

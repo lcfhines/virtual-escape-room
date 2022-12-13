@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { useParams } from 'react-router-dom';
 import { QUERY_ROOM } from '../utils/queries';
 import { Link } from 'react-router-dom';
+import {RoomList} from '../components/RoomList'
 
 // import CommentList from '../components/CommentList';
 
@@ -23,13 +24,14 @@ const Room = ({rooms}) => {
         <div id="room">
              <div>
                   <h2>Room</h2>
-                  <select name="rooms" id="rooms">
+                  <RoomList/>
+                  {/* <select name="rooms" id="rooms">
                     {rooms && rooms.map((room, idx) => (
                         <option key={idx}>
                         <Link to={`/room/${room.roomId}`}>{room.title}</Link>
                         </option>          
                     ))}
-                  </select>
+                  </select> */}
              </div>
              <h2>Timer</h2>
         </div>
