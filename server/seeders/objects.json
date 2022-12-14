@@ -49,13 +49,6 @@
         "name": "Olga the Maid"
     },
     {
-        "object_id": "Cons",
-        "room_id": 1,
-        "type": "character",
-        "isWeapon": false,
-        "name": "Constable"
-    },
-    {
         "object_id": "stai",
         "room_id": 1,
         "type": "thing",

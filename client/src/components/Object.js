@@ -35,7 +35,7 @@ const Object = ({object}) => {
         </Modal.Body>
         </div>
         <Modal.Footer>
-          <Button onClick={object.onHide}>Close</Button>
+          <Button onClick={() => setModalShow(false)}>Close</Button>
         </Modal.Footer>
       </Modal>
     </>
