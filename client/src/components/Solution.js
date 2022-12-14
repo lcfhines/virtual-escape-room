@@ -4,6 +4,7 @@ import { useGameContext } from '../utils/GlobalState'
 import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
 import { END_GAME } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
+import {Navigate } from 'react-router-dom';
 
 
 const SolutionForm = (props) => {
@@ -29,10 +30,19 @@ const SolutionForm = (props) => {
           catch (err) {
           console.error(err)
           }
-          
-
+          return <Navigate to="/EndGame/correct" />; 
         }
-      
+      else {
+        try {
+          const { data } = await endGame({
+            variables: { gameId: state.game.game_id}
+          })
+        } 
+        catch (err) {
+        console.error(err)
+        }
+        return <Navigate to="/EndGame/incorrect" />; 
+      }
     }
 
   return (
