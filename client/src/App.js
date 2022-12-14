@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,15 +7,10 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import LoginForm from './components/LoginForm';
-import SignupForm from './components/SignupForm';
-import Leaderboard from './components/Leaderboard'
 import Game from './pages/Game'
 import Room from './pages/Room';
-
 import { GameProvider } from './utils/GlobalState';
 import EndGame from './pages/EndGame';
 
