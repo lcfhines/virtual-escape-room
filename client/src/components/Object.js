@@ -25,17 +25,15 @@ const Object = ({object}) => {
             {object.name}
           </Modal.Title>
         </Modal.Header>
+        <div>
         <Modal.Body>
-          {/* {state.interactions.map((interaction, idx) => (
+          {object.interactions.map((interaction, idx) => (
                 <div>
                     <InteractionList key={idx} interaction={interaction}/>
                 </div>
-          ))} */}
-          <div>
-            <InteractionList />
-          </div>
-          
+          ))}
         </Modal.Body>
+        </div>
         <Modal.Footer>
           <Button onClick={object.onHide}>Close</Button>
         </Modal.Footer>
