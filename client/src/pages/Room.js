@@ -66,7 +66,7 @@ const Room = () => {
                          <div>
                               <Link onClick={() => {
                                    setShowModal(true);
-                                   }}> I know who did it! </Link>
+                                   }}> I know who did it! Report to the constable your findings to escape the Llewellyn Manor </Link>
                               <Modal
                                    show={showModal}
                                    onHide={() => setShowModal(false)}

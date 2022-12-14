@@ -18,6 +18,7 @@ import Game from './pages/Game'
 import Room from './pages/Room';
 
 import { GameProvider } from './utils/GlobalState';
+import EndGame from './pages/EndGame';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -56,6 +57,10 @@ function App() {
             <Route 
               path='/room/:room_id' 
               element={<Room />} 
+            />
+            <Route 
+              path='/endgame/:correctFlag' 
+              element={<EndGame />} 
             />
             <Route 
               path='*'
