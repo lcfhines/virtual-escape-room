@@ -4,11 +4,12 @@ import { useGameContext } from '../utils/GlobalState'
 import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
 import { END_GAME } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 
 
 const SolutionForm = (props) => {
     const [state] = useGameContext();
-
+    const navigate = useNavigate();
     const [suspect, setSuspect] = useState("")
     const [weapon, setWeapon] = useState("")
     const [motive, setMotive] = useState("")
@@ -18,13 +19,31 @@ const SolutionForm = (props) => {
     const handleGameEnd = async () => {
       props.setTimerRunning(false);
       const score = (state.game.time_limit * 60) - props.timeLeft;
-
-      try {
-        const { data } = await endGame({
-          variables: { gameId: state.game.game_id, final_solution_time: score }
-        })
-      } catch (err) {
+      if (state.correctSolution.suspect_id === suspect 
+        && state.correctSolution.weapon_id === weapon 
+        && state.correctSolution.motive_id === motive){
+          try {
+            const { data } = await endGame({
+              variables: { gameId: state.game.game_id, final_solution_time: score }
+            })
+          } 
+          catch (err) {
+          console.error(err)
+          }
+          console.log("true")
+          navigate ('/endgame/true')
+        }
+      else {
+        try {
+          const { data } = await endGame({
+            variables: { gameId: state.game.game_id}
+          })
+        } 
+        catch (err) {
         console.error(err)
+        }
+        console.log("false")
+        navigate ('/endgame/false')
       }
     }
 
