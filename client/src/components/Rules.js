@@ -7,7 +7,7 @@ const Rules = () => {
         <div>
             <h1>Do you dare to escape where countless have tried and failed?</h1>
             <div id="instruction">
-                <h2>How to play</h2>
+                <h3>How to play</h3>
                 <ul>
                     <li>Choose which room you would like to enter</li>
                     <li>Read the scenario provided</li>
@@ -17,7 +17,7 @@ const Rules = () => {
                 </ul>
             </div>
             <div id="rule">
-                <h2>Rules</h2>
+                <h3>Rules</h3>
                 <ul>
                     <li>You start in a room</li>
                     <li>Explore and interact to gather clues</li>
