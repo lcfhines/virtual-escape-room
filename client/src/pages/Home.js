@@ -22,7 +22,6 @@ const Home = () => {
       return (
         <Container fluid className="g-0 fullheight">
         <div className="homepage fullheight">
-          {/* <h1 className="intro">Solve a murder mystery or escape from a psycho killer all from the comfort of your couch!</h1> */}
           <Rules />
         </div>
         </Container>
