@@ -2,10 +2,8 @@ import React from "react";
 import Auth from '../utils/auth';
 import Rules from '../components/Rules';
 import Container from 'react-bootstrap/Container';
-
 import GameList from '../components/GameList';
 import '../styles/Home.css';
-
 
 const Home = () => {
 
