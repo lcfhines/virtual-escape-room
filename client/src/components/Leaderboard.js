@@ -7,7 +7,8 @@ const Leaderboard = () => {
   const [state] = useGameContext();
   const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD, 
     {
-      variables: { gameId: state.game.game_id}
+      variables: { gameId: state.game.game_id},
+      fetchPolicy: "network-only"
     }
   );
   const leaderBoard = data?.leaderBoard || [];

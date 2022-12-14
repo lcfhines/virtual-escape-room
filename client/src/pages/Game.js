@@ -16,6 +16,7 @@ const Game = () => {
     {
       variables: 
         { gameId: parseInt(game_id) },
+      fetchPolicy: "network-only"
     }
   );
   
