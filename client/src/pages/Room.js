@@ -52,9 +52,11 @@ const Room = () => {
                     <h2>Description of the {room.title}</h2>
                     <p> {room.description} </p>
                </div>
+               <div className="room-objects">
                {room.objects.map((object, idx) => {
-                    return <Object key={idx} object={object} />
+                    return <div className="object p-1 "><Object key={idx} object={object}/></div>
                })}
+               </div>
                {/* <div id="object">
              <div className="row">
                   <a href="#" ><img src="assets/comingSoon.png" alt=""/></a>
