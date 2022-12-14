@@ -2,14 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useGameContext } from '../utils/GlobalState';
 import '../styles/Timer.css'
 
-export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
-    // console.log(timeLeft, timerRunning);
-    // const [state] = useGameContext();
-    // const time_limit = state.game.time_limit;
+const Timer = () => {
+    const [state] = useGameContext();
+    const time_limit = state.game.time_limit;
 
     const timeoutRef = useRef(null);
-    // const [timeLeft2, setTimeLeft] = useState(timeLeft);
-    // const [timerRunning, setTimerRunning] = useState(true);
+    const [timeLeft, setTimeLeft] = useState(time_limit * 60);
+    const [timerRunning, setTimerRunning] = useState(true);
 
     let timer = '';
     let minutes = Math.floor((timeLeft / 60) % 60);
@@ -19,41 +18,25 @@ export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
 
     timer = `${minutes}:${seconds}`
 
-    // useEffect(() => {
-    //     if (timeLeft > 0 && timerRunning) {
-    //         timeoutRef.current = setTimeout(() => {
-    //             timerRunning
-    //             ? {setTimeLeft(timeLeft2 - 1)
-    //                 timeHandler()}
-    //             : clearTimeout(timeoutRef);
-    //         }, 1000);
-    //     }
-    // }, [timeLeft, timerRunning, timeHandler]);
-
     useEffect(() => {
-        console.log(timeLeft, timerRunning);
         if (timeLeft > 0 && timerRunning) {
             timeoutRef.current = setTimeout(() => {
-                if (timerRunning) {
-                    timeHandler();
-                } else {
-                    clearTimeout(timeoutRef);
-                }
-            }, 1000)
+                timerRunning
+                ? setTimeLeft(timeLeft - 1)
+                : clearTimeout(timeoutRef);
+            }, 1000);
         }
-    }, [timeLeft, timerRunning, timeHandler])
+    }, [timeLeft, timerRunning]);
 
     return (
         <div>
-<<<<<<< HEAD
-            <h2>{timer}</h2>
-=======
             <h2 id = "timerEl">{timer}</h2>
             <button onClick={() => setTimerRunning(true)}>Start</button>
             <button onClick={() => {
                 clearTimeout(timeoutRef.current);
                 setTimerRunning(false)}}>Stop</button>
->>>>>>> 1b3b9b492e38b92974d3b0b5d3f4ba0e8c5d2e15
         </div>
     )
 }
+
+export default Timer;
