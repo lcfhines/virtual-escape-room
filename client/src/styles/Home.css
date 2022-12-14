@@ -19,7 +19,21 @@
     min-width: 100%;
 }
 
+.card {
+    --bs-card-bg: #000000;
+    box-shadow: 10px gray;
+}
+.card-img-top {
+    z-index: 0;
+}
+.gamelink {
+    color: white;
+    text-align: center;
+    box-shadow: 5px gray;
+}
 
-.game-card {
-    
+.available {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
 }
