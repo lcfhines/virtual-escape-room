@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useGameContext } from '../utils/GlobalState';
+import '../styles/Timer.css'
 
 const Timer = () => {
     const [state] = useGameContext();
@@ -29,7 +30,7 @@ const Timer = () => {
 
     return (
         <div>
-            <h2>{timer}</h2>
+            <h2 id = "timerEl">{timer}</h2>
             <button onClick={() => setTimerRunning(true)}>Start</button>
             <button onClick={() => {
                 clearTimeout(timeoutRef.current);

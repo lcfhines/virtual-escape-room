@@ -34,11 +34,11 @@ const Room = () => {
                     </div>} */}
                     <div id="titleTimer">
                          <div>
-                              <h2>{room.title}</h2>
+                              <h1>{room.title}</h1>
                               <RoomList />
                          </div>
                          <div>
-                              <h2 id="timer">Timer</h2>
+                              <h2 id="timer">Time Remaining</h2>
                               <Timer />
                          </div>
                     </div>
