@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams} from 'react-router-dom';
 import { useGameContext } from '../utils/GlobalState';
 import Leaderboard from '../components/Leaderboard';
+import full from '../assets/LM-Full.jpg';
 
 const EndGame = () => {
     
@@ -13,6 +14,9 @@ return (
     <main id="game">
         <div className='feed'>
             <h1 id='main-title'>{state.game.title}</h1>
+            <div className="imgContainer">
+                <img src={full} alt="room map" className="mapImage" />
+            </div>
             <div>
                 {
                 (correctFlag === "true")
