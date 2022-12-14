@@ -15,6 +15,26 @@
 }
 
 .fullheight{
-    min-height: 100vh;
+    min-height: 150vh;
     min-width: 100%;
+}
+
+.card {
+    --bs-card-bg: #000000;
+    box-shadow: 10px gray;
+    width: 50%;
+}
+.card-img-top {
+    z-index: 0;
+}
+.gamelink {
+    color: white;
+    text-align: center;
+    box-shadow: 5px gray;
+}
+
+.available {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
 }

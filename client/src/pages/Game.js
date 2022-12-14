@@ -52,10 +52,10 @@ const Game = () => {
                pathname: `/room/${defaultRoom.room_id}`
                }}
           >
-             <Button variant='danger'>START</Button>  
+             <Button className='p-3' variant='danger'>START</Button>  
           </Link>
           </div>
-          <div id=''className='m-5' >
+          <div>
               <Leaderboard/>
           </div>
         <div className="drop"></div>

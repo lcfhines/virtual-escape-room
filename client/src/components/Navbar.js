@@ -14,7 +14,7 @@ const AppNavbar = () => {
     <>
       <Navbar role= 'navigation' className='navi' variant='dark' expand='lg'>
         <Container fluid>
-          <Navbar.Brand as={Link} to='/'>
+          <Navbar.Brand id='navbar-title' as={Link} to='/'>
             Virtual Escape Room
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />

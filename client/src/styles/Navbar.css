@@ -1,8 +1,34 @@
 .navi{
     background-color: #170312;
-    color: white
+    color: white;
+    border-bottom: solid 2px #d4af37;
+    
 }
 
 a {
     color:#A0ACAD
 }
+
+.modal-content {
+    background-color: #300c27;
+    border: solid 2px #d4af37;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: solid 2px #d4af37;
+}
+
+#react-aria1598171891-2-tab-login {
+    color: #d4af37;
+}
+
+
+.nav-link {
+    color: white;
+    --bs-nav-pills-link-active-bg: #d4af37;
+}
+
+/* #navbar-title {
+    color: #d4af37;
+} */
