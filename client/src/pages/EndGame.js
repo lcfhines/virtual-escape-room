@@ -9,27 +9,26 @@ import Leaderboard from '../components/Leaderboard';
 const EndGame = () => {
     
 const [state, dispatch] = useGameContext();
-const {correctSolution, incorrectSolution} = useParams();
-  const {loading,  data } = useQuery(QUERY_GET_GAME, 
-    {
-      variables: 
-        { gameId: parseInt(game_id) },
-    }
-  );
+const {correctFlag} = useParams();
+
 
 return (
     <>
     <main id="game">
-         <h1>{game.title}</h1>
-<div>
-    <solutionLetters/>
-</div>
-<div >
-    <Leaderboard/>
-</div>
-</main>
-</>
-);
+         <h1>{state.game.title}</h1>
+         <div>
+            {
+             (correctFlag === "true")
+            ? (state.solutionLetters[1].message)
+            : (state.solutionLetters[0].message)
+            }
+         </div>
+        <div >
+            <Leaderboard/>
+        </div>
+    </main>
+    </>
+    );
 }
 
 

@@ -30,7 +30,7 @@ const SolutionForm = (props) => {
           catch (err) {
           console.error(err)
           }
-          return <Navigate to="/EndGame/correct" />; 
+          return <Navigate to="/endgame/true" />; 
         }
       else {
         try {
@@ -41,7 +41,7 @@ const SolutionForm = (props) => {
         catch (err) {
         console.error(err)
         }
-        return <Navigate to="/EndGame/incorrect" />; 
+        return <Navigate to="/endgame/false" />; 
       }
     }
 
