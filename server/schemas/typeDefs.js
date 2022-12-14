@@ -38,6 +38,7 @@ const typeDefs = gql`
     description: String
     game_id: Int
     objects: [Object]
+    image: String
   }
 
   type Object{
@@ -91,10 +92,6 @@ const typeDefs = gql`
     user: User
   }
 
-  type Intro {
-    introText: String
-    rulesText: String
-  }
 
   type Query {
     me: User
