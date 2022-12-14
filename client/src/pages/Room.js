@@ -19,8 +19,13 @@ const Room = () => {
      const [showModal, setShowModal] = useState(false)
      const { room_id } = useParams();
      const room = state.rooms?.find(room => room.room_id === parseInt(room_id)) || {};
-     console.log(room);
-     console.log(room_id);
+
+     const [timeLeft, setTimeLeft] = useState(state.game.time_limit * 60);
+     const [timerRunning, setTimerRunning] = useState(true);
+
+     const timeHandler = () => {
+          setTimeLeft(timeLeft - 1);
+     }
 
      return (
           <main>
@@ -41,7 +46,11 @@ const Room = () => {
                          <RoomList />
                     </div>
                     <h2>Timer</h2>
-                    <Timer />
+                    <Timer
+                         timeLeft={timeLeft}
+                         timerRunning={timerRunning}
+                         timeHandler={timeHandler}
+                    />
                </div>
                <div id="room-desc">
                     <h2>Description of the {room.title}</h2>
@@ -55,14 +64,18 @@ const Room = () => {
                {parseInt(room_id) === state.defaultRoomId
                     && (
                          <div>
-                              <Link onClick={() => setShowModal(true)}> I know who did it! </Link>
+                              <Link onClick={() => {
+                                   setShowModal(true);
+                                   }}> I know who did it! </Link>
                               <Modal
                                    show={showModal}
                                    onHide={() => setShowModal(false)}
                                    size="lg"
                                    aria-labelledby="contained-modal-title-vcenter"
                                    centered>
-                                   < SolutionForm />
+                                   < SolutionForm
+                                        setTimerRunning={setTimerRunning}
+                                        timeLeft={timeLeft} />
 
                               </Modal>
                          </div>)
