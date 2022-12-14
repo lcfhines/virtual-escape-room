@@ -3,6 +3,7 @@ import { useParams} from 'react-router-dom';
 import { useGameContext } from '../utils/GlobalState';
 import Leaderboard from '../components/Leaderboard';
 import full from '../assets/LM-Full.jpg';
+import '../styles/Solution.css';
 
 const EndGame = () => {
     
@@ -24,7 +25,7 @@ return (
                 : (state.solutionLetters[0].message)
                 }
             </div>
-            <div >
+            <div className='leaderboard-container'>
                 <Leaderboard/>
             </div>
         </div>

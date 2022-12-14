@@ -15,7 +15,7 @@ const Leaderboard = () => {
 
 return(
      <>
-     <main id="leaderboard">
+     <main className="leaderboard">
           <h3>Global Leaderboard</h3>
           <div >
                <table>

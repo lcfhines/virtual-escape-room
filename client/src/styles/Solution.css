@@ -39,8 +39,11 @@ body {
 
 #leaderboard {
     margin: auto;
-    width: 50%;
-    padding: 15px;
+    margin-top: 17px;
     text-align: center;
-    padding-left: 90px;
+}
+
+.leaderboard-container{
+    display: flex;
+    justify-content: center;
 }
