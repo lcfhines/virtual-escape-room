@@ -11,16 +11,18 @@ const {correctFlag} = useParams();
 return (
     <>
     <main id="game">
-         <h1>{state.game.title}</h1>
-         <div>
-            {
-             (correctFlag === "true")
-            ? (state.solutionLetters[1].message)
-            : (state.solutionLetters[0].message)
-            }
-         </div>
-        <div >
-            <Leaderboard/>
+        <div className='feed'>
+            <h1 id='main-title'>{state.game.title}</h1>
+            <div>
+                {
+                (correctFlag === "true")
+                ? (state.solutionLetters[1].message)
+                : (state.solutionLetters[0].message)
+                }
+            </div>
+            <div >
+                <Leaderboard/>
+            </div>
         </div>
     </main>
     </>

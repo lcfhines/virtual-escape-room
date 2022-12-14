@@ -1,0 +1,46 @@
+body {
+    height: 150vw;
+}
+
+#game {
+    background-color: #880808;
+    color: white;
+    padding: 0 8px 0 8px;
+    min-height: 100vw;
+}
+
+.feed {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 15px;
+    background-color: #180829;
+    min-height: 100vw;
+    text-align: center;
+}
+
+.Leaderboard {
+    padding-top: 20px;
+}
+
+#main-title {
+    border-bottom: 4px solid #880808;
+    text-align: center;
+}
+
+.btn-danger {
+    background-color: #880808;
+    --bs-btn-border-color: #2c0202;
+    --bs-btn-hover-border-color: black;
+    --bs-btn-hover-color: black;
+    --bs-btn-hover-bg: #890202;
+}
+
+#leaderboard {
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    padding-left: 73px;
+}
