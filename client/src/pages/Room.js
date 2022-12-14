@@ -22,8 +22,6 @@ const Room = () => {
      console.log(room);
      console.log(room_id);
 
-
-
      return (
           <main>
                <div id="room">
@@ -45,9 +43,6 @@ const Room = () => {
                     <h2>Timer</h2>
                     <Timer />
                </div>
-               {/* <div id="character">
-             <a href="#"><img src="./assets/char.png"/></a>
-        </div> */}
                <div id="room-desc">
                     <h2>Description of the {room.title}</h2>
                     <p> {room.description} </p>
@@ -57,18 +52,6 @@ const Room = () => {
                     return <div className="object p-1 "><Object key={idx} object={object}/></div>
                })}
                </div>
-               {/* <div id="object">
-             <div className="row">
-                  <a href="#" ><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-             </div>
-             <div  className="row">
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-             </div>
-        </div> */}
                {parseInt(room_id) === state.defaultRoomId
                     && (
                          <div>
