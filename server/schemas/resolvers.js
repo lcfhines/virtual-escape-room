@@ -74,7 +74,7 @@ const resolvers = {
     },
 
     leaderBoard: async (parent, { gameId }) => {
-      return await LeaderBoard.find({ game_id: gameId });
+      return await LeaderBoard.find({ game_id: gameId }).sort({number_of_attempts:1});
     },
 
     // auxillary queries
