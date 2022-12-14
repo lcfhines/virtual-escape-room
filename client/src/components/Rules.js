@@ -5,7 +5,9 @@ const Rules = () => {
     return (
         <Container>
         <div>
+            <br></br>
             <h1>Do you dare to escape where countless have tried and failed?</h1>
+            <br></br>
             <div id="instruction">
                 <h2>How to play</h2>
                 <ul>
