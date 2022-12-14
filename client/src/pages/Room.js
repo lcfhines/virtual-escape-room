@@ -68,7 +68,7 @@ const Room = () => {
                {parseInt(room_id) === state.defaultRoomId
                     && (
                          <div>
-                              <Link onClick={() => setShowModal(true)}> I know who did it! Report to the constable your findings to escape the mansion </Link>
+                              <Link onClick={() => setShowModal(true)}> I know who did it! Report to the constable your findings to escape the Llewellyn Manor </Link>
                               <Modal
                                    show={showModal}
                                    onHide={() => setShowModal(false)}
