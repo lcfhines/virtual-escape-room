@@ -15,13 +15,15 @@ const SolutionForm = (props) => {
 
     const [endGame, { error }] = useMutation(END_GAME);
 
-    const handleGameEnd = async (event) => {
-      event.preventDefault();
-      // stop timer regardless
+    const handleGameEnd = async () => {
+      console.log('handlegameend');
+      props.setTimerRunning(false);
+      const score = (state.game.time_limit * 60) - props.timeLeft;
+      console.log(score);
 
       try {
         const { data } = await endGame({
-          variables: { gameId: state.game.game_id }
+          variables: { gameId: state.game.game_id, final_solution_time: score }
         })
       } catch (err) {
         console.error(err)
