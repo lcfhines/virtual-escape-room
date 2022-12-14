@@ -16,6 +16,8 @@ svg {
     height: auto;
 }
 
-#timer {
-
+#titleTimer {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
 }

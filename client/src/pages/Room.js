@@ -32,11 +32,13 @@ const Room = () => {
                               <path d="M 125 850 h 800 v 550 h -175 v 650 h -625 L 125 850" />
                          </svg>
                     </div>} */}
-                    <div>
-                         <h2>{room.title}</h2>
-                         <RoomList />
+                    <div id="titleTimer">
                          <div>
-                              <h2 id="timer" >Timer</h2>
+                              <h2>{room.title}</h2>
+                              <RoomList />
+                         </div>
+                         <div>
+                              <h2 id="timer">Timer</h2>
                               <Timer />
                          </div>
                     </div>
@@ -47,9 +49,9 @@ const Room = () => {
                     <p> {room.description} </p>
                </div>
                <div className="room-objects">
-               {room.objects.map((object, idx) => {
-                    return <div className="object p-1 "><Object key={idx} object={object}/></div>
-               })}
+                    {room.objects.map((object, idx) => {
+                         return <div className="object p-1 "><Object key={idx} object={object} /></div>
+                    })}
                </div>
                {parseInt(room_id) === state.defaultRoomId
                     && (
