@@ -18,7 +18,7 @@ const leaderBoardSchema = new Schema(
     },
      number_of_attempts: {
       type: Number,
-      default: 0
+      default: 1
     },
     final_solution_time: {
       type: Number,

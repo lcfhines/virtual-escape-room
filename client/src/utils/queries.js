@@ -111,6 +111,7 @@ query GetGame($gameId: Int!) {
 export const QUERY_GET_LEADERBOARD = gql`
 query LeaderBoard($gameId: Int!) {
   leaderBoard(gameId: $gameId) {
+    user_id
     number_of_attempts
     final_solution_time
     first_name
