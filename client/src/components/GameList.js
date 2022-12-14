@@ -11,7 +11,8 @@ const GameList = () => {
         return (
             <div>
                 {games.map((game, idx) => (
-                    <div key={idx}>
+                    <div className='card' key={idx}>
+                        <img src="..." className="card-img-top" alt="..."></img>
                         <Link className='gamelink' to={`/game/${game.game_id}`}>
                             {game.title}
                         </Link>

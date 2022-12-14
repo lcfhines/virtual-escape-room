@@ -48,7 +48,7 @@ const Room = () => {
              <a href="#"><img src="./assets/char.png"/></a>
         </div> */}
                <div id="room-desc">
-                    <h2>description</h2>
+                    <h2>Description of the {room.title}</h2>
                     <p> {room.description} </p>
                </div>
                {room.objects.map((object, idx) => {
