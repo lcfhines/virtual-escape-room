@@ -50,13 +50,13 @@ th, td {
     --bs-btn-hover-bg: #890202;
 }
 
-#leaderboard {
+.leaderboard {
     margin: auto;
     margin-top: 17px;
     text-align: center;
 }
 
-#leader-container{
+.leader-container{
     display: flex;
     justify-content: center;
 }
