@@ -4,13 +4,11 @@ import { useParams } from 'react-router-dom';
 import { QUERY_GET_LEADERBOARD } from '../utils/queries';
 
 const Leaderboard = () => {
-  // const [state, dispatch] = useGameContext();
   const { game_id } = useParams();
-
   const {loading,  data } = useQuery(QUERY_GET_LEADERBOARD, 
     {
       variables: 
-        { gameId: 1 },
+        { gameId: parseInt(game_id) },
     }
   );
   const leaderBoard = data?.leaderBoard || [];

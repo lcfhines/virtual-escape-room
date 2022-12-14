@@ -5,9 +5,7 @@ import { useParams } from 'react-router-dom';
 import { QUERY_GET_GAME } from '../utils/queries';
 import Button from 'react-bootstrap/esm/Button';
 import { useGameContext } from '../utils/GlobalState';
-import {
-  ADD_GAME,
-} from '../utils/actions';
+import { ADD_GAME } from '../utils/actions';
 import '../styles/Game.css';
 import Leaderboard from '../components/Leaderboard';
 
