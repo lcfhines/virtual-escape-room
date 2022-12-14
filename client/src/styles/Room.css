@@ -44,3 +44,9 @@ svg {
     height: 50%;
     border: 3px solid #d4af37;
 }
+
+#filler {
+        height: 1000px;
+        padding: 0;
+        background: #33032F;
+    }

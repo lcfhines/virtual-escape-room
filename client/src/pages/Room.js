@@ -57,7 +57,7 @@ const Room = () => {
                img = secret;
                break;
           default:
-               img = full
+               img = full;
      }
 
      const timeHandler = () => {
@@ -129,6 +129,7 @@ const Room = () => {
                               </Modal>
                          </div>)
                }
+               <div id="filler"/>
           </main>
      )
 }
