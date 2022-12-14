@@ -43,10 +43,14 @@ const Game = () => {
       <div className='feed'>
           <h1 id='main-title'>{game.title}</h1>
           <div id="intro">
-               {/* <p>SCENERIO + PROMPT  HOW LONG YOU HAVE</p> */}
-               {/* <h3>Short Description:</h3><p>{game.title}</p> */}
-               <h5>About the story:</h5><p>{game.story_line}</p>
-               <h5>Time-limit:<span id="time-limit" > {game.time_limit} minutes</span></h5>
+            <div className="storyline m-2">
+               <h3>Storyline</h3>
+               <p className='m-2'>{game.story_line}</p>
+            </div>
+            <div className="time m-2">
+               <h4 className='m-2'>Time Limit</h4>
+               <p id="time-limit">{game.time_limit} minutes</p>
+            </div>
           </div>
           <div  id="start">
           <Link
@@ -58,7 +62,7 @@ const Game = () => {
              <Button variant='danger'>START</Button>  
           </Link>
           </div>
-          <div id='' >
+          <div id=''className='m-5' >
               <Leaderboard/>
           </div>
         <div className="drop"></div>
