@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import { useQuery } from "@apollo/client";
 import { useParams } from 'react-router-dom';
-import { QUERY_ROOM } from '../utils/queries';
 import { Link } from 'react-router-dom';
 import RoomList from '../components/RoomList'
 import { useGameContext } from '../utils/GlobalState';
 import Timer from '../components/Timer';
 import Object from '../components/Object';
-import Solution from '../components/Solution';
 import SolutionForm from "../components/Solution";
 import { Modal } from 'react-bootstrap';
 import "../styles/Room.css"
-
-// import CommentList from '../components/CommentList';
 
 const Room = () => {
      const [state] = useGameContext();
