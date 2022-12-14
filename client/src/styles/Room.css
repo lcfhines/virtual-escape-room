@@ -20,7 +20,8 @@ svg {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #timer{
