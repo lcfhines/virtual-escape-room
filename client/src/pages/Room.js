@@ -106,7 +106,7 @@ const Room = () => {
                     </div>
                     <div className="room-objects">
                          {room.objects.map((object, idx) => {
-                              return <div className="object p-1 "><Object key={idx} object={object} /></div>
+                              return <div key={idx} className="object p-1 "><Object key={idx} object={object} /></div>
                          })}
                     </div>
                </div>
