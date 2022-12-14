@@ -30,7 +30,6 @@ export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
     // }, [timeLeft, timerRunning, timeHandler]);
 
     useEffect(() => {
-        console.log(timeLeft, timerRunning);
         if (timeLeft > 0 && timerRunning) {
             timeoutRef.current = setTimeout(() => {
                 if (timerRunning) {
