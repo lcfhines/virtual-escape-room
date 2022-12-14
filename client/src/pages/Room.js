@@ -112,10 +112,11 @@ const Room = () => {
                </div>
                {parseInt(room_id) === state.defaultRoomId
                     && (
-                         <div>
+                         <div className="solutionLink">
+                              <p>Report your findings to the constable to escape the Llewellyn Manor!</p>
                               <Link onClick={() => {
                                    setShowModal(true);
-                              }}> I know who did it! Report to the constable your findings to escape the Llewellyn Manor </Link>
+                              }}> I know who did it!</Link>
                               <Modal
                                    show={showModal}
                                    onHide={() => setShowModal(false)}

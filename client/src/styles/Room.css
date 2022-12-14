@@ -50,3 +50,14 @@ svg {
         padding: 0;
         background: #33032F;
     }
+
+.solutionLink {
+    background: #33032F ;
+    padding-left: 2%;
+    font-size: 30px;
+    color: white
+}
+
+a{
+    color:white
+}
