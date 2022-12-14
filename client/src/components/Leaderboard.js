@@ -20,7 +20,7 @@ const leaderBoard = data?.leaderBoard || [];
 return(
      <>
      <main id="leaderboard">
-          <h3>Global Leader board</h3>
+          <h3>Global Leaderboard</h3>
           <div >
                <table>
                 <thead >

@@ -27,8 +27,6 @@ const Room = () => {
           setTimeLeft(timeLeft - 1);
      }
 
-
-
      return (
           <main>
                <div id="room">
@@ -54,28 +52,15 @@ const Room = () => {
                          timeHandler={timeHandler}
                     />
                </div>
-               {/* <div id="character">
-             <a href="#"><img src="./assets/char.png"/></a>
-        </div> */}
                <div id="room-desc">
-                    <h2>description</h2>
+                    <h2>Description of the {room.title}</h2>
                     <p> {room.description} </p>
                </div>
+               <div className="room-objects">
                {room.objects.map((object, idx) => {
-                    return <Object key={idx} object={object} />
+                    return <div className="object p-1 "><Object key={idx} object={object}/></div>
                })}
-               {/* <div id="object">
-             <div className="row">
-                  <a href="#" ><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-             </div>
-             <div  className="row">
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-                  <a href="#"><img src="assets/comingSoon.png" alt=""/></a>
-             </div>
-        </div> */}
+               </div>
                {parseInt(room_id) === state.defaultRoomId
                     && (
                          <div>

@@ -3,7 +3,7 @@
   {
       "is_default": true,
       "room_id": 1,
-      "title": "Entrance-Hall",
+      "title": "Entrance Hall",
       "description": "Upon entering the entrance hall you see the constable, looking at you suspiciously. He stands in front of a large door with tobacco leaves carved into it. Opposite the door is a large staircase that leads to the second level. The railing on the left side of it has been destroyed with the remnants lying on the ground below it. Moving further into the house you can see doors that lead to every room on the ground level.",
       "game_id": 1
   },
@@ -31,7 +31,7 @@
   {
       "is_default": false,
       "room_id": 5,
-      "title": "Dining-Hall",
+      "title": "Dining Hall",
       "description": "Upon entering the dining room, you see a long table adorned with ornate cutlery and fine china. Surrounding the table are oak chairs with red velvet upholstery. Across from you, there is a large bay window overlooking the fields . On your right lining the wall is a bar. To the right of the bar is is an ice bucket with a pick driven into the ice. Sitting at the table, sweating profusely, is Margarite with her head down on the table. Across from her is Matthew.",
       "game_id": 1
   },
@@ -45,7 +45,7 @@
   {
       "is_default": false,
       "room_id": 7,
-      "title": "Occupied-Bathroom",
+      "title": "Occupied Bathroom",
       "description": "Upon trying to enter the bathroom you find the door to be locked, You hear someone groaning before saying, 'Come back Later!'",
       "game_id": 1
   },
@@ -59,7 +59,7 @@
   {
       "is_default": false,
       "room_id": 9,
-      "title": "Secret-Room",
+      "title": "Secret Room",
       "description": "Upon adjusting the book a a section of bookshelf opens revealing a secret room. Weapons and paintings cover the walls. There is only one empty space where a crossbow used to exist. In the center of the room is a table sized display case containing the Sword of St. Thomas. The gemstones decorating its hilt and scabbard throw colorful splashes of light around the room. On top of the display case is a bizarre mechanism with a severed length of cord running towards the exit. Inside of it is the crossbow missing from the wall.",
       "game_id": 1
   }
