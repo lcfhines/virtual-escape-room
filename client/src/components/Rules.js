@@ -21,8 +21,9 @@ const Rules = () => {
                 <ul>
                     <li>You start in a room</li>
                     <li>Explore and interact to gather clues</li>
-                    <li>You have 'x' interactions and 'y' time to complete the challenge</li>
+                    <li>Complete the game in the given amount of time</li>
                     <li>Submit your answer in the starting room</li>
+                    <li>Leaderboard ranks based on number of attempts first, then completion time</li>
                 </ul>
             </div>
         </div>
