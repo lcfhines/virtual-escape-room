@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
     const timeoutRef = useRef(null);
