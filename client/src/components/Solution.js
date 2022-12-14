@@ -6,14 +6,12 @@ import { END_GAME } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 
-
 const SolutionForm = (props) => {
     const [state] = useGameContext();
     const navigate = useNavigate();
     const [suspect, setSuspect] = useState({})
     const [weapon, setWeapon] = useState({})
     const [motive, setMotive] = useState({})
-
 
     const [endGame, { error }] = useMutation(END_GAME);
 
@@ -31,7 +29,6 @@ const SolutionForm = (props) => {
           catch (err) {
           console.error(err)
           }
-          console.log("true")
           navigate ('/endgame/true')
         }
       else {
@@ -43,7 +40,6 @@ const SolutionForm = (props) => {
         catch (err) {
         console.error(err)
         }
-        console.log("false")
         navigate ('/endgame/false')
       }
     }
@@ -99,6 +95,7 @@ const SolutionForm = (props) => {
               <Button onClick={props.onHide}>Close</Button>
         </Modal.Footer>
         </div>
-  )}
+  )
+}
 
 export default SolutionForm;

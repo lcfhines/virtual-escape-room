@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
-// import { useUserContext } from '../leaderboard/UserContext';
+import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import  { Link }  from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { QUERY_GAME_ROOMS, QUERY_GET_GAME } from '../utils/queries';
+import { QUERY_GET_GAME } from '../utils/queries';
 import Button from 'react-bootstrap/esm/Button';
-
 import { useGameContext } from '../utils/GlobalState';
 import {
   ADD_GAME,
 } from '../utils/actions';
 import '../styles/Game.css';
 import Leaderboard from '../components/Leaderboard';
+
 const Game = () => {
-  // const [defaultRoom, setDefaultRoom] = useState({});
   const [state, dispatch] = useGameContext();
   const { game_id } = useParams();
   const {loading,  data } = useQuery(QUERY_GET_GAME, 
@@ -22,7 +20,6 @@ const Game = () => {
         { gameId: parseInt(game_id) },
     }
   );
-  
   
   const game = data?.game || {};
   const defaultRoom = game.rooms?.find(room => room.is_default) || {};
@@ -36,7 +33,6 @@ const Game = () => {
     }
    }, [loading, game, dispatch]);
 
-     
   return (
      <>
      <main id="game">
@@ -56,7 +52,6 @@ const Game = () => {
           <Link
                to={{
                pathname: `/room/${defaultRoom.room_id}`
-               // state: {game.rooms.title}
                }}
           >
              <Button variant='danger'>START</Button>  
