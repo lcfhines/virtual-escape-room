@@ -4,11 +4,13 @@ import { useQuery } from '@apollo/client';
 import  { Link }  from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { QUERY_GAME_ROOMS, QUERY_GET_GAME } from '../utils/queries';
+import Button from 'react-bootstrap/esm/Button';
 
 import { useGameContext } from '../utils/GlobalState';
 import {
   ADD_GAME,
 } from '../utils/actions';
+import '../styles/Game.css';
 import Leaderboard from '../components/Leaderboard';
 const Game = () => {
   // const [defaultRoom, setDefaultRoom] = useState({});
@@ -38,12 +40,17 @@ const Game = () => {
   return (
      <>
      <main id="game">
-          <h1>{game.title}</h1>
+      <div className='feed'>
+          <h1 id='main-title'>{game.title}</h1>
           <div id="intro">
-               {/* <p>SCENERIO + PROMPT  HOW LONG YOU HAVE</p> */}
-               <h3>Short Description:</h3><p>{game.title}</p>
-               <h3>Story line Descriptions:</h3><p>{game.story_line}</p>
-               <h3>Time limit for game:</h3><p>{game.time_limit}</p>
+            <div className="storyline m-2">
+               <h3>Storyline</h3>
+               <p className='m-2'>{game.story_line}</p>
+            </div>
+            <div className="time m-2">
+               <h4 className='m-2'>Time Limit</h4>
+               <p id="time-limit">{game.time_limit} minutes</p>
+            </div>
           </div>
           <div  id="start">
           <Link
@@ -52,13 +59,18 @@ const Game = () => {
                // state: {game.rooms.title}
                }}
           >
-               START
+             <Button variant='danger'>START</Button>  
           </Link>
           </div>
-          <div >
-          {/* <h3>Global Leader board</h3> */}
+          <div id=''className='m-5' >
               <Leaderboard/>
           </div>
+        <div className="drop"></div>
+        <div id='wave-container'>
+          <div className="wave"></div>
+        </div>
+        <div id='wave-background'></div>
+      </div>
      </main>
      </>
      );
