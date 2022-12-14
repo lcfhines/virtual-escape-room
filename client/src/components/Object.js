@@ -16,7 +16,7 @@ const ObjectModal = (props, object, idx) => {
         <Modal
         {...props}
         size="lg"
-        aria-labelledby="object-modal"
+        aria-labelledby="contained-modal-title-vcenter"
         centered
         object={object}
         key={idx}
