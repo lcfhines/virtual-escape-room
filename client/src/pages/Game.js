@@ -10,6 +10,7 @@ import { useGameContext } from '../utils/GlobalState';
 import {
   ADD_GAME,
 } from '../utils/actions';
+import '../styles/Game.css';
 
 const Game = () => {
   // const [defaultRoom, setDefaultRoom] = useState({});
@@ -42,7 +43,7 @@ const Game = () => {
      <>
      <main id="game">
       <div className='feed'>
-          <h1>{game.title}</h1>
+          <h1 id='main-title'>{game.title}</h1>
           <div id="intro">
                {/* <p>SCENERIO + PROMPT  HOW LONG YOU HAVE</p> */}
                {/* <h3>Short Description:</h3><p>{game.title}</p> */}
@@ -59,29 +60,17 @@ const Game = () => {
              <Button variant='danger'>START</Button>  
           </Link>
           </div>
-          <div >
+          <div className='Leaderboard'>
           <h5>Global Leaderboard</h5>
-               {/* <table>
-                <thead>
-                  <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Time</th>
-                    <th>Clicks</th>
-                  </tr>
-                </thead>  
-                <tbody>
-                 {/* {users.map((user) => (
-                  <tr key={user.id}>
-                    <td>{user.rank}</td>
-                    <td>{user.name}</td>
-                    <td>{user.time}</td>
-                    <td>{user.click}</td>
-                  </tr>
-                 ))} *
-                </tbody>
-               </table> */}
+            <div>
+              
+              
+            </div>
           </div>
+        <div class="drop"></div>
+        <div id='wave-container'>
+          <div class="wave"></div>
+        </div>
       </div>
      </main>
      </>

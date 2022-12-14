@@ -17,8 +17,8 @@ const Home = () => {
     if (Auth.loggedIn()){
       
       return (
-        <Container>
-        <div className="homepage">
+        <Container fluid className="g-0 fullheight">
+        <div className="homepage fullheight">
           {/* Intro */}
           <h1 className="intro">Solve a murder mystery or escape from a psycho killer all from the comfort of your couch!</h1>
           <h3>Available Games</h3>
@@ -35,14 +35,13 @@ const Home = () => {
       )
     } else {
       return (
-        <Container>
-        <div className="homepage">
+        <Container fluid className="g-0 fullheight">
+        <div className="homepage fullheight">
           {/* Intro */}
           <h1 className="intro">Solve a murder mystery or escape from a psycho killer all from the comfort of your couch!</h1>
          {/* <p>How to play rules</p> */}
           <Rules />
         </div>
-        <div id="filler"></div>
         </Container>
       )
     }
