@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useGameContext } from '../utils/GlobalState'
 import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
+import { END_GAME } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 
 const SolutionForm = (props) => {
@@ -10,6 +12,21 @@ const SolutionForm = (props) => {
     const [suspect, setSuspect] = useState("")
     const [weapon, setWeapon] = useState("")
     const [motive, setMotive] = useState("")
+
+    const [endGame, { error }] = useMutation(END_GAME);
+
+    const handleGameEnd = async (event) => {
+      event.preventDefault();
+      // stop timer regardless
+
+      try {
+        const { data } = await endGame({
+          variables: { gameId: state.game.game_id }
+        })
+      } catch (err) {
+        console.error(err)
+      }
+    }
 
   return (
     <div>
@@ -55,6 +72,7 @@ const SolutionForm = (props) => {
               <div>    
               <button
                 type="button"
+                onClick={handleGameEnd}
                 // onClick={() => {
                 //   addSolution({ suspect: suspect, weapon: weapon, motive: motive});
                 // }}
