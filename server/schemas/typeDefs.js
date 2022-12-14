@@ -37,6 +37,7 @@ const typeDefs = gql`
     title: String
     description: String
     game_id: Int
+    map: String
     objects: [Object]
     image: String
   }
