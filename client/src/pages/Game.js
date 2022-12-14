@@ -11,7 +11,7 @@ import {
   ADD_GAME,
 } from '../utils/actions';
 import '../styles/Game.css';
-
+import Leaderboard from '../components/Leaderboard';
 const Game = () => {
   // const [defaultRoom, setDefaultRoom] = useState({});
   const [state, dispatch] = useGameContext();
@@ -27,8 +27,6 @@ const Game = () => {
   const game = data?.game || {};
   const defaultRoom = game.rooms?.find(room => room.is_default) || {};
 
-  // console.log(game);
-  
    useEffect(() => {
     if (!loading){
       dispatch({
@@ -60,17 +58,14 @@ const Game = () => {
              <Button variant='danger'>START</Button>  
           </Link>
           </div>
-          <div className='Leaderboard'>
-          <h5>Global Leaderboard</h5>
-            <div>
-              
-              
-            </div>
+          <div id='' >
+              <Leaderboard/>
           </div>
-        <div class="drop"></div>
+        <div className="drop"></div>
         <div id='wave-container'>
-          <div class="wave"></div>
+          <div className="wave"></div>
         </div>
+        <div id='wave-background'></div>
       </div>
      </main>
      </>

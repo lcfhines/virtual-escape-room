@@ -27,6 +27,7 @@ const typeDefs = gql`
     time_limit: Int
     rooms: [Room]
     solution: Solution
+    solutionLetters: [SolutionLetter]
   }
 
   type Room {
@@ -96,25 +97,20 @@ const typeDefs = gql`
   }
 
   type Query {
+    me: User
     games: [Game]!
     game(gameId: Int!): Game 
     room(roomId: Int!): Room 
-    objectInteractions(objectId: String!): [Interaction]!  
-    me: User
-
-    leaderBoards: [LeaderBoard]!
-
     leaderBoard(gameId: Int!): [LeaderBoard]!
-
-    introData: Intro
-    defaultRoom(gameId: Int!): Room
-
+    objectInteractions(objectId: String!): [Interaction]!  
+    
     users: [User]!
     rooms: [Room]!
     objects: [Object]!
     interactions: [Interaction]!
     gameUserInteractions: [GameUserInteraction]!
     motives: [Motive]!
+    leaderBoards: [LeaderBoard]!
     solutions: [Solution]!
     solutionLetters: [SolutionLetter]!
   }
@@ -128,9 +124,7 @@ const typeDefs = gql`
 
     addGameUserInteraction(interaction_id: ID!): GameUserInteraction 
 
-    checkSolution(character_id: ID!, thing_id: ID!, motive_id: ID!): Solution
-
-    endGame(solutionTime: Int): User
+    endGame(gameId: Int!, final_solution_time: Int): LeaderBoard
   }
 `;
 

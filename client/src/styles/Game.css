@@ -1,5 +1,5 @@
 body {
-    height: 100vw;
+    height: 120vw;
 }
 
 #game {
@@ -42,18 +42,19 @@ body {
     --bs-btn-hover-bg: #890202;
 }
 
-/* body {
-background-color: #000;
-overflow: hidden;
-} */
-
-/* div {
-margin: 175px auto;
-} */
-
 #wave-container {
     position: absolute;
-    top: 605px;
+    top: 957px;
+}
+
+#wave-background {
+    position: absolute;
+    top: 807px;
+    left: 1px;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+    background-color: black;
 }
 
 .drop {
