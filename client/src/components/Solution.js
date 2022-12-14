@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useGameContext } from '../utils/GlobalState'
 import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
 import { END_GAME } from '../utils/mutations';
@@ -16,10 +16,8 @@ const SolutionForm = (props) => {
     const [endGame, { error }] = useMutation(END_GAME);
 
     const handleGameEnd = async () => {
-      console.log('handlegameend');
       props.setTimerRunning(false);
       const score = (state.game.time_limit * 60) - props.timeLeft;
-      console.log(score);
 
       try {
         const { data } = await endGame({
@@ -40,7 +38,6 @@ const SolutionForm = (props) => {
         <Modal.Body>
             <div>
               <DropdownButton id="dropdown-basic-button" title="Choose your prime suspect...">
-                {/* <option>Choose your prime suspect...</option> */}
                 {state.suspects.map((suspect, index) => (
                   <Dropdown.Item key={index} value={suspect.object_id} onClick={() => setSuspect(suspect.name)}>
                     {suspect.name}
@@ -51,7 +48,6 @@ const SolutionForm = (props) => {
               </div>   
               <div>
               <DropdownButton id="dropdown-basic-button" title="Choose the murder weapon...">
-                {/* <option>Choose the murder weapon...</option> */}
                 {state.weapons.map((weapon, index) => (
                   <Dropdown.Item key={index} value={weapon.object_id} onClick={() => setWeapon(weapon.name)}>
                     {weapon.name}
@@ -62,7 +58,6 @@ const SolutionForm = (props) => {
               </div>
               <div>
               <DropdownButton id="dropdown-basic-button" title="Choose the motive...">
-                {/* <option>Choose the suspect's motive...</option> */}
                 {state.motives.map((motive, index) => (
                   <Dropdown.Item key={index} value={motive.motive_id} onClick={() => setMotive(motive.description)}>
                     {motive.description}
@@ -75,9 +70,6 @@ const SolutionForm = (props) => {
               <button
                 type="button"
                 onClick={handleGameEnd}
-                // onClick={() => {
-                //   addSolution({ suspect: suspect, weapon: weapon, motive: motive});
-                // }}
               >
                 Submit Solution
               </button>
