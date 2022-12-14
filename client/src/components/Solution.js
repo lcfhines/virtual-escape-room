@@ -4,12 +4,12 @@ import { useGameContext } from '../utils/GlobalState'
 import  { DropdownButton, Dropdown, Modal }  from 'react-bootstrap';
 import { END_GAME } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
-import {Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const SolutionForm = (props) => {
     const [state] = useGameContext();
-
+    const navigate = useNavigate();
     const [suspect, setSuspect] = useState("")
     const [weapon, setWeapon] = useState("")
     const [motive, setMotive] = useState("")
@@ -30,7 +30,8 @@ const SolutionForm = (props) => {
           catch (err) {
           console.error(err)
           }
-          return <Navigate to="/endgame/true" />; 
+          console.log("true")
+          navigate ('/endgame/true')
         }
       else {
         try {
@@ -41,7 +42,8 @@ const SolutionForm = (props) => {
         catch (err) {
         console.error(err)
         }
-        return <Navigate to="/endgame/false" />; 
+        console.log("false")
+        navigate ('/endgame/false')
       }
     }
 
