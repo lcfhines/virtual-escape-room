@@ -25,32 +25,33 @@ const Room = () => {
      return (
           <main>
                <div id="room">
-                    <div className ="map">
-                         <img src="https://raw.githubusercontent.com/mikeyboxx/virtual-escape-room/main/assets/LM-Full.jpg" alt="manor map"/>
-                         <svg width="2048" height="2048" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M 100 100 H 900 V 900 H 100 L 100 100" />
-
-                              <circle cx="10" cy="10" r="2" fill="red" />
-                              <circle cx="90" cy="90" r="2" fill="red" />
-                              <circle cx="90" cy="10" r="2" fill="red" />
-                              <circle cx="10" cy="90" r="2" fill="red" />
+                    {/* {<div className ="map">
+                         <img src="https://raw.githubusercontent.com/mikeyboxx/virtual-escape-room/main/assets/LM-Full.jpg" className="mapimg" alt="manor map"/>
+                         <svg viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M 125 250 h 800 v 550 h -800 L 125 250" />
+                              <path d="M 125 850 h 800 v 550 h -175 v 650 h -625 L 125 850" />
                          </svg>
+                    </div>} */}
+                    <div id="titleTimer">
+                         <div>
+                              <h2>{room.title}</h2>
+                              <RoomList />
+                         </div>
+                         <div>
+                              <h2 id="timer">Timer</h2>
+                              <Timer />
+                         </div>
                     </div>
-                    <div>
-                         <h2>{room.title}</h2>
-                         <RoomList />
-                    </div>
-                    <h2>Timer</h2>
-                    <Timer />
+
                </div>
                <div id="room-desc">
                     <h2>Description of the {room.title}</h2>
                     <p> {room.description} </p>
                </div>
                <div className="room-objects">
-               {room.objects.map((object, idx) => {
-                    return <div className="object p-1 "><Object key={idx} object={object}/></div>
-               })}
+                    {room.objects.map((object, idx) => {
+                         return <div className="object p-1 "><Object key={idx} object={object} /></div>
+                    })}
                </div>
                {parseInt(room_id) === state.defaultRoomId
                     && (
