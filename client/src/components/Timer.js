@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useGameContext } from '../utils/GlobalState';
+import '../styles/Timer.css'
 
 export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
     // console.log(timeLeft, timerRunning);
@@ -44,7 +45,15 @@ export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
 
     return (
         <div>
+<<<<<<< HEAD
             <h2>{timer}</h2>
+=======
+            <h2 id = "timerEl">{timer}</h2>
+            <button onClick={() => setTimerRunning(true)}>Start</button>
+            <button onClick={() => {
+                clearTimeout(timeoutRef.current);
+                setTimerRunning(false)}}>Stop</button>
+>>>>>>> 1b3b9b492e38b92974d3b0b5d3f4ba0e8c5d2e15
         </div>
     )
 }

@@ -19,13 +19,9 @@ const Room = () => {
      const [showModal, setShowModal] = useState(false)
      const { room_id } = useParams();
      const room = state.rooms?.find(room => room.room_id === parseInt(room_id)) || {};
-
-     const [timeLeft, setTimeLeft] = useState(state.game.time_limit * 60);
-     const [timerRunning, setTimerRunning] = useState(true);
-
-     const timeHandler = () => {
-          setTimeLeft(timeLeft - 1);
-     }
+     console.log(room);
+     console.log(room_id);
+     console.log(room.map)
 
      return (
           <main>
@@ -40,6 +36,16 @@ const Room = () => {
                               <circle cx="90" cy="10" r="2" fill="red" />
                               <circle cx="10" cy="90" r="2" fill="red" />
                          </svg>
+                    </div>
+                    <div id="titleTimer">
+                         <div>
+                              <h1>{room.title}</h1>
+                              <RoomList />
+                         </div>
+                         <div>
+                              <h2 id="timer">Time Remaining</h2>
+                              <Timer />
+                         </div>
                     </div>
                     <div>
                          <h2>{room.title}</h2>

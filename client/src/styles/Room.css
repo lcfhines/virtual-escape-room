@@ -21,3 +21,7 @@ svg {
     flex-direction:row;
     justify-content: space-between;
 }
+
+#timer{
+    font-size: medium;
+}
