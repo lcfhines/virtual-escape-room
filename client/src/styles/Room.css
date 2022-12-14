@@ -1,3 +1,8 @@
+#room{
+    background: #33032F;
+    color: white
+}
+
 .map {
     width: 100%;
     height: auto;
@@ -20,16 +25,39 @@ svg {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 2%;
 }
 
 #timer{
     font-size: medium;
 }
 
-#timerBlock{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#roomBody {
+    padding-left: 2%;
+    background: #33032F;
+    color: white
+}
+
+.mapImage {
+   object-fit: contain;
+    width: 50%;
+    height: 50%;
+    border: 3px solid #d4af37;
+}
+
+#filler {
+        height: 1000px;
+        padding: 0;
+        background: #33032F;
+    }
+
+.solutionLink {
+    background: #33032F ;
+    padding-left: 2%;
+    font-size: 30px;
+    color: white
+}
+
+a{
+    color:white
 }
