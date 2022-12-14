@@ -27,7 +27,7 @@ const Object = ({object}) => {
       <div>
         <Modal.Body>
           {object.interactions.map((interaction, idx) => (
-            <div>
+            <div key={idx}>
                 <InteractionList key={idx} interaction={interaction}/>
             </div>
           ))}
