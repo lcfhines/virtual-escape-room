@@ -21,7 +21,6 @@ const Room = () => {
      const room = state.rooms?.find(room => room.room_id === parseInt(room_id)) || {};
      console.log(room);
      console.log(room_id);
-     console.log(room.map)
 
      return (
           <main>
