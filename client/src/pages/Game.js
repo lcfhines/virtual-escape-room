@@ -9,7 +9,7 @@ import { useGameContext } from '../utils/GlobalState';
 import {
   ADD_GAME,
 } from '../utils/actions';
-
+import Leaderboard from '../components/Leaderboard';
 const Game = () => {
   // const [defaultRoom, setDefaultRoom] = useState({});
   const [state, dispatch] = useGameContext();
@@ -25,8 +25,6 @@ const Game = () => {
   const game = data?.game || {};
   const defaultRoom = game.rooms?.find(room => room.is_default) || {};
 
-  // console.log(game);
-  
    useEffect(() => {
     if (!loading){
       dispatch({
@@ -58,27 +56,8 @@ const Game = () => {
           </Link>
           </div>
           <div >
-          <h3>Global Leader board</h3>
-               {/* <table>
-                <thead>
-                  <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Time</th>
-                    <th>Clicks</th>
-                  </tr>
-                </thead>  
-                <tbody>
-                 {/* {users.map((user) => (
-                  <tr key={user.id}>
-                    <td>{user.rank}</td>
-                    <td>{user.name}</td>
-                    <td>{user.time}</td>
-                    <td>{user.click}</td>
-                  </tr>
-                 ))} *
-                </tbody>
-               </table> */}
+          {/* <h3>Global Leader board</h3> */}
+              <Leaderboard/>
           </div>
      </main>
      </>
