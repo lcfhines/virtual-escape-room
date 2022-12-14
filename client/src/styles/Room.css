@@ -20,10 +20,16 @@ svg {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #timer{
     font-size: medium;
+}
+
+#timerBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
