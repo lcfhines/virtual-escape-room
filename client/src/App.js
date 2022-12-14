@@ -9,16 +9,15 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Leaderboard from './pages/leaderboard/Leaderboard'
-import Game from './pages/Game'
-// import Home from './pages/Home';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import Leaderboard from './components/Leaderboard'
+import Game from './pages/Game'
 import Room from './pages/Room';
-import { GameProvider } from './utils/GlobalState';
 
+import { GameProvider } from './utils/GlobalState';
 
 const httpLink = createHttpLink({
   uri: '/graphql',

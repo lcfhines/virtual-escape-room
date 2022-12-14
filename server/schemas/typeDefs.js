@@ -27,6 +27,7 @@ const typeDefs = gql`
     time_limit: Int
     rooms: [Room]
     solution: Solution
+    solutionLetters: [SolutionLetter]
   }
 
   type Room {

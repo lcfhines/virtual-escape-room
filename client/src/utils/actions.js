@@ -1,3 +1,1 @@
 export const ADD_GAME = "ADD_GAME";
-
-export const UPDATE_USER_INTERACTION = "UPDATE_USER_INTERACTION";
