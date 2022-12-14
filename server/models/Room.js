@@ -18,6 +18,10 @@ const roomSchema = new Schema(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      required: true,
+    },
     game_id: {
       type: Number,
       required: true,
