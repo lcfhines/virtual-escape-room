@@ -1,8 +1,5 @@
 import { useReducer } from 'react';
-import {
-  UPDATE_USER_INTERACTION,
-  ADD_GAME
-} from './actions';
+import {ADD_GAME} from './actions';
 
 // The reducer is a function that accepts the current state and an action. It returns a new state based on that action.
 export const reducer = (state, action) => {
@@ -14,7 +11,8 @@ export const reducer = (state, action) => {
           story_line,
           time_limit,
           rooms,
-          solution
+          solution,
+          solutionLetters
         } = action.game;
 
       
@@ -58,11 +56,11 @@ export const reducer = (state, action) => {
         rooms,
         defaultRoomId,
         correctSolution: solution,
+        solutionLetters,
         suspects,
         weapons,
         motives
       }
-    // case UPDATE_USER_INTERACTION:
     // This saves us from a crash.
     default:
       return state;

@@ -30,8 +30,8 @@ const resolvers = {
             }
       });
 
-      const solution = await Solution.findOne();
-      game.solution = solution;
+      game.solution = await Solution.findOne({});
+      game.solutionLetters = await SolutionLetter.find({});
 
       return game;
     },

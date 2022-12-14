@@ -100,6 +100,10 @@ query GetGame($gameId: Int!) {
       weapon_id
       motive_id
     }
+    solutionLetters {
+      success
+      message
+    }
   }
 }
 `;
