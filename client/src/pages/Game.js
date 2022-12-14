@@ -58,7 +58,7 @@ const Game = () => {
              <Button variant='danger'>START</Button>  
           </Link>
           </div>
-          <div id='' >
+          <div >
               <Leaderboard/>
           </div>
         <div className="drop"></div>

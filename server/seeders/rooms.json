@@ -44,13 +44,6 @@
   },
   {
       "is_default": false,
-      "room_id": 7,
-      "title": "Occupied-Bathroom",
-      "description": "Upon trying to enter the bathroom you find the door to be locked, You hear someone groaning before saying, 'Come back Later!'",
-      "game_id": 1
-  },
-  {
-      "is_default": false,
       "room_id": 8,
       "title": "Bathroom",
       "description": "Upon entering the bathroom you are assailed by the smell of vomit. To your right is a toilet clogged from sickness. Sitting beside the toilet is a plunger. In front of you is a partially open window that overlooks the gardens. On your left is a large ornate mirror gilded at its edges. Below it is a sink also filled with vomit. Resting in the sink are two empty wine bottles.",
