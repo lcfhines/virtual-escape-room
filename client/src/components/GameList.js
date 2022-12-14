@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_GAMES } from '../utils/queries';
 import '../styles/Gamelist.css'
+import gameImg from '../assets/c870x524.jpg'
 
 const GameList = () => {
     const { data } = useQuery(QUERY_GAMES);
@@ -12,7 +13,7 @@ const GameList = () => {
         <div>
             {games.map((game, idx) => (
                 <div className='card' key={idx}>
-                        <img src="https://raw.githubusercontent.com/mikeyboxx/virtual-escape-room/component-styling/assets/c870x524.jpg" className="card-img-top" alt="Maginfying-glass looking over evidence"></img>
+                        <img src={gameImg}className="card-img-top" alt="Maginfying-glass looking over evidence"></img>
                     <Link className='gamelink' to={`/game/${game.game_id}`}>
                         {game.title}
                     </Link>
