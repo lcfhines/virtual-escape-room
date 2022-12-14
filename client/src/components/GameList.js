@@ -12,7 +12,7 @@ const GameList = () => {
         <div>
             {games.map((game, idx) => (
                 <div className='card' key={idx}>
-                        <img src="https://raw.githubusercontent.com/mikeyboxx/virtual-escape-room/component-styling/assets/c870x524.jpg" className="card-img-top" alt="Maginfying-glass looking over evidence"></img>
+                        <img src="assets/c870x524.jpg" className="card-img-top" alt="Maginfying-glass looking over evidence"></img>
                     <Link className='gamelink' to={`/game/${game.game_id}`}>
                         {game.title}
                     </Link>

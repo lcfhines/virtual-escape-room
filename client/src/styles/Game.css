@@ -1,6 +1,14 @@
+#root{
+    overflow: hidden;
+}
+
 body {
     height: 150vw;
 }
+
+th, td {
+    padding: 15px;
+  }
 
 #game {
     background-color: #880808;
@@ -44,15 +52,19 @@ body {
 
 #leaderboard {
     margin: auto;
-    width: 50%;
-    padding: 15px;
+    margin-top: 17px;
     text-align: center;
-    padding-left: 73px;
 }
 
+#leader-container{
+    display: flex;
+    justify-content: center;
+}
 #wave-container {
-    position: absolute;
-    top: 689px;
+    position: relative;
+    width: 100vw;
+    height: 800px;
+
 }
 
 #wave-background {
@@ -66,11 +78,11 @@ body {
 }
 
 .drop {
-position: relative;
+position: absolute;
     width: 20px;
     height: 20px;
-    top: -303px;
-left: -358px;
+    top: -637px;
+    /* left: -255px; */
 margin: 0 auto;
     background: #F00;
     -moz-border-radius: 20px;
