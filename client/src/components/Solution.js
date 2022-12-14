@@ -20,8 +20,6 @@ const SolutionForm = (props) => {
     const handleGameEnd = async () => {
       props.setTimerRunning(false);
       const score = (state.game.time_limit * 60) - props.timeLeft;
-      console.log(suspect, weapon, motive )
-      console.log(state.correctSolution)
       if (state.correctSolution.suspect_id === suspect.object_id
         && state.correctSolution.weapon_id === weapon.object_id 
         && state.correctSolution.motive_id === motive.motive_id){
