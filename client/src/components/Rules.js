@@ -5,7 +5,9 @@ const Rules = () => {
     return (
         <Container>
         <div>
+            <br></br>
             <h1>Do you dare to escape where countless have tried and failed?</h1>
+            <br></br>
             <div id="instruction">
                 <h2>How to play</h2>
                 <ul>
@@ -21,8 +23,9 @@ const Rules = () => {
                 <ul>
                     <li>You start in a room</li>
                     <li>Explore and interact to gather clues</li>
-                    <li>You have 'x' interactions and 'y' time to complete the challenge</li>
+                    <li>Complete the game in the given amount of time</li>
                     <li>Submit your answer in the starting room</li>
+                    <li>Leaderboard ranks based on number of attempts first, then completion time</li>
                 </ul>
             </div>
         </div>
