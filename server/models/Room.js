@@ -22,9 +22,6 @@ const roomSchema = new Schema(
       type: Number,
       required: true,
     },
-    map: {
-      type: String
-    },
     objects: [
       {
         type:Schema.Types.ObjectId,
