@@ -20,13 +20,13 @@ const leaderBoard = data?.leaderBoard || [];
 return(
      <>
      <main id="leaderboard">
-          <h3>Global Leader board</h3>
+          <h3>Global Leaderboard</h3>
           <div >
                <table>
                 <thead >
                   <tr>
                     <th>Rank</th>
-                    <th>Name</th>
+                    <th className='ps-1'>Name</th>
                     <th>Number of Attempts</th>
                     <th>Final Solution Time</th>
                   </tr>
