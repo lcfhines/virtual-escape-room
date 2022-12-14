@@ -10,7 +10,7 @@ import Leaderboard from '../components/Leaderboard';
 const EndGame = () => {
     
 const [state, dispatch] = useGameContext();
-const { game_id } = useParams();
+const {correctSolution, incorrectSolution} = useParams();
   const {loading,  data } = useQuery(QUERY_GET_GAME, 
     {
       variables: 
@@ -32,8 +32,6 @@ return (
 </>
 );
 }
-
-
 
 
 export default EndGame;

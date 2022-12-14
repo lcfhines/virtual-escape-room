@@ -18,14 +18,21 @@ const SolutionForm = (props) => {
     const handleGameEnd = async () => {
       props.setTimerRunning(false);
       const score = (state.game.time_limit * 60) - props.timeLeft;
+      if (state.correctSolution.suspect_id === suspect 
+        && state.correctSolution.weapon_id === weapon 
+        && state.correctSolution.motive_id === motive){
+          try {
+            const { data } = await endGame({
+              variables: { gameId: state.game.game_id, final_solution_time: score }
+            })
+          } 
+          catch (err) {
+          console.error(err)
+          }
+          
 
-      try {
-        const { data } = await endGame({
-          variables: { gameId: state.game.game_id, final_solution_time: score }
-        })
-      } catch (err) {
-        console.error(err)
-      }
+        }
+      
     }
 
   return (
