@@ -22,7 +22,6 @@ const Room = () => {
     console.log(room_id);
 
 
-
     return (
         <main>
         <div id="room">
