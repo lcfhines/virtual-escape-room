@@ -1,16 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useGameContext } from '../utils/GlobalState';
-import '../styles/Timer.css'
+import React, { useEffect, useRef } from 'react';
 
-const Timer = () => {
-    const [state] = useGameContext();
-    const time_limit = state.game.time_limit;
-
+export default function Timer ({ timeLeft, timerRunning, timeHandler }) {
     const timeoutRef = useRef(null);
-    const [timeLeft2, setTimeLeft] = useState(timeLeft);
-    const [timerRunning, setTimerRunning] = useState(true);
-    const [timeLeft, setTimeLeft] = useState(time_limit * 60);
-    const [timerRunning, setTimerRunning] = useState(true);
 
     let timer = '';
     let minutes = Math.floor((timeLeft / 60) % 60);
@@ -40,5 +31,3 @@ const Timer = () => {
         </div>
     )
 }
-
-export default Timer;

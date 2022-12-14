@@ -5,41 +5,40 @@ import { useGameContext } from '../utils/GlobalState';
 import InteractionList from './InteractionList';
 
 const Object = ({object}) => {
-    const [modalShow, setModalShow] = useState(false);
-    const [state] = useGameContext();
+  const [modalShow, setModalShow] = useState(false);
+  const [state] = useGameContext();
     
-    return (
+  return (
     <>
-        <Button variant="outline-danger" size="lg"onClick={() => setModalShow(true)}>{object.name}
-        </Button>
-        <Modal
+      <Button variant="outline-danger" size="lg"onClick={() => setModalShow(true)}>{object.name}</Button>
+      <Modal
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         object={object}
         show={modalShow}
         onHide={() => setModalShow(false)}
-        >
-        <Modal.Header closeButton>
-          <Modal.Title id="object-modal">
-            {object.name}
-          </Modal.Title>
-        </Modal.Header>
-        <div>
+      >
+      <Modal.Header closeButton>
+        <Modal.Title id="object-modal">
+          {object.name}
+        </Modal.Title>
+      </Modal.Header>
+      <div>
         <Modal.Body>
           {object.interactions.map((interaction, idx) => (
-                <div>
-                    <InteractionList key={idx} interaction={interaction}/>
-                </div>
+            <div>
+                <InteractionList key={idx} interaction={interaction}/>
+            </div>
           ))}
         </Modal.Body>
-        </div>
+      </div>
         <Modal.Footer>
           <Button onClick={() => setModalShow(false)}>Close</Button>
         </Modal.Footer>
       </Modal>
     </>
-    )
+  )
 }
 
 export default Object
