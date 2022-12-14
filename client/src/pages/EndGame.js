@@ -6,6 +6,20 @@ import { useParams } from 'react-router-dom';
 import { useGameContext } from '../utils/GlobalState';
 
 
+return (
+    <>
+    <main id="game">
+         <h1>{game.title}</h1>
+<div>
+    <solutionLetters/>
+</div>
+<div >
+    <Leaderboard/>
+</div>
+</main>
+</>
+);
+}
 
 
 
