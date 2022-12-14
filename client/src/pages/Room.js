@@ -39,7 +39,6 @@ const Room = () => {
 
                     <div id ="titleTimer">
                          <div>
-                              <h2>{room.title}</h2>
                               <RoomList />
                          </div>
                          <div>
@@ -52,14 +51,17 @@ const Room = () => {
                          </div>
                     </div>
                </div>
+               <div id="roomBody">
+               <h2>{room.title}</h2>
                <div id="room-desc">
-                    <h2>Description of the {room.title}</h2>
+                    <h3>Description of the {room.title}</h3>
                     <p> {room.description} </p>
                </div>
                <div className="room-objects">
                     {room.objects.map((object, idx) => {
                          return <div className="object p-1 "><Object key={idx} object={object} /></div>
                     })}
+               </div>
                </div>
                {parseInt(room_id) === state.defaultRoomId
                     && (

@@ -20,16 +20,14 @@ svg {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 2%;
 }
 
 #timer{
     font-size: medium;
 }
 
-#timerBlock{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#roomBody {
+    padding-left: 2%;
 }
+
