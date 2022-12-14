@@ -78,6 +78,7 @@ query GetGame($gameId: Int!) {
       is_default
       title
       description
+      image
       objects {
         object_id
         name

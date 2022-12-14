@@ -1,6 +1,8 @@
 .navi{
     background-color: #170312;
-    color: white
+    color: white;
+    border-bottom: solid 2px #d4af37;
+    
 }
 
 a {
@@ -23,10 +25,10 @@ a {
 
 
 .nav-link {
-    color: #d4af37;
+    color: white;
     --bs-nav-pills-link-active-bg: #d4af37;
 }
 
-#navbar-title {
+/* #navbar-title {
     color: #d4af37;
-}
+} */

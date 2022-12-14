@@ -22,6 +22,7 @@
 .card {
     --bs-card-bg: #000000;
     box-shadow: 10px gray;
+    width: 50%;
 }
 .card-img-top {
     z-index: 0;
