@@ -3,7 +3,7 @@
         "description": "Examine",
         "interaction_id": "A1",
         "object_id": "Anna",
-        "reaction": "Upon closer examination Annabelle is a beautiful woman. She is dressed for a party, wearing a bright yellow gown, white elbow length gloves and a pair of white slippers. Her hands have never known a day of labor. She carries on her face a practiced neutral expression. If it weren't for her hidden glances towards Elizabeth it would seem she is completely unaware of tonights events."
+        "reaction": "Upon closer examination, Annabelle is a beautiful woman. She is dressed for a party, wearing a bright yellow gown, white elbow length gloves and a pair of white slippers. Her hands have never known a day of labor. She carries on her face a practiced neutral expression. If it weren't for her hidden glances towards Elizabeth it would seem she is completely unaware of tonights events."
         
     },
     {
@@ -67,7 +67,7 @@
         "description": "Examine Sir Edmund",
         "interaction_id": "S1",
         "object_id": "SirE",
-        "reaction": "Upon closer examination you can't decide if Sir Edmond would be more at home bumping elbows with the posh intellectuals of Oxford or stalking big cats in Africa. He's dressed in a tailored three piece suit. Hanging from his pocket is a gold chain attached to a pocket watch. On his head is a topper that makes the impressive man appear to be a giant. "
+        "reaction": "Upon closer examination, you can't decide if Sir Edmond would be more at home bumping elbows with the posh intellectuals of Oxford or stalking big cats in Africa. He's dressed in a tailored three piece suit. Hanging from his pocket is a gold chain attached to a pocket watch. On his head is a topper that makes the impressive man appear to be a giant. "
     },
     {
         "description": "What brings you here from Britain?",
@@ -123,7 +123,7 @@
         "description": "Examine",
         "interaction_id": "M1",
         "object_id": "Matt",
-        "reaction": "Upon closer examination Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
+        "reaction": "Upon closer examination, Matthew shares many of his feature's with a common rat. It would be hard to argue that he didn't have even a single rodent someowhere in his family tree. His scrunched up face shows lines from decades of being upset that any outfit he wore didn't suit him. He was born into this world in an ill-fitting birthday suit."
     },
     {
         "description": "What do you think of Sir Edmond?",
@@ -365,141 +365,141 @@
         "description": "Examine stairs",
         "interaction_id": "St1",
         "object_id": "stai",
-        "reaction": "Upon closer examination of the stairs you see that their integrity has been compromised, and it would be unwise to go up them."
+        "reaction": "Upon closer examination of the stairs, you see that their integrity has been compromised, and it would be unwise to go up them."
     },
     {
         "description": "Examine Debris",
         "interaction_id": "De1",
         "object_id": "debr",
-        "reaction": "Upon closer examination of the debris you find shards of glass belonging to a wine bottle."
+        "reaction": "Upon closer examination of the debris, you find shards of glass belonging to a wine bottle."
     },
     {
         "description": "Examine Large Door",
         "interaction_id": "Do1",
         "object_id": "door",
-        "reaction": "Upon closer examination of the large door you decide there's no way to leave without the constable's approval."
+        "reaction": "Upon closer examination of the large door, you decide there's no way to leave without the constable's approval."
     },
     {
         "description": "Examine Jameson's Body",
         "interaction_id": "Jb1",
         "object_id": "Jame",
-        "reaction":"Upon closer examination of the body there is an obvious wound from where he was pierced by an object. Any allusions to what could have caused the wound leading to his premature death would require knowledge that you don't have."
+        "reaction":"Upon closer examination of the body, there is an obvious wound from where he was pierced by an object. Any allusions to what could have caused the wound leading to his premature death would require knowledge that you don't have."
     },
     {
         "description": "Examine Business Documents",
         "interaction_id": "Bd1",
         "object_id": "docu",
-        "reaction":"Upon closer examination it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss"
+        "reaction":"Upon closer examination, it looks as though the documents have been rifled through and on top of the pile is a business document showing a huge monetary loss."
     },
     {
         "display_if_visited_interaction_id": "Mi1",
         "description": "Examine Bookshelf",
         "interaction_id": "Bs1",
         "object_id": "book",
-        "reaction": "Upon closer examination you see that one of the books is clearly askew. You put push the book into place and the bookshelf creeks open, and reveals a secret room."
+        "reaction": "Upon closer examination, you see that one of the books is clearly askew. You push the book into place and the bookshelf creeks open, and reveals a secret room."
     },
     {
         "description": "Examine Glasses",
         "interaction_id": "Tg1",
         "object_id": "glas",
-        "reaction": "Upon Closer examination The first glass has a smudge of red lipstick on the rim and appears to be only half- finished where the second is empty but some residue remains from a recently finished drink."
+        "reaction": "Upon closer examination, the first glass has a smudge of red lipstick on the rim and appears to be only half-finished. The second glass is empty but some residue remains from a recently finished drink."
     },
     {
         "description": "Examine Knife",
         "interaction_id": "Kn1",
-        "object_id": "knife",
-        "reaction": "Upon closer examination the knife has chunks of meat sticking to it, they look seasoned."
+        "object_id": "knif",
+        "reaction": "Upon closer examination, the knife has chunks of meat sticking to it, they look seasoned."
     },
     {
         "description": "Examine Tray of Snacks",
         "interaction_id": "Ts1",
         "object_id": "tray",
-        "reaction": "Upon closer examination of the snacks it looks as though none of the snacks have been eaten. It looks like they were never served to guests."
+        "reaction": "Upon closer examination of the snacks, it looks as though none of the snacks have been eaten. It looks like they were never served to guests."
     },
     {
         "description": "Examine Shield",
         "interaction_id": "Ss1",
         "object_id": "shie",
-        "reaction": "Upon closer examination of the shield it looks as though there used to be two spears mounted behind it."
+        "reaction": "Upon closer examination of the shield, it looks as though there used to be two spears mounted behind it."
     },
     {
         "description": "Examine Letters",
         "interaction_id": "Le1",
         "object_id": "lett",
-        "reaction": "Upon closer examination of the letters you see they're all addressed to Annabelle and one has been torn into pieces."
+        "reaction": "Upon closer examination of the letters, you see they're all addressed to Annabelle and one has been torn into pieces."
     },
     {
         "description": "Examine Fireplace Tools",
         "interaction_id": "Ft1",
         "object_id": "fire",
-        "reaction": "Upon closer examination of the fireplace tools, you find a brook, shovel and claw used to grab logs. It's clearly missing the fireplace poker."
+        "reaction": "Upon closer examination of the fireplace tools, you find a brook, shovel and claw used to grab logs. The fireplace poker is clearly missing."
     },
     {
-        "description": "Examine Clocks",
+        "description": "Examine Clock",
         "interaction_id": "Cl1",
         "object_id": "cloc",
-        "reaction": "Upon closer examination of the clock it looks as though it has been years since it last worked properly."
+        "reaction": "Upon closer examination of the clock, it looks as though it has been years since it last functioned properly."
     },
     {
         "description": "Examine Ice Pick",
         "interaction_id": "Ip1",
         "object_id": "icep",
-        "reaction": "Upon closer examination of the ice pick you see that that it was only recently driven into the ice block."
+        "reaction": "Upon closer examination of the ice pick, you see that that it was only recently driven into the ice block."
     },
     {
         "description": "Examine Cup of Coffee",
         "interaction_id": "Cc1",
         "object_id": "cupo",
-        "reaction": "Upon closer examination of the coffee cup you see it was clearly intended to sober up miss Featherbottom, you place it in front of her and she starts to drink. set coffee cup to true?"
+        "reaction": "Upon closer examination of the coffee cup, you see it was clearly intended to sober up miss Featherbottom, you place it in front of her and she starts to drink."
     },
     {
         "description": "Examine Fern Bed",
         "interaction_id": "Fb1",
         "object_id": "fern",
-        "reaction": "Upon closer examination of the trampled bed of ferns you see a bloodied cloth."
+        "reaction": "Upon closer examination of the trampled bed of ferns, you see a bloodied cloth."
     },
     {
         "description": "Examine Spade",
         "interaction_id": "Sp1",
         "object_id": "spad",
-        "reaction": "Upon closer examination of the spade you see that the handle is and the end is splintered to a point."
+        "reaction": "Upon closer examination of the spade, you see that the handle is broken and the end is splintered to a point."
     },
     {
         "description": "Examine Gravestone",
         "interaction_id": "Gs1",
         "object_id": "grav",
-        "reaction": "Upon closer examination of the gravestone you see it belongs to Mr. Llewellyn, with an epitaph that says here lies a great and generous man. The word bastard is painted over the last word."
+        "reaction": "Upon closer examination of the gravestone, you see it belongs to Mr. Llewellyn, with an epitaph that says here lies a great and generous man. The word bastard is painted over the last word."
     },
     {
         "description": "Examine Plunger",
         "interaction_id": "Pl1",
         "object_id": "plun",
-        "reaction": "upon closer examination of the plunger, you see a little bit of blood on the handle. You decide to unclog the toilet."
+        "reaction": "Upon closer examination of the plunger, you see a little bit of blood on the handle. You decide to unclog the toilet."
     },
     {
         "display_if_visited_interaction_id": "Pl1",
         "description": "Examine Arrow",
         "interaction_id": "Ar1",
         "object_id": "arro",
-        "reaction": "Upon closer examination of the now emptied toilet you find an arrow"
+        "reaction": "Upon closer examination of the now emptied toilet, you find an arrow."
     },
     {
         "description": "Examine Toilet",
         "interaction_id": "To1",
         "object_id": "toil",
-        "reaction": "Upon closer examination of the toilet, It's filled with vomit."
+        "reaction": "Upon closer examination of the toilet, you see it's filled with vomit."
     },
     {
         "description": "Examine Wine Bottle",
         "interaction_id": "Bo1",
         "object_id": "wine",
-        "reaction": "Upon closer examination of the bottle you find red lipstick on the lip of the bottle."
+        "reaction": "Upon closer examination of the bottle, you find red lipstick on the lip of the bottle."
     },
     {
         "description": "Examine Mirror",
         "interaction_id": "Mi1",
         "object_id": "mirr",
-        "reaction": "Upon closer examination of the mirror you see that the room is smaller than it should be, as though the adjacent room is bigger than it seems."
+        "reaction": "Upon closer examination of the mirror, you see that the room is smaller than it should be, as though the adjacent room is bigger than it seems."
     },
     {
         "description": "Examine Window",
@@ -511,19 +511,19 @@
         "description": "Examine Crossbow Mechanism",
         "interaction_id": "Cm1",
         "object_id": "cros",
-        "reaction": "Upon closer examination of the mechanism it's clear that it is a trap of sorts. The wire is connected to a trigger in the study. That trigger causes the crossbow to fire a bolt through a small hole cut into the book-case."
+        "reaction": "Upon closer examination of the mechanism, it's clear that it is a trap of sorts. The wire is connected to a trigger in the study. That trigger causes the crossbow to fire a bolt through a small hole cut into the bookcase."
     },
     {
         "description": "Examine Wall",
         "interaction_id": "Wa1",
         "object_id": "empt",
-        "reaction": "Upon closer examination of the empty space on the wall you see see that a couple days worth of dust replaced the crossbow."
+        "reaction": "Upon closer examination of the empty space on the wall, you see that a couple days worth of dust has replaced the crossbow."
     },
     {
         "description": "Examine Sword of St. Thomas",
         "interaction_id": "St2",
         "object_id": "swor",
-        "reaction": "Upon closer examination of the sword looks as though it has both shed blood and had blood shed over it."
+        "reaction": "Upon closer examination of the sword, it looks as though it has both shed blood and had blood shed over it."
     }
 ]
 
