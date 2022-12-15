@@ -115,6 +115,7 @@ const resolvers = {
     },
 
     endGame: async (parent, { gameId, final_solution_time = 0 }, context) => {
+      console.log(gameId, final_solution_time);
       if (!context.user) {
         throw new AuthenticationError('You need to be logged in!');
       }
@@ -142,8 +143,7 @@ const resolvers = {
             },
             { new: true }
           )
-          console.log(leaderboard);
-          }
+        }
       } else {
           const user = await User.findOne({ _id: context.user._id });
           leaderboard = await LeaderBoard.create({
@@ -151,6 +151,7 @@ const resolvers = {
             user_id: context.user._id,
             first_name: user.first_name,
             last_name: user.last_name,
+            final_solution_time: final_solution_time
           })
       };
 

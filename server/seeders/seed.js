@@ -12,15 +12,24 @@ const userSeeds = require('./user.json');
 
 db.once('open', async () => {
   try {
-    await User.deleteMany({});
-    await Game.deleteMany({});
-    await Room.deleteMany({});
-    await Object.deleteMany({});
-    await Interaction.deleteMany({});
-    await Motive.deleteMany({});
-    await Solution.deleteMany({});
-    await SolutionLetter.deleteMany({});
-    await LeaderBoard.deleteMany({});
+    await User.collection.drop();
+    await Game.collection.drop();
+    await Room.collection.drop();
+    await Object.collection.drop();
+    await Interaction.collection.drop();
+    await Motive.collection.drop();
+    await Solution.collection.drop();
+    await SolutionLetter.collection.drop();
+    await LeaderBoard.collection.drop();
+    // await User.deleteMany({});
+    // await Game.deleteMany({});
+    // await Room.deleteMany({});
+    // await Object.deleteMany({});
+    // await Interaction.deleteMany({});
+    // await Motive.deleteMany({});
+    // await Solution.deleteMany({});
+    // await SolutionLetter.deleteMany({});
+    // await LeaderBoard.deleteMany({});
 
     const solution = await Solution.insertMany(solutionSeeds);
     const solutionLetter = await SolutionLetter.insertMany(solutionLetterSeeds);
@@ -35,8 +44,8 @@ db.once('open', async () => {
         user_id: user._id,
         first_name: user.first_name,
         last_name: user.last_name,
-        number_of_attempts: Math.floor(Math.random() * 20),
-        final_solution_time: Math.floor(Math.random() * 1800)
+        number_of_attempts: Math.floor(Math.random() * 20) + 1,
+        final_solution_time: Math.floor(Math.random() * 1800) + 1
       }
       leaderboards.push(leaderboard);
     })
