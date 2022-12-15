@@ -30,8 +30,8 @@ export const ADD_USER = gql`
     }
 `;
 export const END_GAME = gql`
-  mutation Mutation($gameId: Int!, $finalSolutionTime: Int) {
-    endGame(gameId: $gameId, final_solution_time: $finalSolutionTime) {
+  mutation Mutation($gameId: Int!, $final_solution_time: Int) {
+    endGame(gameId: $gameId, final_solution_time: $final_solution_time) {
       _id
       game_id
       user_id
