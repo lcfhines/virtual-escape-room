@@ -48,7 +48,7 @@ const SolutionForm = (props) => {
     <div>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Guess your solution to escape the mansion
+            Identify the culprit to escape the mansion
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -82,17 +82,19 @@ const SolutionForm = (props) => {
               </DropdownButton>
               <p>You chose: {motive.description}</p>
               </div>  
-              <div>    
-              <button
-                type="button"
-                onClick={handleGameEnd}
-              >
-                Submit Solution
-              </button>
-            </div>
+
         </Modal.Body>
         <Modal.Footer>
-              <Button onClick={props.onHide}>Close</Button>
+              {/* <Button closeButton> Close</Button> */}
+              <div>    
+              <Button
+                type="button"
+                onClick={handleGameEnd}
+                variant="success"
+              >
+                Submit Solution
+              </Button>
+            </div>
         </Modal.Footer>
         </div>
   )
