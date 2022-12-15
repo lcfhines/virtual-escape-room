@@ -6,7 +6,7 @@ import { useGameContext } from '../utils/GlobalState';
 import Timer from '../components/Timer';
 import Object from '../components/Object';
 import SolutionForm from "../components/Solution";
-import { Modal } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import "../styles/Room.css"
 import bathroom from '../assets/LM-Bathroom.jpg';
 import entrance from '../assets/LM-Entrance.jpg';
@@ -114,9 +114,12 @@ const Room = () => {
                     && (
                          <div className="solutionLink">
                               <p>Report your findings to the constable to escape the Llewellyn Manor!</p>
-                              <Link onClick={() => {
+                              <Button 
+                                   size="lg"
+                                   variant="success"
+                                   onClick={() => {
                                    setShowModal(true);
-                              }}> I know who did it!</Link>
+                              }}> I know who did it!</Button>
                               <Modal
                                    show={showModal}
                                    onHide={() => setShowModal(false)}

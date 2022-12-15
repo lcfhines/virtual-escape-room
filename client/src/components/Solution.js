@@ -83,12 +83,13 @@ const SolutionForm = (props) => {
               <p>You chose: {motive.description}</p>
               </div>  
               <div>    
-              <button
+              <Button
                 type="button"
                 onClick={handleGameEnd}
+                variant="success"
               >
                 Submit Solution
-              </button>
+              </Button>
             </div>
         </Modal.Body>
         <Modal.Footer>

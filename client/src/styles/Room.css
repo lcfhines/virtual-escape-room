@@ -34,8 +34,10 @@ svg {
 
 #roomBody {
     padding-left: 2%;
+    padding-right: 2%;
     background: #33032F;
-    color: white
+    color: white;
+    text-align: center;
 }
 
 .mapImage {
@@ -53,9 +55,10 @@ svg {
 
 .solutionLink {
     background: #33032F ;
-    padding-left: 2%;
+    padding: 5%;
     font-size: 30px;
-    color: white
+    color: white;
+    text-align: center;
 }
 
 a{
@@ -64,4 +67,10 @@ a{
 
 .object {
     display: inline-block;
+}
+
+#room-desc {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%
 }
