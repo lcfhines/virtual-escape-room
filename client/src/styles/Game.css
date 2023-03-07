@@ -34,15 +34,38 @@ th, td {
     text-align: center;
 }
 
+#game-intro-container {
+    display: block;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#intro {
+    padding-top: 15px;
+}
+
+.time {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+#time-limit {
+    font-size: 20px;
+}
+
 .Leaderboard {
     padding-top: 20px;
 }
 
 #main-title {
     border-bottom: 4px solid #a8d0e6;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .btn-danger {
+    font-size: 20px;
+    font-weight: bold;
     background-color: #F76C6C;
     --bs-btn-border-color: #2c0202;
     --bs-btn-hover-border-color: black;

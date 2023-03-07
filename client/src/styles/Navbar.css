@@ -1,8 +1,7 @@
 .navi{
     background-color: #F76C6C;
     color: white;
-    /* border-bottom: solid 2px #259c45; */
-    
+    /* font: ; */
 }
 
 a {
@@ -26,5 +25,5 @@ a {
 
 .nav-link {
     color: white;
-    --bs-nav-pills-link-active-bg: #f8e9a1;
+    --bs-nav-pills-link-active-bg: #F76C6C;
 }

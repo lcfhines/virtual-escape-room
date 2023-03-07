@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import RoomList from '../components/RoomList'
 import { useGameContext } from '../utils/GlobalState';
 import Timer from '../components/Timer';
@@ -64,23 +63,9 @@ const Room = () => {
           setTimeLeft(timeLeft - 1);
      }
 
-     const roomMap = `../assets/${room.image}`
-
      return (
           <main>
                <div id="room">
-                    {/* <div className ="map">
-                         <img src="https://raw.githubusercontent.com/mikeyboxx/virtual-escape-room/main/assets/LM-Full.jpg" alt="manor map"/>
-                         <svg width="2048" height="2048" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M 100 100 H 900 V 900 H 100 L 100 100" />
-
-                              <circle cx="10" cy="10" r="2" fill="red" />
-                              <circle cx="90" cy="90" r="2" fill="red" />
-                              <circle cx="90" cy="10" r="2" fill="red" />
-                              <circle cx="10" cy="90" r="2" fill="red" />
-                         </svg>
-                    </div> */}
-
                     <div id="titleTimer">
                          <div>
                               <RoomList />

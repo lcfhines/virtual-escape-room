@@ -1,7 +1,7 @@
 /* style for all the pages */
 
 body{
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-family: 'Roboto', sans-serif;
 }
 
 header{
@@ -13,6 +13,7 @@ header{
 
 h1,h2{
      text-align: center;
+     font-family: 'Fira Sans', sans-serif;
 }
 
 #logo{
