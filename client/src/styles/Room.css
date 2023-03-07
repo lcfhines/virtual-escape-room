@@ -1,5 +1,5 @@
 #room{
-    background: #33032F;
+    background: #24305e;
     color: white
 }
 
@@ -35,7 +35,7 @@ svg {
 #roomBody {
     padding-left: 2%;
     padding-right: 2%;
-    background: #33032F;
+    background: #24305e;
     color: white;
     text-align: center;
 }
@@ -44,17 +44,17 @@ svg {
    object-fit: contain;
     width: 50%;
     height: 50%;
-    border: 3px solid #d4af37;
+    border: 3px solid #f8e9a1;
 }
 
 #filler {
         height: 1000px;
         padding: 0;
-        background: #33032F;
+        background: #24305e;
     }
 
 .solutionLink {
-    background: #33032F ;
+    background: #24305e ;
     padding: 5%;
     font-size: 30px;
     color: white;
