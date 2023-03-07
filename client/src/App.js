@@ -58,7 +58,8 @@ function App() {
             />
             <Route 
               path='*'
-              element={<h1 className='display-2'>Wrong page!</h1>}
+              element={<Home />}
+              // element={<h1 className='display-2'>Wrong page!</h1>}
             />
           </Routes>
         </GameProvider>
