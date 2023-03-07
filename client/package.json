@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
+  "homepage": "https://lcfhines.github.io/virtual-escape-room",
   "dependencies": {
     "@apollo/client": "^3.7.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "gh-pages": "^5.0.0",
     "graphql": "^16.6.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
@@ -18,6 +20,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
