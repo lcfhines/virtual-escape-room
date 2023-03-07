@@ -3,7 +3,7 @@ body {
 }
 
 #game {
-    background-color: #880808;
+    background-color: #a8d0e6;
     color: white;
     padding: 0 8px 0 8px;
     min-height: 100vw;
@@ -15,7 +15,7 @@ body {
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 15px;
-    background-color: #180829;
+    background-color: #374785;
     min-height: 100vw;
     text-align: center;
 }
@@ -25,16 +25,16 @@ body {
 }
 
 #main-title {
-    border-bottom: 4px solid #880808;
+    border-bottom: 4px solid #a8d0e6;
     text-align: center;
 }
 
 .btn-danger {
-    background-color: #880808;
+    background-color: #F76C6C;
     --bs-btn-border-color: #2c0202;
     --bs-btn-hover-border-color: black;
     --bs-btn-hover-color: black;
-    --bs-btn-hover-bg: #890202;
+    --bs-btn-hover-bg: #a8d0e6;
 }
 
 #leaderboard {

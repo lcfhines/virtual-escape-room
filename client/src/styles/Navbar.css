@@ -1,7 +1,7 @@
 .navi{
-    background-color: #170312;
+    background-color: #F76C6C;
     color: white;
-    border-bottom: solid 2px #d4af37;
+    /* border-bottom: solid 2px #259c45; */
     
 }
 
@@ -10,7 +10,7 @@ a {
 }
 
 .modal-content {
-    background-color: #300c27;
+    background-color: #374785;
     border: solid 2px #d4af37;
     color: white;
 }
