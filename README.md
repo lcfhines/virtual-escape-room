@@ -26,7 +26,7 @@ Run `npm run delveop` to run on your machine.
 
 ## Usage
 
-The app was deployed using Heroku and can be found [here](https://virtual-escape-room-mikeyboxx.herokuapp.com/).  
+The app was deployed using GH pages and can be found [here](https://lcfhines.github.io/virtual-escape-room/).  
 
 On the app, log in to an existing account or sign up. Select the game you want to play from the list of available games. Read through the rules and directions and start the game. You can navigate to all of the rooms and interact with the characters and objects found in each room. Once you've solved the mystery, return to the Entrance Hall to tell the constable who did it. 
 
@@ -42,12 +42,11 @@ On the app, log in to an existing account or sign up. Select the game you want t
 
 ## Credits
 
-Collaborators:
+This project is an expansion of a group project with the following collaborators:
 - [Ajilakj](https://github.com/Ajilakj)
 - [dannyjunlee](https://github.com/dannyjunlee)
 - [DBanfieldKeller](https://github.com/DBanfieldKeller)
 - [ereneedolan](https://github.com/ereneedolan)
-- [lcfhines](https://github.com/lcfhines)
 - [mikeyboxx](https://github.com/mikeyboxx)
 - [shurrc](https://github.com/shurrc)
 
@@ -56,7 +55,7 @@ Collaborators:
 
 This application is covered by [MIT License](https://choosealicense.com/licenses/mit/).
 
-Copyright 2022 [mikeyboxx](https://github.com/mikeyboxx)
+Copyright 2022 [lcfhines](https://github.com/lcfhines)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
