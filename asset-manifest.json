@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/virtual-escape-room/static/css/main.02ce19c0.css",
-    "main.js": "/virtual-escape-room/static/js/main.ed750f51.js",
+    "main.js": "/virtual-escape-room/static/js/main.5bd92fff.js",
     "static/media/LM-Full.jpg": "/virtual-escape-room/static/media/LM-Full.3059db612070e726a725.jpg",
     "static/media/LM-Dining.jpg": "/virtual-escape-room/static/media/LM-Dining.62bbfe420e8f3d6cb97d.jpg",
     "static/media/LM-Garden.jpg": "/virtual-escape-room/static/media/LM-Garden.5345e37d0c7513d5437e.jpg",
@@ -14,10 +14,10 @@
     "static/media/LM-Secret.jpg": "/virtual-escape-room/static/media/LM-Secret.dff94bb627e0b1d10fbf.jpg",
     "index.html": "/virtual-escape-room/index.html",
     "main.02ce19c0.css.map": "/virtual-escape-room/static/css/main.02ce19c0.css.map",
-    "main.ed750f51.js.map": "/virtual-escape-room/static/js/main.ed750f51.js.map"
+    "main.5bd92fff.js.map": "/virtual-escape-room/static/js/main.5bd92fff.js.map"
   },
   "entrypoints": [
     "static/css/main.02ce19c0.css",
-    "static/js/main.ed750f51.js"
+    "static/js/main.5bd92fff.js"
   ]
 }
