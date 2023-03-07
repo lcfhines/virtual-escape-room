@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/virtual-escape-room/static/css/main.3cce19ae.css",
+    "main.js": "/virtual-escape-room/static/js/main.3e67e0e1.js",
+    "static/media/LM-Full.jpg": "/virtual-escape-room/static/media/LM-Full.3059db612070e726a725.jpg",
+    "static/media/LM-Dining.jpg": "/virtual-escape-room/static/media/LM-Dining.62bbfe420e8f3d6cb97d.jpg",
+    "static/media/LM-Garden.jpg": "/virtual-escape-room/static/media/LM-Garden.5345e37d0c7513d5437e.jpg",
+    "static/media/LM-Parlor.jpg": "/virtual-escape-room/static/media/LM-Parlor.cced1b053b3b10b877d0.jpg",
+    "static/media/LM-Study.jpg": "/virtual-escape-room/static/media/LM-Study.9e389e706850f7218b25.jpg",
+    "static/media/LM-Kitchen.jpg": "/virtual-escape-room/static/media/LM-Kitchen.e4498150879bac41e325.jpg",
+    "static/media/LM-Entrance.jpg": "/virtual-escape-room/static/media/LM-Entrance.6330b6211a5a51a4a1dc.jpg",
+    "static/media/c870x524.jpg": "/virtual-escape-room/static/media/c870x524.258ab6ff8e519060f4b4.jpg",
+    "static/media/LM-Bathroom.jpg": "/virtual-escape-room/static/media/LM-Bathroom.d2b8edc50dd8ff46d8c6.jpg",
+    "static/media/LM-Secret.jpg": "/virtual-escape-room/static/media/LM-Secret.dff94bb627e0b1d10fbf.jpg",
+    "index.html": "/virtual-escape-room/index.html",
+    "main.3cce19ae.css.map": "/virtual-escape-room/static/css/main.3cce19ae.css.map",
+    "main.3e67e0e1.js.map": "/virtual-escape-room/static/js/main.3e67e0e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cce19ae.css",
+    "static/js/main.3e67e0e1.js"
+  ]
+}
